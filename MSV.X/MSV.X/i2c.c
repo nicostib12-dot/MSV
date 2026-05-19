@@ -71,8 +71,6 @@ void I2C_Init(void) {
     /* -- Deshabilitar analogico en RB0 y RB1 --
      * ANCON1 controla los pines analogicos del PORTB en el PIC18F4550.
      * AN12 = RB0, AN10 = RB1 deben ser digitales para I2C. */
-    ANCON1bits.PCFG12 = 1;  /* RB0/AN12 -> digital */
-    ANCON1bits.PCFG10 = 1;  /* RB1/AN10 -> digital */
 
     /* -- Configurar modulo MSSP --
      * SSPCON1: SSPEN=1 habilita el modulo.
@@ -246,7 +244,7 @@ unsigned char I2C_ReadReg(unsigned char addr, unsigned char reg) {
     status = I2C_RepeatStart();
     if (status != I2C_OK) { I2C_Stop(); return 0xFF; }
 
-    status = I2C_Write((addr << 1) | 0x01);
+    status = I2C_Write((unsigned char)((addr << 1) | 0x01));
     if (status != I2C_OK) { I2C_Stop(); return 0xFF; }
 
     /* Leer el unico byte con NACK (fin de transferencia) */
@@ -285,7 +283,7 @@ unsigned char I2C_ReadBurst(unsigned char  addr,
     status = I2C_RepeatStart();
     if (status != I2C_OK) { I2C_Stop(); return status; }
 
-    status = I2C_Write((addr << 1) | 0x01);
+    status = I2C_Write((unsigned char)((addr << 1) | 0x01));
     if (status != I2C_OK) { I2C_Stop(); return status; }
 
     /* Leer los bytes: ACK en todos excepto el ultimo (NACK) */

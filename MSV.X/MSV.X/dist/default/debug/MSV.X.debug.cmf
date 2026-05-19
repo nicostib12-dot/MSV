@@ -1,0 +1,1509 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/default/debug\MSV.X.debug.o
+cinit CODE 0 1EA6 1EA6 3E 1 2
+intcode_body CODE 0 1F58 1F58 36 1 2
+text0 CODE 0 C2E C2E 11E 1 2
+text1 CODE 0 12C4 12C4 B6 1 2
+text2 CODE 0 137A 137A B6 1 2
+text3 CODE 0 738 738 156 1 2
+text4 CODE 0 1FFC 1FFC 1A 1 2
+text5 CODE 0 14E6 14E6 B0 1 2
+text6 CODE 0 D4C D4C 10A 1 2
+text7 CODE 0 1828 1828 9A 1 2
+text8 CODE 0 206C 206C 8 1 2
+text9 CODE 0 2060 2060 C 1 2
+text10 CODE 0 202A 202A 12 1 2
+text11 CODE 0 1068 1068 E6 1 2
+text12 CODE 0 1C20 1C20 56 1 2
+text13 CODE 0 2074 2074 4 1 2
+text14 CODE 0 1FE0 1FE0 1C 1 2
+text15 CODE 0 2016 2016 14 1 2
+text16 CODE 0 120A 120A BA 1 2
+text17 CODE 0 1CC4 1CC4 48 1 2
+text18 CODE 0 1430 1430 B6 1 2
+text19 CODE 0 1BBC 1BBC 64 1 2
+text20 CODE 0 1E26 1E26 40 1 2
+text21 CODE 0 1E66 1E66 40 1 2
+text22 CODE 0 1D9C 1D9C 46 1 2
+text23 CODE 0 1F8E 1F8E 2C 1 2
+text24 CODE 0 562 562 1D6 1 2
+text25 CODE 0 1596 1596 A6 1 2
+text26 CODE 0 12 12 2E4 1 2
+text27 CODE 0 1AE0 1AE0 72 1 2
+text28 CODE 0 16E2 16E2 A4 1 2
+text29 CODE 0 1786 1786 A2 1 2
+text30 CODE 0 1D0C 1D0C 48 1 2
+text31 CODE 0 1EE4 1EE4 3C 1 2
+text32 CODE 0 1D54 1D54 48 1 2
+text33 CODE 0 1C76 1C76 4E 1 2
+text34 CODE 0 F60 F60 108 1 2
+text35 CODE 0 1FBA 1FBA 26 1 2
+text36 CODE 0 1DE2 1DE2 44 1 2
+text37 CODE 0 203C 203C 12 1 2
+text38 CODE 0 204E 204E 12 1 2
+text39 CODE 0 88E 88E 142 1 2
+text40 CODE 0 E56 E56 10A 1 2
+text41 CODE 0 1A60 1A60 80 1 2
+text42 CODE 0 B0A B0A 124 1 2
+text43 CODE 0 163C 163C A6 1 2
+text44 CODE 0 18C2 18C2 8A 1 2
+text45 CODE 0 194C 194C 8A 1 2
+text46 CODE 0 19D6 19D6 8A 1 2
+text47 CODE 0 9D0 9D0 13A 1 2
+text48 CODE 0 2F6 2F6 26C 1 2
+text49 CODE 0 1B52 1B52 6A 1 2
+text50 CODE 0 2078 2078 4 1 2
+text51 CODE 0 114E 114E BC 1 2
+text53 CODE 0 1F20 1F20 38 1 2
+cstackCOMRAM COMRAM 1 2 2 54 1 1
+cstackBANK0 BANK0 1 91 91 2 1 1
+bssBANK0 BANK0 1 60 60 31 1 1
+bssBANK1 BANK1 1 100 100 C8 1 1
+bssBANK2 BANK2 1 200 200 96 1 1
+intcode CODE 0 8 8 6 1 2
+bssCOMRAM COMRAM 1 56 56 8 1 1
+mediumconst MEDIUMCONST 0 7E42 7E42 1BE 1 2
+config CONFIG 4 300000 300000 8 1 1
+$C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_9.o
+init CODE 0 E E 4 1 2
+reset_vec CODE 0 0 0 4 1 2
+config CONFIG 4 300000 300000 8 1 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 93-FF 1
+RAM 1C8-1FF 1
+RAM 296-7FF 1
+SFR F60-FFF 1
+BANK0 93-FF 1
+BANK1 1C8-1FF 1
+BANK2 296-2FF 1
+BANK3 300-3FF 1
+BANK4 400-4FF 1
+BANK5 500-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+CONST 4-7 1
+CONST 207C-7E41 1
+IDLOC 200000-200007 1
+SMALLCONST 207C-7E41 1
+CODE 4-7 1
+CODE 207C-7E41 1
+BIGRAM 5E-5F 1
+BIGRAM 93-FF 1
+BIGRAM 1C8-1FF 1
+BIGRAM 296-7FF 1
+BIGSFR F60-FFF 1
+COMRAM 5E-5F 1
+CONFIG 300008-30000D 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 207C-7E41 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/debug\MSV.X.debug.o
+8 intcode CODE >13359:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+8 intcode CODE >111:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1F20 text53 CODE >86:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1F20 text53 CODE >87:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1F30 text53 CODE >89:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1F3C text53 CODE >90:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1F42 text53 CODE >91:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1F44 text53 CODE >96:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1F54 text53 CODE >97:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1F56 text53 CODE >99:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1F58 intcode_body CODE >111:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1F62 intcode_body CODE >115:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1F7E intcode_body CODE >116:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1F82 intcode_body CODE >118:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+114E text51 CODE >28:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Alarmas.c
+114E text51 CODE >29:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Alarmas.c
+1150 text51 CODE >35:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Alarmas.c
+1162 text51 CODE >36:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Alarmas.c
+118E text51 CODE >37:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Alarmas.c
+1192 text51 CODE >44:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Alarmas.c
+11A4 text51 CODE >45:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Alarmas.c
+11D0 text51 CODE >47:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Alarmas.c
+11D4 text51 CODE >49:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Alarmas.c
+11D4 text51 CODE >54:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Alarmas.c
+11E4 text51 CODE >55:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Alarmas.c
+11E6 text51 CODE >56:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Alarmas.c
+11FE text51 CODE >57:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Alarmas.c
+1200 text51 CODE >58:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Alarmas.c
+1204 text51 CODE >59:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Alarmas.c
+1206 text51 CODE >62:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Alarmas.c
+1208 text51 CODE >63:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Alarmas.c
+2078 text50 CODE >68:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Alarmas.c
+2078 text50 CODE >69:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Alarmas.c
+207A text50 CODE >70:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Alarmas.c
+1B52 text49 CODE >15:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul32.c
+1B52 text49 CODE >119:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul32.c
+1B62 text49 CODE >121:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul32.c
+1B70 text49 CODE >122:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul32.c
+1B80 text49 CODE >123:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul32.c
+1B8A text49 CODE >124:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul32.c
+1B94 text49 CODE >125:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul32.c
+1BAA text49 CODE >128:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul32.c
+1BBA text49 CODE >129:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul32.c
+2F6 text48 CODE >95:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+2F6 text48 CODE >99:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+3A0 text48 CODE >102:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+4CE text48 CODE >106:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+4E6 text48 CODE >109:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+550 text48 CODE >111:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+560 text48 CODE >112:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+9D0 text47 CODE >170:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+9D2 text47 CODE >173:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+A20 text47 CODE >177:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+A22 text47 CODE >178:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+A24 text47 CODE >181:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+A5A text47 CODE >184:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+A5E text47 CODE >186:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+AAA text47 CODE >191:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+ACE text47 CODE >192:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+AD0 text47 CODE >195:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+B06 text47 CODE >197:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+B08 text47 CODE >198:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+19D6 text46 CODE >132:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+19D6 text46 CODE >133:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+1A24 text46 CODE >136:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+1A26 text46 CODE >138:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+1A5C text46 CODE >140:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+1A5E text46 CODE >141:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+194C text45 CODE >102:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+194C text45 CODE >104:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+199A text45 CODE >107:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+199C text45 CODE >110:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+19D2 text45 CODE >112:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+19D4 text45 CODE >113:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+18C2 text44 CODE >118:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+18C2 text44 CODE >119:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+1910 text44 CODE >122:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+1912 text44 CODE >124:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+1948 text44 CODE >126:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+194A text44 CODE >127:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+163C text43 CODE >146:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+163E text43 CODE >147:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+168C text43 CODE >151:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+168E text43 CODE >152:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+1692 text43 CODE >155:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+16C8 text43 CODE >156:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+16CA text43 CODE >160:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+16D8 text43 CODE >161:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+16DE text43 CODE >164:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+16E0 text43 CODE >165:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+B0A text42 CODE >263:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+B0C text42 CODE >270:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+B34 text42 CODE >273:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+B3A text42 CODE >274:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+B54 text42 CODE >276:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+B60 text42 CODE >277:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+B74 text42 CODE >279:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+B7C text42 CODE >280:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+B90 text42 CODE >283:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+B96 text42 CODE >284:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+BAA text42 CODE >286:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+BB4 text42 CODE >287:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+BC8 text42 CODE >290:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+BCE text42 CODE >291:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+C14 text42 CODE >292:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+C28 text42 CODE >294:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+C2C text42 CODE >295:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+1A60 text41 CODE >204:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+1A62 text41 CODE >209:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+1A68 text41 CODE >210:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+1A82 text41 CODE >213:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+1A8E text41 CODE >214:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+1AA2 text41 CODE >216:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+1AAA text41 CODE >217:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+1ABE text41 CODE >219:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+1AC6 text41 CODE >220:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+1ADA text41 CODE >222:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+1ADE text41 CODE >223:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+E56 text40 CODE >7:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+E56 text40 CODE >13:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+E58 text40 CODE >14:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+E66 text40 CODE >15:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+E76 text40 CODE >16:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+E7A text40 CODE >18:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+E88 text40 CODE >19:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+E98 text40 CODE >20:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+E9C text40 CODE >22:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+EAC text40 CODE >23:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+EC2 text40 CODE >24:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+EC6 text40 CODE >25:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+ECA text40 CODE >26:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+ED4 text40 CODE >27:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+ED6 text40 CODE >25:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+EE4 text40 CODE >30:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+EEE text40 CODE >31:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+F0C text40 CODE >32:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+F1C text40 CODE >33:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+F1E text40 CODE >35:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+F28 text40 CODE >36:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+F2E text40 CODE >38:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+F3E text40 CODE >39:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+F4E text40 CODE >40:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+F5E text40 CODE >41:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+88E text39 CODE >169:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+88E text39 CODE >179:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+89E text39 CODE >180:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+8BA text39 CODE >186:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+8C8 text39 CODE >192:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+8DE text39 CODE >193:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+8F2 text39 CODE >198:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+95E text39 CODE >204:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+97A text39 CODE >208:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+99E text39 CODE >214:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+9CE text39 CODE >217:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+204E text38 CODE >89:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+2050 text38 CODE >90:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+205E text38 CODE >91:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+203C text37 CODE >97:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+203E text37 CODE >98:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+204C text37 CODE >99:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1DE2 text36 CODE >156:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1DE2 text36 CODE >158:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1DE4 text36 CODE >159:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1DEC text36 CODE >160:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1DF2 text36 CODE >161:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1DF8 text36 CODE >162:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1DFA text36 CODE >163:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1E00 text36 CODE >164:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1E12 text36 CODE >165:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1E24 text36 CODE >166:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1FBA text35 CODE >185:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1FBC text35 CODE >187:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1FC0 text35 CODE >189:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1FCA text35 CODE >190:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1FD2 text35 CODE >191:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1FDE text35 CODE >192:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+F60 text34 CODE >106:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+F62 text34 CODE >107:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+F7A text34 CODE >108:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+FA2 text34 CODE >109:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+FCA text34 CODE >110:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+FF2 text34 CODE >111:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+100A text34 CODE >112:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1022 text34 CODE >113:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+103A text34 CODE >114:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1052 text34 CODE >115:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1066 text34 CODE >117:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1C76 text33 CODE >197:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1C78 text33 CODE >199:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1C80 text33 CODE >201:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1C82 text33 CODE >202:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1CAA text33 CODE >203:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1CBC text33 CODE >204:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1CC2 text33 CODE >205:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1D54 text32 CODE >210:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1D54 text32 CODE >211:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1D6A text32 CODE >213:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1D7A text32 CODE >214:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1D7E text32 CODE >212:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1D9A text32 CODE >216:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1EE4 text31 CODE >123:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1EE6 text31 CODE >127:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1EE8 text31 CODE >129:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1EF8 text31 CODE >130:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1F04 text31 CODE >131:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1F0A text31 CODE >132:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1F0C text31 CODE >138:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1F1C text31 CODE >139:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1F1E text31 CODE >141:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1D0C text30 CODE >146:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1D0C text30 CODE >147:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1D22 text30 CODE >149:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1D32 text30 CODE >150:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1D36 text30 CODE >148:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1D52 text30 CODE >152:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1786 text29 CODE >425:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1786 text29 CODE >431:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1794 text29 CODE >432:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1798 text29 CODE >434:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+17B8 text29 CODE >436:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+17CE text29 CODE >437:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+17D0 text29 CODE >438:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+17D4 text29 CODE >440:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+17E4 text29 CODE >442:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+17E6 text29 CODE >443:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+17EA text29 CODE >444:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+17F4 text29 CODE >445:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1800 text29 CODE >446:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+180C text29 CODE >447:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1810 text29 CODE >448:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1820 text29 CODE >451:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1820 text29 CODE >453:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1824 text29 CODE >454:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1826 text29 CODE >456:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+16E2 text28 CODE >7:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\__lldiv.c
+16E2 text28 CODE >13:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\__lldiv.c
+16F2 text28 CODE >14:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\__lldiv.c
+1708 text28 CODE >15:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\__lldiv.c
+170C text28 CODE >16:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\__lldiv.c
+1710 text28 CODE >17:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\__lldiv.c
+171A text28 CODE >18:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\__lldiv.c
+171C text28 CODE >16:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\__lldiv.c
+172A text28 CODE >21:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\__lldiv.c
+1734 text28 CODE >22:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\__lldiv.c
+1752 text28 CODE >23:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\__lldiv.c
+1762 text28 CODE >24:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\__lldiv.c
+1764 text28 CODE >26:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\__lldiv.c
+176E text28 CODE >27:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\__lldiv.c
+1774 text28 CODE >28:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\__lldiv.c
+1774 text28 CODE >29:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\__lldiv.c
+1784 text28 CODE >30:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\__lldiv.c
+1AE0 text27 CODE >7:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+1AE0 text27 CODE >13:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+1AE6 text27 CODE >14:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+1AF8 text27 CODE >15:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+1AFC text27 CODE >16:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+1B00 text27 CODE >17:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+1B06 text27 CODE >18:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+1B08 text27 CODE >16:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+1B16 text27 CODE >21:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+1B1C text27 CODE >22:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+1B32 text27 CODE >23:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+1B3A text27 CODE >24:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+1B3C text27 CODE >26:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+1B42 text27 CODE >27:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+1B48 text27 CODE >28:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+1B48 text27 CODE >29:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+1B50 text27 CODE >30:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+12 text26 CODE >164:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+12 text26 CODE >175:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+1A text26 CODE >176:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+22 text26 CODE >177:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+26 text26 CODE >178:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+64 text26 CODE >179:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+A2 text26 CODE >180:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+B4 text26 CODE >185:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+D6 text26 CODE >186:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+E2 text26 CODE >193:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+13E text26 CODE >199:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+140 text26 CODE >200:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+142 text26 CODE >202:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+148 text26 CODE >203:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+17E text26 CODE >205:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+18C text26 CODE >206:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+190 text26 CODE >207:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+1CA text26 CODE >209:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+1CC text26 CODE >211:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+1EE text26 CODE >215:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+202 text26 CODE >222:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+208 text26 CODE >223:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+210 text26 CODE >224:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+242 text26 CODE >225:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+256 text26 CODE >226:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+276 text26 CODE >229:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+28C text26 CODE >234:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+2B4 text26 CODE >240:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+2E4 text26 CODE >242:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+2E4 text26 CODE >245:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+2EC text26 CODE >246:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+2F4 text26 CODE >247:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+1596 text25 CODE >229:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+1598 text25 CODE >234:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+159E text25 CODE >235:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+15B8 text25 CODE >237:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+15C4 text25 CODE >238:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+15D8 text25 CODE >240:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+15E0 text25 CODE >241:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+15F4 text25 CODE >244:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+15FA text25 CODE >245:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+160E text25 CODE >247:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+1618 text25 CODE >248:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+162C text25 CODE >251:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+1634 text25 CODE >253:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+1638 text25 CODE >254:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+163A text25 CODE >255:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+562 text24 CODE >96:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+562 text24 CODE >103:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+56E text24 CODE >104:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+57A text24 CODE >107:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+584 text24 CODE >110:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+594 text24 CODE >111:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+598 text24 CODE >112:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+598 text24 CODE >114:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+5AC text24 CODE >119:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+5DA text24 CODE >126:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+5EA text24 CODE >127:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+5F0 text24 CODE >128:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+628 text24 CODE >129:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+642 text24 CODE >130:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+648 text24 CODE >146:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+64E text24 CODE >147:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+656 text24 CODE >149:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+6E2 text24 CODE >153:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+720 text24 CODE >154:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+722 text24 CODE >155:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+736 text24 CODE >156:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+1F8E text23 CODE >322:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+1F8E text23 CODE >324:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+1F92 text23 CODE >328:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+1FA2 text23 CODE >329:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+1FAC text23 CODE >333:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+1FB8 text23 CODE >334:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+1D9C text22 CODE >171:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1D9E text22 CODE >173:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1DB2 text22 CODE >174:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1DBA text22 CODE >175:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1DC0 text22 CODE >176:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1DC6 text22 CODE >177:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1DC8 text22 CODE >178:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1DCE text22 CODE >179:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1DE0 text22 CODE >180:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1E66 text21 CODE >383:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1E66 text21 CODE >384:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1E6C text21 CODE >385:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1E76 text21 CODE >387:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1E88 text21 CODE >388:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1E94 text21 CODE >389:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1E98 text21 CODE >390:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1EA4 text21 CODE >392:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1E26 text20 CODE >400:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1E26 text20 CODE >401:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1E2C text20 CODE >402:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1E32 text20 CODE >403:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1E38 text20 CODE >405:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1E42 text20 CODE >406:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1E4E text20 CODE >407:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1E58 text20 CODE >408:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1E64 text20 CODE >409:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1BBC text19 CODE >7:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwmod.c
+1BBC text19 CODE >12:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwmod.c
+1BCE text19 CODE >13:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwmod.c
+1BD2 text19 CODE >14:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwmod.c
+1BD6 text19 CODE >15:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwmod.c
+1BDC text19 CODE >16:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwmod.c
+1BDE text19 CODE >14:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwmod.c
+1BEC text19 CODE >19:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwmod.c
+1C02 text19 CODE >20:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwmod.c
+1C0A text19 CODE >21:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwmod.c
+1C10 text19 CODE >22:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwmod.c
+1C16 text19 CODE >23:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwmod.c
+1C16 text19 CODE >24:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwmod.c
+1C1E text19 CODE >25:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwmod.c
+1430 text18 CODE >224:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1430 text18 CODE >226:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1432 text18 CODE >229:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1444 text18 CODE >230:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+144E text18 CODE >236:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1470 text18 CODE >237:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+148A text18 CODE >235:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+14B0 text18 CODE >241:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+14C6 text18 CODE >242:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+14D4 text18 CODE >243:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+14E4 text18 CODE >244:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1CC4 text17 CODE >252:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1CC4 text17 CODE >253:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1CEA text17 CODE >254:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1CF0 text17 CODE >255:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1D0A text17 CODE >256:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+120A text16 CODE >350:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+120A text16 CODE >352:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1210 text16 CODE >353:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+121A text16 CODE >354:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1226 text16 CODE >355:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1230 text16 CODE >357:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1244 text16 CODE >359:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1250 text16 CODE >360:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1254 text16 CODE >361:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1260 text16 CODE >365:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1266 text16 CODE >366:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1270 text16 CODE >367:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+127C text16 CODE >368:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1286 text16 CODE >370:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+129A text16 CODE >371:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+12A6 text16 CODE >372:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+12AA text16 CODE >373:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+12B6 text16 CODE >374:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+12C2 text16 CODE >376:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+2016 text15 CODE >224:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+2016 text15 CODE >225:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+201A text15 CODE >229:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+2028 text15 CODE >230:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1FE0 text14 CODE >238:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1FE0 text14 CODE >241:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1FE4 text14 CODE >245:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1FE8 text14 CODE >249:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1FEA text14 CODE >250:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1FEC text14 CODE >257:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1FF0 text14 CODE >258:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1FF2 text14 CODE >262:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1FF4 text14 CODE >263:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1FF6 text14 CODE >268:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1FF8 text14 CODE >269:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1FFA text14 CODE >270:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+2074 text13 CODE >19:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Alarmas.c
+2074 text13 CODE >22:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Alarmas.c
+2076 text13 CODE >23:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Alarmas.c
+1C20 text12 CODE >61:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+1C20 text12 CODE >72:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+1C36 text12 CODE >73:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+1C4C text12 CODE >76:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+1C5A text12 CODE >77:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+1C66 text12 CODE >78:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+1C72 text12 CODE >80:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+1C74 text12 CODE >81:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+1068 text11 CODE >117:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+1068 text11 CODE >124:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+1074 text11 CODE >125:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+108C text11 CODE >130:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+109C text11 CODE >131:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+10B2 text11 CODE >134:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+10C2 text11 CODE >138:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+10C8 text11 CODE >139:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+10DE text11 CODE >145:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+10EE text11 CODE >146:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+1102 text11 CODE >152:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+1112 text11 CODE >153:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+1126 text11 CODE >160:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+1136 text11 CODE >161:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+114A text11 CODE >163:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+114C text11 CODE >164:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Bme280.c
+202A text10 CODE >63:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+202A text10 CODE >68:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+202C text10 CODE >69:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+202E text10 CODE >79:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+2032 text10 CODE >85:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+2036 text10 CODE >90:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+2038 text10 CODE >96:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+203A text10 CODE >97:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\i2c.c
+2060 text9 CODE >33:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+2060 text9 CODE >37:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+2062 text9 CODE >38:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+2064 text9 CODE >40:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+2068 text9 CODE >41:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+206A text9 CODE >42:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+206C text8 CODE >24:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+206C text8 CODE >25:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+206E text8 CODE >26:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+2070 text8 CODE >27:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+2072 text8 CODE >28:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+1828 text7 CODE >47:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+182A text7 CODE >48:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+182E text7 CODE >49:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+1834 text7 CODE >52:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+1836 text7 CODE >54:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+183A text7 CODE >58:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+183E text7 CODE >59:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+1842 text7 CODE >63:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+1846 text7 CODE >64:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+1848 text7 CODE >65:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+184C text7 CODE >69:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+1850 text7 CODE >70:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+1852 text7 CODE >71:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+1856 text7 CODE >77:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+185A text7 CODE >78:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+1866 text7 CODE >79:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+186A text7 CODE >83:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+186E text7 CODE >84:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+187A text7 CODE >85:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+187E text7 CODE >91:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+1888 text7 CODE >91:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+1896 text7 CODE >91:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+189E text7 CODE >91:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+18A6 text7 CODE >91:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+18AE text7 CODE >91:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+18B6 text7 CODE >91:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+18C0 text7 CODE >92:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Leds.c
+D4C text6 CODE >252:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+D4C text6 CODE >259:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+D58 text6 CODE >260:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+D6A text6 CODE >261:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+D70 text6 CODE >267:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+D8E text6 CODE >268:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+D94 text6 CODE >270:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+DA4 text6 CODE >274:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+DB2 text6 CODE >275:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+DC0 text6 CODE >280:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+DCE text6 CODE >281:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+DDC text6 CODE >282:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+DEA text6 CODE >289:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+DF8 text6 CODE >294:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+E06 text6 CODE >301:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+E14 text6 CODE >307:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+E22 text6 CODE >310:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+E24 text6 CODE >311:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+E38 text6 CODE >312:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+E4A text6 CODE >313:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+E4C text6 CODE >314:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+E52 text6 CODE >316:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+E54 text6 CODE >317:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Max30102.c
+14E6 text5 CODE >122:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+14E6 text5 CODE >123:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+14FE text5 CODE >126:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1504 text5 CODE >127:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+150A text5 CODE >128:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1510 text5 CODE >129:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1516 text5 CODE >130:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+151C text5 CODE >131:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1522 text5 CODE >132:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1528 text5 CODE >133:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+152E text5 CODE >134:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1534 text5 CODE >135:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+153A text5 CODE >136:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1540 text5 CODE >137:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1546 text5 CODE >138:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+154C text5 CODE >139:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1552 text5 CODE >140:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1558 text5 CODE >141:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+155E text5 CODE >142:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1564 text5 CODE >143:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+156A text5 CODE >144:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1570 text5 CODE >145:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1576 text5 CODE >146:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+157C text5 CODE >147:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1582 text5 CODE >148:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1588 text5 CODE >149:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+158E text5 CODE >150:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1594 text5 CODE >151:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Oled.c
+1FFC text4 CODE >38:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1FFC text4 CODE >42:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1FFE text4 CODE >43:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+2000 text4 CODE >53:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+2004 text4 CODE >62:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+2008 text4 CODE >67:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+200C text4 CODE >70:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+200E text4 CODE >71:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+2010 text4 CODE >72:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+2012 text4 CODE >78:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+2014 text4 CODE >79:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+738 text3 CODE >279:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+738 text3 CODE >280:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+73C text3 CODE >283:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+740 text3 CODE >284:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+746 text3 CODE >287:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+74A text3 CODE >291:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+74E text3 CODE >292:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+752 text3 CODE >293:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+75C text3 CODE >294:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+768 text3 CODE >297:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+772 text3 CODE >298:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+786 text3 CODE >299:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+792 text3 CODE >300:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+796 text3 CODE >301:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+7A2 text3 CODE >302:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+7A4 text3 CODE >304:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+7BA text3 CODE >307:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+7C4 text3 CODE >308:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+7D8 text3 CODE >309:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+7E4 text3 CODE >310:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+7E8 text3 CODE >311:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+7F4 text3 CODE >312:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+7F6 text3 CODE >314:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+80C text3 CODE >317:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+810 text3 CODE >320:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+814 text3 CODE >323:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+81E text3 CODE >324:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+82E text3 CODE >325:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+83A text3 CODE >326:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+83E text3 CODE >327:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+84A text3 CODE >328:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+856 text3 CODE >331:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+85A text3 CODE >334:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+872 text3 CODE >337:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+876 text3 CODE >340:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+880 text3 CODE >341:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+88C text3 CODE >342:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+137A text2 CODE >158:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+137A text2 CODE >160:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+137C text2 CODE >163:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+138E text2 CODE >164:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1398 text2 CODE >169:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+13BA text2 CODE >170:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+13D4 text2 CODE >168:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+13FA text2 CODE >173:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1410 text2 CODE >174:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+141E text2 CODE >175:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+142E text2 CODE >176:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+12C4 text1 CODE >185:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+12C4 text1 CODE >189:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+12D0 text1 CODE >190:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+12EC text1 CODE >191:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1308 text1 CODE >192:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1314 text1 CODE >195:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+131A text1 CODE >200:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1326 text1 CODE >201:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+134C text1 CODE >202:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1352 text1 CODE >203:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+136C text1 CODE >206:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1372 text1 CODE >207:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+1378 text1 CODE >208:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Uart.c
+C2E text0 CODE >119:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+C2E text0 CODE >122:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+C32 text0 CODE >123:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+C36 text0 CODE >126:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+C3A text0 CODE >131:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+C3C text0 CODE >132:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+C3E text0 CODE >135:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+C42 text0 CODE >136:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+C48 text0 CODE >139:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+C54 text0 CODE >146:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+C54 text0 CODE >152:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+C56 text0 CODE >155:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+C66 text0 CODE >159:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+C72 text0 CODE >163:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+C7E text0 CODE >167:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+CA2 text0 CODE >168:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+CA6 text0 CODE >169:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+CAA text0 CODE >170:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+CAE text0 CODE >174:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+CB2 text0 CODE >175:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+CB6 text0 CODE >179:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+CCA text0 CODE >181:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+CCE text0 CODE >184:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+CE0 text0 CODE >185:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+CE4 text0 CODE >186:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+CEA text0 CODE >188:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+CEE text0 CODE >189:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+CF2 text0 CODE >195:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+CF8 text0 CODE >200:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+CFC text0 CODE >206:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+D0E text0 CODE >208:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+D26 text0 CODE >209:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+D2A text0 CODE >210:C:\Users\nicos\Desktop\Final Project\MSV.X\MSV.X\Main.c
+1EA6 cinit CODE >3540:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1EA6 cinit CODE >3542:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1EA6 cinit CODE >3545:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1EA6 cinit CODE >3605:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1EAA cinit CODE >3606:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1EAC cinit CODE >3607:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1EAC cinit CODE >3608:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1EAE cinit CODE >3609:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1EB0 cinit CODE >3610:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1EB2 cinit CODE >3613:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1EB6 cinit CODE >3614:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1EB8 cinit CODE >3615:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1EB8 cinit CODE >3616:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1EBA cinit CODE >3617:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1EBC cinit CODE >3618:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1EBE cinit CODE >3621:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1EC2 cinit CODE >3622:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1EC4 cinit CODE >3623:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1EC4 cinit CODE >3624:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1EC6 cinit CODE >3625:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1EC8 cinit CODE >3626:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1ECA cinit CODE >3629:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1ECE cinit CODE >3630:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1ED0 cinit CODE >3631:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1ED0 cinit CODE >3632:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1ED2 cinit CODE >3633:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1ED4 cinit CODE >3634:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1ED6 cinit CODE >3640:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1ED6 cinit CODE >3642:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1ED8 cinit CODE >3643:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1EDA cinit CODE >3645:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1EDC cinit CODE >3646:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1EDE cinit CODE >3647:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+1EE0 cinit CODE >3648:C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_1.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___lwmod@counter 8 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__Lmediumconst 7E42 0 MEDIUMCONST 0 mediumconst dist/default/debug\MSV.X.debug.o
+OLED_ClearLine@page F 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__Hspace_0 8000 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+__Hspace_1 296 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+__Hspace_2 0 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+__Hspace_4 600008 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+I2C_ReadReg@reg F 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_pausa_dibujada 8D 0 BANK0 1 bssBANK0 dist/default/debug\MSV.X.debug.o
+MAX30102_CalcBPM@max_val 34 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__end_of_ALARMAS_Silenciar 207C 0 CODE 0 text50 dist/default/debug\MSV.X.debug.o
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/debug\MSV.X.debug.o
+__mediumconst 7E42 0 MEDIUMCONST 0 mediumconst dist/default/debug\MSV.X.debug.o
+OLED_WriteTemp@decimas 1D 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+Sistema_InitModulos@init_ok 29 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_BME280_ReadCalibration 1C20 0 CODE 0 text12 dist/default/debug\MSV.X.debug.o
+__end_of_UART_SendString 1D54 0 CODE 0 text30 dist/default/debug\MSV.X.debug.o
+I2C_Start@_t 5 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+BME280_Init@status 26 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+UART_SendVitals@bpm 14 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug\MSV.X.debug.o
+Boton_Verificar@boton_procesado 8C 0 BANK0 1 bssBANK0 dist/default/debug\MSV.X.debug.o
+__L__absolute__ 0 0 ABS 0 __absolute__ dist/default/debug\MSV.X.debug.o
+__end_of_I2C_Start 19D6 0 CODE 0 text45 dist/default/debug\MSV.X.debug.o
+__end_of_I2C_Write 16E2 0 CODE 0 text43 dist/default/debug\MSV.X.debug.o
+__end_of_UART_SendVitals 137A 0 CODE 0 text1 dist/default/debug\MSV.X.debug.o
+__Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/debug\MSV.X.debug.o
+_LATA F89 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+_LATB F8A 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+_LATC F8B 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+_LATD F8C 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+_LATE F8D 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+___sp 0 0 STACK 2 stack C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_9.o
+_main C2E 0 CODE 0 text0 dist/default/debug\MSV.X.debug.o
+btemp 1 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+___stack_hi 0 0 STACK 2 stack C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_9.o
+___stack_lo 0 0 STACK 2 stack C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_9.o
+start E 0 CODE 0 init C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_9.o
+I2C_ReadBurst@status 1A 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/debug\MSV.X.debug.o
+_I2C_RepeatStart 19D6 0 CODE 0 text46 dist/default/debug\MSV.X.debug.o
+BME280_CompensateTemp@adc_T 10 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+MAX30102_CalcBPM@min_val 36 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+?___lmul 4 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_UART_SendChar 1EE4 0 CODE 0 text31 dist/default/debug\MSV.X.debug.o
+_last_bpm 56 0 COMRAM 1 bssCOMRAM dist/default/debug\MSV.X.debug.o
+_UART_SendInt 137A 0 CODE 0 text2 dist/default/debug\MSV.X.debug.o
+_I2C_ReadReg 1596 0 CODE 0 text25 dist/default/debug\MSV.X.debug.o
+OLED_Clear@page 10 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_I2C_Start 194C 0 CODE 0 text45 dist/default/debug\MSV.X.debug.o
+UART_SendInt@digits D 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__Hpowerup 0 0 CODE 0 powerup dist/default/debug\MSV.X.debug.o
+_I2C_Write 163C 0 CODE 0 text43 dist/default/debug\MSV.X.debug.o
+MAX30102_CalcBPM@threshold 2D 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_last_temp_decimas 84 0 BANK0 1 bssBANK0 dist/default/debug\MSV.X.debug.o
+?_BME280_ReadTemp 3B 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__end_of_OLED_Data 204E 0 CODE 0 text37 dist/default/debug\MSV.X.debug.o
+__end_of_OLED_Init 1596 0 CODE 0 text5 dist/default/debug\MSV.X.debug.o
+__accesstop 60 0 ABS 0 - C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_9.o
+intlevel0 0 0 CODE 0 text C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_9.o
+intlevel1 0 0 CODE 0 text C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_9.o
+intlevel2 0 0 CODE 0 text C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_9.o
+intlevel3 0 0 CODE 0 text C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_9.o
+_BME280_CompensateTemp$1821 37 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__end_of_MAX30102_UpdateBuffer 738 0 CODE 0 text24 dist/default/debug\MSV.X.debug.o
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/debug\MSV.X.debug.o
+__end_of_BME280_ReadTemp 9D0 0 CODE 0 text39 dist/default/debug\MSV.X.debug.o
+__end_of_OLED_WriteInt 14E6 0 CODE 0 text18 dist/default/debug\MSV.X.debug.o
+__end_of_LEDS_Init 206C 0 CODE 0 text9 dist/default/debug\MSV.X.debug.o
+___aldiv@divisor 8 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_OSCCONbits FD3 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug\MSV.X.debug.o
+_UART_SendString 1D0C 0 CODE 0 text30 dist/default/debug\MSV.X.debug.o
+_UART_TxISR 1F20 0 CODE 0 text53 dist/default/debug\MSV.X.debug.o
+_tx_head 5C 0 COMRAM 1 bssCOMRAM dist/default/debug\MSV.X.debug.o
+_tx_tail 5B 0 COMRAM 1 bssCOMRAM dist/default/debug\MSV.X.debug.o
+__Hifardata 0 0 CODE 0 ifardata dist/default/debug\MSV.X.debug.o
+_Sistema_ConfigPines 1FE0 0 CODE 0 text14 dist/default/debug\MSV.X.debug.o
+___aldiv@sign D 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+OLED_WriteChar@c 11 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+OLED_WriteChar@i 13 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+BME280_Init@chip_id 25 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__Hclrtext 0 0 ABS 0 clrtext dist/default/debug\MSV.X.debug.o
+_UART_SendVitals 12C4 0 CODE 0 text1 dist/default/debug\MSV.X.debug.o
+I2C_RepeatStart@_t_302 7 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_MAX30102_UpdateBuffer 562 0 CODE 0 text24 dist/default/debug\MSV.X.debug.o
+_OLED_Data 203C 0 CODE 0 text37 dist/default/debug\MSV.X.debug.o
+_OLED_Init 14E6 0 CODE 0 text5 dist/default/debug\MSV.X.debug.o
+MAX30102_UpdateBuffer@i 31 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+MAX30102_UpdateBuffer@j 30 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_ADCON1 FC1 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+MAX30102_CalcBPM@peak_idx 23 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+I2C_Write@_t 5 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_LEDS_Init 2060 0 CODE 0 text9 dist/default/debug\MSV.X.debug.o
+MAX30102_UpdateBuffer@num_samples 32 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_9.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_9.o
+_tx_count 5A 0 COMRAM 1 bssCOMRAM dist/default/debug\MSV.X.debug.o
+_ALARMAS_Silenciar 2078 0 CODE 0 text50 dist/default/debug\MSV.X.debug.o
+_I2C_Init 202A 0 CODE 0 text10 dist/default/debug\MSV.X.debug.o
+_I2C_Read 9D0 0 CODE 0 text47 dist/default/debug\MSV.X.debug.o
+_I2C_Stop 18C2 0 CODE 0 text44 dist/default/debug\MSV.X.debug.o
+__Hintcode_body 0 0 ABS 0 intcode_body dist/default/debug\MSV.X.debug.o
+_MAX30102_CalcBPM 12 0 CODE 0 text26 dist/default/debug\MSV.X.debug.o
+__end_of___lmul 1BBC 0 CODE 0 text49 dist/default/debug\MSV.X.debug.o
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug\MSV.X.debug.o
+__end_of_MAX30102_Init E56 0 CODE 0 text6 dist/default/debug\MSV.X.debug.o
+__Hmediumconst 8000 0 MEDIUMCONST 0 mediumconst dist/default/debug\MSV.X.debug.o
+__end_of_I2C_Init 203C 0 CODE 0 text10 dist/default/debug\MSV.X.debug.o
+__end_of_I2C_Read B0A 0 CODE 0 text47 dist/default/debug\MSV.X.debug.o
+__end_of_I2C_Stop 194C 0 CODE 0 text44 dist/default/debug\MSV.X.debug.o
+OLED_Command@cmd E 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__Hintcodelo 18 0 CODE 0 intcodelo dist/default/debug\MSV.X.debug.o
+_ISR_Global 8 0 CODE 0 intcode dist/default/debug\MSV.X.debug.o
+_OLED_Clear 1DE2 0 CODE 0 text36 dist/default/debug\MSV.X.debug.o
+___lwmod@divisor 6 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__end_of___aldiv F60 0 CODE 0 text40 dist/default/debug\MSV.X.debug.o
+_I2C_ReadBurst B0A 0 CODE 0 text42 dist/default/debug\MSV.X.debug.o
+__end_of_UART_SendInt 1430 0 CODE 0 text2 dist/default/debug\MSV.X.debug.o
+__end_of___lldiv 1786 0 CODE 0 text28 dist/default/debug\MSV.X.debug.o
+__end_of___lwdiv 1B52 0 CODE 0 text27 dist/default/debug\MSV.X.debug.o
+__end_of___lwmod 1C20 0 CODE 0 text19 dist/default/debug\MSV.X.debug.o
+OLED_Data@data E 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_BME280_ReadTemp 88E 0 CODE 0 text39 dist/default/debug\MSV.X.debug.o
+_estado_sistema 59 0 COMRAM 1 bssCOMRAM dist/default/debug\MSV.X.debug.o
+__end_of_OLED_MostrarPausa 1E66 0 CODE 0 text20 dist/default/debug\MSV.X.debug.o
+OLED_ClearLine@col 10 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_LEDS_ApagarTodos 206C 0 CODE 0 text8 dist/default/debug\MSV.X.debug.o
+__end_of_UART_TxISR 1F58 0 CODE 0 text53 dist/default/debug\MSV.X.debug.o
+___lwdiv@quotient 8 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+I2C_ReadReg@status 12 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+___lwmod@dividend 4 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+___lldiv@counter 1C 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__Lintcodelo 18 0 CODE 0 intcodelo dist/default/debug\MSV.X.debug.o
+start_initialization 1EA6 0 CODE 0 cinit dist/default/debug\MSV.X.debug.o
+_OSCCON FD3 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+UART_SendChar@c 9 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug\MSV.X.debug.o
+?_MAX30102_GetBPM 3A 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_TRISBbits F93 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+_TRISCbits F94 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+___aldiv@quotient E 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__end_of_BME280_ReadCalibration 1C76 0 CODE 0 text12 dist/default/debug\MSV.X.debug.o
+___lldiv@dividend 10 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+UART_SendInt@value B 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+___rparam_used 1 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+I2C_ReadBurst@i 19 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__end_of_BME280_Init 114E 0 CODE 0 text11 dist/default/debug\MSV.X.debug.o
+__end_of_MAX30102_GetBPM 1FBA 0 CODE 0 text23 dist/default/debug\MSV.X.debug.o
+_raw_buf 200 0 BANK2 1 bssBANK2 dist/default/debug\MSV.X.debug.o
+I2C_WriteReg@reg A 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_en_pausa 58 0 COMRAM 1 bssCOMRAM dist/default/debug\MSV.X.debug.o
+__pcstackBANK0 91 0 BANK0 1 cstackBANK0 dist/default/debug\MSV.X.debug.o
+_SSPADD FC8 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+_SSPBUF FC9 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+__end_of_Sistema_ConfigPines 1FFC 0 CODE 0 text14 dist/default/debug\MSV.X.debug.o
+_charToIndex F60 0 CODE 0 text34 dist/default/debug\MSV.X.debug.o
+__end_of_UART_SendChar 1F20 0 CODE 0 text31 dist/default/debug\MSV.X.debug.o
+OLED_WriteChar@idx 12 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__end_of_ISR_Global 1F8E 0 CODE 0 intcode_body dist/default/debug\MSV.X.debug.o
+__end_of_OLED_Clear 1E26 0 CODE 0 text36 dist/default/debug\MSV.X.debug.o
+isa$xinst 0 0 ABS 0 - C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_9.o
+ALARMAS_Evaluar@temp_decimas 6 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__end_of_MAX30102_CalcBPM 2F6 0 CODE 0 text26 dist/default/debug\MSV.X.debug.o
+I2C_ReadReg@addr 11 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+I2C_ReadReg@data 10 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__Hbank0 0 0 ABS 0 bank0 dist/default/debug\MSV.X.debug.o
+__Hbank1 0 0 ABS 0 bank1 dist/default/debug\MSV.X.debug.o
+__Hbank2 0 0 ABS 0 bank2 dist/default/debug\MSV.X.debug.o
+__Hbank3 0 0 ABS 0 bank3 dist/default/debug\MSV.X.debug.o
+__Hbank4 0 0 ABS 0 bank4 dist/default/debug\MSV.X.debug.o
+__Hbank5 0 0 ABS 0 bank5 dist/default/debug\MSV.X.debug.o
+__Hbank6 0 0 ABS 0 bank6 dist/default/debug\MSV.X.debug.o
+__Hbank7 0 0 ABS 0 bank7 dist/default/debug\MSV.X.debug.o
+__Hcinit 0 0 ABS 0 cinit dist/default/debug\MSV.X.debug.o
+__Hconst 0 0 CONST 0 const dist/default/debug\MSV.X.debug.o
+__Hidata 0 0 CODE 0 idata dist/default/debug\MSV.X.debug.o
+__Hidloc 0 0 ABS 0 idloc dist/default/debug\MSV.X.debug.o
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/debug\MSV.X.debug.o
+__Hparam 0 0 COMRAM 1 rparam dist/default/debug\MSV.X.debug.o
+__Hrdata 0 0 COMRAM 1 rdata dist/default/debug\MSV.X.debug.o
+__Hstack 0 0 STACK 2 stack dist/default/debug\MSV.X.debug.o
+__Htext0 0 0 ABS 0 text0 dist/default/debug\MSV.X.debug.o
+__Htext1 0 0 ABS 0 text1 dist/default/debug\MSV.X.debug.o
+__Htext2 0 0 ABS 0 text2 dist/default/debug\MSV.X.debug.o
+__Htext3 0 0 ABS 0 text3 dist/default/debug\MSV.X.debug.o
+__Htext4 0 0 ABS 0 text4 dist/default/debug\MSV.X.debug.o
+__Htext5 0 0 ABS 0 text5 dist/default/debug\MSV.X.debug.o
+__Htext6 0 0 ABS 0 text6 dist/default/debug\MSV.X.debug.o
+__Htext7 0 0 ABS 0 text7 dist/default/debug\MSV.X.debug.o
+__Htext8 0 0 ABS 0 text8 dist/default/debug\MSV.X.debug.o
+__Htext9 0 0 ABS 0 text9 dist/default/debug\MSV.X.debug.o
+___lwdiv@counter A 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_samples_in_buf 5D 0 COMRAM 1 bssCOMRAM dist/default/debug\MSV.X.debug.o
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/debug\MSV.X.debug.o
+__Hbigram 0 0 ABS 0 bigram dist/default/debug\MSV.X.debug.o
+__Hbigsfr 0 0 ABS 0 bigsfr dist/default/debug\MSV.X.debug.o
+__smallconst 7E42 0 MEDIUMCONST 0 mediumconst dist/default/debug\MSV.X.debug.o
+MAX30102_CalcBPM@i 39 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__end_of_BME280_CompensateTemp 562 0 CODE 0 text48 dist/default/debug\MSV.X.debug.o
+__Hcomram 0 0 ABS 0 comram dist/default/debug\MSV.X.debug.o
+__Hconfig 300008 0 CONFIG 4 config dist/default/debug\MSV.X.debug.o
+OLED_WriteInt@i 1B 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+OLED_WriteInt@j 1C 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_LEDS_SetEstado 1828 0 CODE 0 text7 dist/default/debug\MSV.X.debug.o
+MAX30102_CalcBPM@peak_count 38 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__Lbank0 0 0 ABS 0 bank0 dist/default/debug\MSV.X.debug.o
+__Lbank1 0 0 ABS 0 bank1 dist/default/debug\MSV.X.debug.o
+__Lbank2 0 0 ABS 0 bank2 dist/default/debug\MSV.X.debug.o
+__Lbank3 0 0 ABS 0 bank3 dist/default/debug\MSV.X.debug.o
+__Lbank4 0 0 ABS 0 bank4 dist/default/debug\MSV.X.debug.o
+__Lbank5 0 0 ABS 0 bank5 dist/default/debug\MSV.X.debug.o
+__Lbank6 0 0 ABS 0 bank6 dist/default/debug\MSV.X.debug.o
+__Lbank7 0 0 ABS 0 bank7 dist/default/debug\MSV.X.debug.o
+__Lcinit 0 0 ABS 0 cinit dist/default/debug\MSV.X.debug.o
+__Lconst 0 0 CONST 0 const dist/default/debug\MSV.X.debug.o
+__Lidata 0 0 CODE 0 idata dist/default/debug\MSV.X.debug.o
+__Lidloc 0 0 ABS 0 idloc dist/default/debug\MSV.X.debug.o
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/debug\MSV.X.debug.o
+__Lparam 0 0 COMRAM 1 rparam dist/default/debug\MSV.X.debug.o
+__Lrdata 0 0 COMRAM 1 rdata dist/default/debug\MSV.X.debug.o
+__Lstack 0 0 STACK 2 stack dist/default/debug\MSV.X.debug.o
+__Ltext0 0 0 ABS 0 text0 dist/default/debug\MSV.X.debug.o
+__Ltext1 0 0 ABS 0 text1 dist/default/debug\MSV.X.debug.o
+__Ltext2 0 0 ABS 0 text2 dist/default/debug\MSV.X.debug.o
+__Ltext3 0 0 ABS 0 text3 dist/default/debug\MSV.X.debug.o
+__Ltext4 0 0 ABS 0 text4 dist/default/debug\MSV.X.debug.o
+__Ltext5 0 0 ABS 0 text5 dist/default/debug\MSV.X.debug.o
+__Ltext6 0 0 ABS 0 text6 dist/default/debug\MSV.X.debug.o
+__Ltext7 0 0 ABS 0 text7 dist/default/debug\MSV.X.debug.o
+__Ltext8 0 0 ABS 0 text8 dist/default/debug\MSV.X.debug.o
+__Ltext9 0 0 ABS 0 text9 dist/default/debug\MSV.X.debug.o
+_OLED_MostrarPausa 1E26 0 CODE 0 text20 dist/default/debug\MSV.X.debug.o
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/debug\MSV.X.debug.o
+__Lintcode_body 0 0 ABS 0 intcode_body dist/default/debug\MSV.X.debug.o
+OLED_Clear@col F 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_PORTBbits F81 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+__end_of_LEDS_ApagarTodos 2074 0 CODE 0 text8 dist/default/debug\MSV.X.debug.o
+_INTCONbits FF2 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+__end_of_ALARMAS_Evaluar 120A 0 CODE 0 text51 dist/default/debug\MSV.X.debug.o
+__Habs1 0 0 ABS 0 abs1 dist/default/debug\MSV.X.debug.o
+__Hdata 0 0 ABS 0 data dist/default/debug\MSV.X.debug.o
+__Hheap 0 0 HEAP 7 heap dist/default/debug\MSV.X.debug.o
+__Hinit 12 0 CODE 0 init dist/default/debug\MSV.X.debug.o
+__Hrbit 0 0 COMRAM 1 rbit dist/default/debug\MSV.X.debug.o
+__Hrbss 0 0 COMRAM 1 rbss dist/default/debug\MSV.X.debug.o
+__Htemp 0 0 COMRAM 1 temp dist/default/debug\MSV.X.debug.o
+__Htext 0 0 ABS 0 text dist/default/debug\MSV.X.debug.o
+__Labs1 0 0 ABS 0 abs1 dist/default/debug\MSV.X.debug.o
+__Ldata 0 0 ABS 0 data dist/default/debug\MSV.X.debug.o
+__Lheap 0 0 HEAP 7 heap dist/default/debug\MSV.X.debug.o
+__Linit E 0 CODE 0 init dist/default/debug\MSV.X.debug.o
+__Lrbit 0 0 COMRAM 1 rbit dist/default/debug\MSV.X.debug.o
+__Lrbss 0 0 COMRAM 1 rbss dist/default/debug\MSV.X.debug.o
+__Ltemp 0 0 COMRAM 1 temp dist/default/debug\MSV.X.debug.o
+__Ltext 0 0 ABS 0 text dist/default/debug\MSV.X.debug.o
+_MAX30102_GetBPM 1F8E 0 CODE 0 text23 dist/default/debug\MSV.X.debug.o
+_OLED_Command 204E 0 CODE 0 text38 dist/default/debug\MSV.X.debug.o
+___lmul 1B52 0 CODE 0 text49 dist/default/debug\MSV.X.debug.o
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/debug\MSV.X.debug.o
+BME280_ReadTemp@status 55 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+int$flags 1 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+MAX30102_CalcBPM@above 31 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_BME280_CompensateTemp 2F6 0 CODE 0 text48 dist/default/debug\MSV.X.debug.o
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__Hintret 0 0 ABS 0 intret dist/default/debug\MSV.X.debug.o
+__Hirdata 0 0 CODE 0 irdata dist/default/debug\MSV.X.debug.o
+__S0 8000 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+__S1 296 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+__S4 0 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+__S5 0 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+BME280_ReadCalibration@status 23 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__end_of_I2C_ReadReg 163C 0 CODE 0 text25 dist/default/debug\MSV.X.debug.o
+I2C_Read@_t 5 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__end_of_font5x7 7F15 0 MEDIUMCONST 0 mediumconst dist/default/debug\MSV.X.debug.o
+_boton_count 8E 0 BANK0 1 bssBANK0 dist/default/debug\MSV.X.debug.o
+_Sistema_ConfigOscilador 2016 0 CODE 0 text15 dist/default/debug\MSV.X.debug.o
+MAX30102_UpdateBuffer@raw_value 2A 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+ALARMAS_Evaluar@hay_alarma A 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_dig_T1 8A 0 BANK0 1 bssBANK0 dist/default/debug\MSV.X.debug.o
+_dig_T2 88 0 BANK0 1 bssBANK0 dist/default/debug\MSV.X.debug.o
+_dig_T3 86 0 BANK0 1 bssBANK0 dist/default/debug\MSV.X.debug.o
+__end_of_Sistema_ConfigOscilador 202A 0 CODE 0 text15 dist/default/debug\MSV.X.debug.o
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/debug\MSV.X.debug.o
+__end_of_I2C_ReadBurst C2E 0 CODE 0 text42 dist/default/debug\MSV.X.debug.o
+OLED_WriteInt@digits 16 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/debug\MSV.X.debug.o
+_OLED_WriteString 1D54 0 CODE 0 text32 dist/default/debug\MSV.X.debug.o
+BME280_ReadCalibration@buf 1D 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__end_of_Boton_Verificar 1828 0 CODE 0 text29 dist/default/debug\MSV.X.debug.o
+int_func 1F58 0 CODE 0 intcode_body dist/default/debug\MSV.X.debug.o
+I2C_Read@_t_311 7 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+I2C_Read@_t_320 9 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+I2C_Read@_t_321 B 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__end_of_LEDS_SetEstado 18C2 0 CODE 0 text7 dist/default/debug\MSV.X.debug.o
+__Lintentry 0 0 ABS 0 intentry dist/default/debug\MSV.X.debug.o
+___lldiv@divisor 14 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+MAX30102_CalcBPM@avg_interval 2F 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__Hramtop 800 0 RAM 0 ramtop dist/default/debug\MSV.X.debug.o
+__Hrparam 0 0 COMRAM 1 rparam dist/default/debug\MSV.X.debug.o
+UART_SendString@str A 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_ir_buf 100 0 BANK1 1 bssBANK1 dist/default/debug\MSV.X.debug.o
+__activetblptr 2 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+BME280_CompensateTemp@T 2F 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_Sistema_InitModulos 738 0 CODE 0 text3 dist/default/debug\MSV.X.debug.o
+__Hstruct 0 0 COMRAM 1 struct dist/default/debug\MSV.X.debug.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 dist/default/debug\MSV.X.debug.o
+__LbssBANK1 0 0 ABS 0 bssBANK1 dist/default/debug\MSV.X.debug.o
+__LbssBANK2 0 0 ABS 0 bssBANK2 dist/default/debug\MSV.X.debug.o
+_ALARMAS_Evaluar 114E 0 CODE 0 text51 dist/default/debug\MSV.X.debug.o
+__Htext10 0 0 ABS 0 text10 dist/default/debug\MSV.X.debug.o
+__Htext11 0 0 ABS 0 text11 dist/default/debug\MSV.X.debug.o
+__Htext12 0 0 ABS 0 text12 dist/default/debug\MSV.X.debug.o
+__Htext13 0 0 ABS 0 text13 dist/default/debug\MSV.X.debug.o
+__Htext14 0 0 ABS 0 text14 dist/default/debug\MSV.X.debug.o
+__Htext15 0 0 ABS 0 text15 dist/default/debug\MSV.X.debug.o
+__Htext16 0 0 ABS 0 text16 dist/default/debug\MSV.X.debug.o
+__Htext17 0 0 ABS 0 text17 dist/default/debug\MSV.X.debug.o
+__Htext18 0 0 ABS 0 text18 dist/default/debug\MSV.X.debug.o
+__Htext19 0 0 ABS 0 text19 dist/default/debug\MSV.X.debug.o
+__Htext20 0 0 ABS 0 text20 dist/default/debug\MSV.X.debug.o
+__Htext21 0 0 ABS 0 text21 dist/default/debug\MSV.X.debug.o
+__Htext22 0 0 ABS 0 text22 dist/default/debug\MSV.X.debug.o
+__Htext23 0 0 ABS 0 text23 dist/default/debug\MSV.X.debug.o
+__Htext24 0 0 ABS 0 text24 dist/default/debug\MSV.X.debug.o
+__Htext25 0 0 ABS 0 text25 dist/default/debug\MSV.X.debug.o
+__Htext26 0 0 ABS 0 text26 dist/default/debug\MSV.X.debug.o
+__Htext27 0 0 ABS 0 text27 dist/default/debug\MSV.X.debug.o
+__Htext28 0 0 ABS 0 text28 dist/default/debug\MSV.X.debug.o
+__Htext29 0 0 ABS 0 text29 dist/default/debug\MSV.X.debug.o
+__Htext30 0 0 ABS 0 text30 dist/default/debug\MSV.X.debug.o
+__Htext31 0 0 ABS 0 text31 dist/default/debug\MSV.X.debug.o
+__Htext32 0 0 ABS 0 text32 dist/default/debug\MSV.X.debug.o
+__Htext33 0 0 ABS 0 text33 dist/default/debug\MSV.X.debug.o
+__Htext34 0 0 ABS 0 text34 dist/default/debug\MSV.X.debug.o
+__Htext35 0 0 ABS 0 text35 dist/default/debug\MSV.X.debug.o
+__Htext36 0 0 ABS 0 text36 dist/default/debug\MSV.X.debug.o
+__Htext37 0 0 ABS 0 text37 dist/default/debug\MSV.X.debug.o
+__Htext38 0 0 ABS 0 text38 dist/default/debug\MSV.X.debug.o
+__Htext39 0 0 ABS 0 text39 dist/default/debug\MSV.X.debug.o
+__Htext40 0 0 ABS 0 text40 dist/default/debug\MSV.X.debug.o
+__Htext41 0 0 ABS 0 text41 dist/default/debug\MSV.X.debug.o
+__Htext42 0 0 ABS 0 text42 dist/default/debug\MSV.X.debug.o
+__Htext43 0 0 ABS 0 text43 dist/default/debug\MSV.X.debug.o
+__Htext44 0 0 ABS 0 text44 dist/default/debug\MSV.X.debug.o
+__Htext45 0 0 ABS 0 text45 dist/default/debug\MSV.X.debug.o
+__Htext46 0 0 ABS 0 text46 dist/default/debug\MSV.X.debug.o
+__Htext47 0 0 ABS 0 text47 dist/default/debug\MSV.X.debug.o
+__Htext48 0 0 ABS 0 text48 dist/default/debug\MSV.X.debug.o
+__Htext49 0 0 ABS 0 text49 dist/default/debug\MSV.X.debug.o
+__Htext50 0 0 ABS 0 text50 dist/default/debug\MSV.X.debug.o
+__Htext51 0 0 ABS 0 text51 dist/default/debug\MSV.X.debug.o
+__Htext53 0 0 ABS 0 text53 dist/default/debug\MSV.X.debug.o
+MAX30102_CalcBPM@total_interval 2B 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+I2C_Read@ack D 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_PIE1bits F9D 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+_OLED_ClearLine 1D9C 0 CODE 0 text22 dist/default/debug\MSV.X.debug.o
+UART_SendVitals@temp_decimas 16 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_OLED_WriteChar 1C76 0 CODE 0 text33 dist/default/debug\MSV.X.debug.o
+_OLED_WriteTemp 1CC4 0 CODE 0 text17 dist/default/debug\MSV.X.debug.o
+__ptext10 202A 0 CODE 0 text10 dist/default/debug\MSV.X.debug.o
+__ptext11 1068 0 CODE 0 text11 dist/default/debug\MSV.X.debug.o
+__ptext12 1C20 0 CODE 0 text12 dist/default/debug\MSV.X.debug.o
+__ptext13 2074 0 CODE 0 text13 dist/default/debug\MSV.X.debug.o
+__ptext14 1FE0 0 CODE 0 text14 dist/default/debug\MSV.X.debug.o
+__ptext15 2016 0 CODE 0 text15 dist/default/debug\MSV.X.debug.o
+__ptext16 120A 0 CODE 0 text16 dist/default/debug\MSV.X.debug.o
+__ptext17 1CC4 0 CODE 0 text17 dist/default/debug\MSV.X.debug.o
+__ptext18 1430 0 CODE 0 text18 dist/default/debug\MSV.X.debug.o
+__ptext19 1BBC 0 CODE 0 text19 dist/default/debug\MSV.X.debug.o
+__ptext20 1E26 0 CODE 0 text20 dist/default/debug\MSV.X.debug.o
+__ptext21 1E66 0 CODE 0 text21 dist/default/debug\MSV.X.debug.o
+__ptext22 1D9C 0 CODE 0 text22 dist/default/debug\MSV.X.debug.o
+__ptext23 1F8E 0 CODE 0 text23 dist/default/debug\MSV.X.debug.o
+__ptext24 562 0 CODE 0 text24 dist/default/debug\MSV.X.debug.o
+__ptext25 1596 0 CODE 0 text25 dist/default/debug\MSV.X.debug.o
+__ptext26 12 0 CODE 0 text26 dist/default/debug\MSV.X.debug.o
+__ptext27 1AE0 0 CODE 0 text27 dist/default/debug\MSV.X.debug.o
+__ptext28 16E2 0 CODE 0 text28 dist/default/debug\MSV.X.debug.o
+__ptext29 1786 0 CODE 0 text29 dist/default/debug\MSV.X.debug.o
+__ptext30 1D0C 0 CODE 0 text30 dist/default/debug\MSV.X.debug.o
+__ptext31 1EE4 0 CODE 0 text31 dist/default/debug\MSV.X.debug.o
+__ptext32 1D54 0 CODE 0 text32 dist/default/debug\MSV.X.debug.o
+__ptext33 1C76 0 CODE 0 text33 dist/default/debug\MSV.X.debug.o
+__ptext34 F60 0 CODE 0 text34 dist/default/debug\MSV.X.debug.o
+__ptext35 1FBA 0 CODE 0 text35 dist/default/debug\MSV.X.debug.o
+__ptext36 1DE2 0 CODE 0 text36 dist/default/debug\MSV.X.debug.o
+__ptext37 203C 0 CODE 0 text37 dist/default/debug\MSV.X.debug.o
+__ptext38 204E 0 CODE 0 text38 dist/default/debug\MSV.X.debug.o
+__ptext39 88E 0 CODE 0 text39 dist/default/debug\MSV.X.debug.o
+__ptext40 E56 0 CODE 0 text40 dist/default/debug\MSV.X.debug.o
+__ptext41 1A60 0 CODE 0 text41 dist/default/debug\MSV.X.debug.o
+__ptext42 B0A 0 CODE 0 text42 dist/default/debug\MSV.X.debug.o
+__ptext43 163C 0 CODE 0 text43 dist/default/debug\MSV.X.debug.o
+__ptext44 18C2 0 CODE 0 text44 dist/default/debug\MSV.X.debug.o
+__ptext45 194C 0 CODE 0 text45 dist/default/debug\MSV.X.debug.o
+__ptext46 19D6 0 CODE 0 text46 dist/default/debug\MSV.X.debug.o
+__ptext47 9D0 0 CODE 0 text47 dist/default/debug\MSV.X.debug.o
+__ptext48 2F6 0 CODE 0 text48 dist/default/debug\MSV.X.debug.o
+__ptext49 1B52 0 CODE 0 text49 dist/default/debug\MSV.X.debug.o
+__ptext50 2078 0 CODE 0 text50 dist/default/debug\MSV.X.debug.o
+__ptext51 114E 0 CODE 0 text51 dist/default/debug\MSV.X.debug.o
+__ptext53 1F20 0 CODE 0 text53 dist/default/debug\MSV.X.debug.o
+___aldiv E56 0 CODE 0 text40 dist/default/debug\MSV.X.debug.o
+__pintcode_body 1F58 0 CODE 0 intcode_body dist/default/debug\MSV.X.debug.o
+___lldiv 16E2 0 CODE 0 text28 dist/default/debug\MSV.X.debug.o
+___lwdiv 1AE0 0 CODE 0 text27 dist/default/debug\MSV.X.debug.o
+___lwmod 1BBC 0 CODE 0 text19 dist/default/debug\MSV.X.debug.o
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/debug\MSV.X.debug.o
+__Lbigram 0 0 ABS 0 bigram dist/default/debug\MSV.X.debug.o
+__Lbigsfr 0 0 ABS 0 bigsfr dist/default/debug\MSV.X.debug.o
+___lmul@multiplier 4 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_ALARMAS_Init 2074 0 CODE 0 text13 dist/default/debug\MSV.X.debug.o
+__end_of_OLED_Command 2060 0 CODE 0 text38 dist/default/debug\MSV.X.debug.o
+__Lcomram 0 0 ABS 0 comram dist/default/debug\MSV.X.debug.o
+__Lconfig 0 0 CONFIG 4 config dist/default/debug\MSV.X.debug.o
+?_BME280_CompensateTemp 10 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__end_of_OLED_MostrarEstado 1EA6 0 CODE 0 text21 dist/default/debug\MSV.X.debug.o
+_LATDbits F8C 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+I2C_Read@data E 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__Lsivt_hi 0 0 CODE 0 sivt_hi dist/default/debug\MSV.X.debug.o
+__Lsivt_lo 18 0 CODE 0 sivt_lo dist/default/debug\MSV.X.debug.o
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/debug\MSV.X.debug.o
+_OLED_SetCursor 1FBA 0 CODE 0 text35 dist/default/debug\MSV.X.debug.o
+___inthi_stack_hi 0 0 STACK 2 stack C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_9.o
+___inthi_stack_lo 0 0 STACK 2 stack C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_9.o
+___lwdiv@divisor 6 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_Boton_Verificar 1786 0 CODE 0 text29 dist/default/debug\MSV.X.debug.o
+I2C_ReadBurst@buf 10 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+I2C_ReadBurst@len 12 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+I2C_ReadBurst@reg F 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__Lfardata 0 0 FARRAM 0 fardata dist/default/debug\MSV.X.debug.o
+isa$std 1 0 ABS 0 - C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_9.o
+_toggle 8F 0 BANK0 1 bssBANK0 dist/default/debug\MSV.X.debug.o
+BME280_ReadTemp@temp_centesimas 4A 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_tx_buf 60 0 BANK0 1 bssBANK0 dist/default/debug\MSV.X.debug.o
+stackhi 0 0 ABS 0 - C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_9.o
+stacklo 0 0 ABS 0 - C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_9.o
+__Lintcode 8 0 CODE 0 intcode dist/default/debug\MSV.X.debug.o
+MAX30102_Init@part_id 14 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__Lintret 0 0 ABS 0 intret dist/default/debug\MSV.X.debug.o
+OLED_WriteInt@value 14 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__Lirdata 0 0 CODE 0 irdata dist/default/debug\MSV.X.debug.o
+OLED_SetCursor@col 10 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+MAX30102_UpdateBuffer@rd_ptr 2F 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__Lspace_0 0 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+__Lspace_1 0 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+__Lspace_2 0 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+__Lspace_4 0 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+__pbssCOMRAM 56 0 COMRAM 1 bssCOMRAM dist/default/debug\MSV.X.debug.o
+__end_of_OLED_WriteString 1D9C 0 CODE 0 text32 dist/default/debug\MSV.X.debug.o
+I2C_WriteReg@addr C 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+I2C_WriteReg@data B 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/debug\MSV.X.debug.o
+?_MAX30102_CalcBPM 1D 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+I2C_Write@data 9 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_PIR1bits F9E 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+__end_of_OLED_ClearLine 1DE2 0 CODE 0 text22 dist/default/debug\MSV.X.debug.o
+_OLED_MostrarEstado 1E66 0 CODE 0 text21 dist/default/debug\MSV.X.debug.o
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_estado_actual 90 0 BANK0 1 bssBANK0 dist/default/debug\MSV.X.debug.o
+__end_of_OLED_WriteChar 1CC4 0 CODE 0 text33 dist/default/debug\MSV.X.debug.o
+__end_of_OLED_WriteTemp 1D0C 0 CODE 0 text17 dist/default/debug\MSV.X.debug.o
+end_of_initialization 1ED6 0 CODE 0 cinit dist/default/debug\MSV.X.debug.o
+_I2C_WriteReg 1A60 0 CODE 0 text41 dist/default/debug\MSV.X.debug.o
+_OLED_MostrarVitales 120A 0 CODE 0 text16 dist/default/debug\MSV.X.debug.o
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/debug\MSV.X.debug.o
+__Hintentry 0 0 ABS 0 intentry dist/default/debug\MSV.X.debug.o
+MAX30102_UpdateBuffer@wr_ptr 2E 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+?___aldiv 4 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+___lwdiv@dividend 4 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+?___lldiv 10 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+?___lwdiv 4 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+?___lwmod 4 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+I2C_Stop@_t_299 7 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+ALARMAS_Evaluar@bpm 4 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__Hreset_vec 4 0 CODE 0 reset_vec dist/default/debug\MSV.X.debug.o
+__HbssBANK0 0 0 ABS 0 bssBANK0 dist/default/debug\MSV.X.debug.o
+__HbssBANK1 0 0 ABS 0 bssBANK1 dist/default/debug\MSV.X.debug.o
+__HbssBANK2 0 0 ABS 0 bssBANK2 dist/default/debug\MSV.X.debug.o
+__end_of_charToIndex 1068 0 CODE 0 text34 dist/default/debug\MSV.X.debug.o
+I2C_RepeatStart@_t 5 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__Lramtop 800 0 RAM 0 ramtop dist/default/debug\MSV.X.debug.o
+__end_of_UART_Init 2016 0 CODE 0 text4 dist/default/debug\MSV.X.debug.o
+OLED_SetCursor@page F 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__Lrparam 0 0 COMRAM 1 rparam dist/default/debug\MSV.X.debug.o
+__pcinit 1EA6 0 CODE 0 cinit dist/default/debug\MSV.X.debug.o
+BME280_CompensateTemp@t_fine 33 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__end_of_Sistema_InitModulos 88E 0 CODE 0 text3 dist/default/debug\MSV.X.debug.o
+_SSPCON2bits FC5 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+__end_of_OLED_SetCursor 1FE0 0 CODE 0 text35 dist/default/debug\MSV.X.debug.o
+__ptext0 C2E 0 CODE 0 text0 dist/default/debug\MSV.X.debug.o
+__ptext1 12C4 0 CODE 0 text1 dist/default/debug\MSV.X.debug.o
+__ptext2 137A 0 CODE 0 text2 dist/default/debug\MSV.X.debug.o
+__ptext3 738 0 CODE 0 text3 dist/default/debug\MSV.X.debug.o
+__ptext4 1FFC 0 CODE 0 text4 dist/default/debug\MSV.X.debug.o
+__ptext5 14E6 0 CODE 0 text5 dist/default/debug\MSV.X.debug.o
+__ptext6 D4C 0 CODE 0 text6 dist/default/debug\MSV.X.debug.o
+__ptext7 1828 0 CODE 0 text7 dist/default/debug\MSV.X.debug.o
+__ptext8 206C 0 CODE 0 text8 dist/default/debug\MSV.X.debug.o
+__ptext9 2060 0 CODE 0 text9 dist/default/debug\MSV.X.debug.o
+__Lstruct 0 0 COMRAM 1 struct dist/default/debug\MSV.X.debug.o
+__Ltext10 0 0 ABS 0 text10 dist/default/debug\MSV.X.debug.o
+__Ltext11 0 0 ABS 0 text11 dist/default/debug\MSV.X.debug.o
+__Ltext12 0 0 ABS 0 text12 dist/default/debug\MSV.X.debug.o
+__Ltext13 0 0 ABS 0 text13 dist/default/debug\MSV.X.debug.o
+__Ltext14 0 0 ABS 0 text14 dist/default/debug\MSV.X.debug.o
+__Ltext15 0 0 ABS 0 text15 dist/default/debug\MSV.X.debug.o
+__Ltext16 0 0 ABS 0 text16 dist/default/debug\MSV.X.debug.o
+__Ltext17 0 0 ABS 0 text17 dist/default/debug\MSV.X.debug.o
+__Ltext18 0 0 ABS 0 text18 dist/default/debug\MSV.X.debug.o
+__Ltext19 0 0 ABS 0 text19 dist/default/debug\MSV.X.debug.o
+__Ltext20 0 0 ABS 0 text20 dist/default/debug\MSV.X.debug.o
+__Ltext21 0 0 ABS 0 text21 dist/default/debug\MSV.X.debug.o
+__Ltext22 0 0 ABS 0 text22 dist/default/debug\MSV.X.debug.o
+__Ltext23 0 0 ABS 0 text23 dist/default/debug\MSV.X.debug.o
+__Ltext24 0 0 ABS 0 text24 dist/default/debug\MSV.X.debug.o
+__Ltext25 0 0 ABS 0 text25 dist/default/debug\MSV.X.debug.o
+__Ltext26 0 0 ABS 0 text26 dist/default/debug\MSV.X.debug.o
+__Ltext27 0 0 ABS 0 text27 dist/default/debug\MSV.X.debug.o
+__Ltext28 0 0 ABS 0 text28 dist/default/debug\MSV.X.debug.o
+__Ltext29 0 0 ABS 0 text29 dist/default/debug\MSV.X.debug.o
+__Ltext30 0 0 ABS 0 text30 dist/default/debug\MSV.X.debug.o
+__Ltext31 0 0 ABS 0 text31 dist/default/debug\MSV.X.debug.o
+__Ltext32 0 0 ABS 0 text32 dist/default/debug\MSV.X.debug.o
+__Ltext33 0 0 ABS 0 text33 dist/default/debug\MSV.X.debug.o
+__Ltext34 0 0 ABS 0 text34 dist/default/debug\MSV.X.debug.o
+__Ltext35 0 0 ABS 0 text35 dist/default/debug\MSV.X.debug.o
+__Ltext36 0 0 ABS 0 text36 dist/default/debug\MSV.X.debug.o
+__Ltext37 0 0 ABS 0 text37 dist/default/debug\MSV.X.debug.o
+__Ltext38 0 0 ABS 0 text38 dist/default/debug\MSV.X.debug.o
+__Ltext39 0 0 ABS 0 text39 dist/default/debug\MSV.X.debug.o
+__Ltext40 0 0 ABS 0 text40 dist/default/debug\MSV.X.debug.o
+__Ltext41 0 0 ABS 0 text41 dist/default/debug\MSV.X.debug.o
+__Ltext42 0 0 ABS 0 text42 dist/default/debug\MSV.X.debug.o
+__Ltext43 0 0 ABS 0 text43 dist/default/debug\MSV.X.debug.o
+__Ltext44 0 0 ABS 0 text44 dist/default/debug\MSV.X.debug.o
+__Ltext45 0 0 ABS 0 text45 dist/default/debug\MSV.X.debug.o
+__Ltext46 0 0 ABS 0 text46 dist/default/debug\MSV.X.debug.o
+__Ltext47 0 0 ABS 0 text47 dist/default/debug\MSV.X.debug.o
+__Ltext48 0 0 ABS 0 text48 dist/default/debug\MSV.X.debug.o
+__Ltext49 0 0 ABS 0 text49 dist/default/debug\MSV.X.debug.o
+__Ltext50 0 0 ABS 0 text50 dist/default/debug\MSV.X.debug.o
+__Ltext51 0 0 ABS 0 text51 dist/default/debug\MSV.X.debug.o
+__Ltext53 0 0 ABS 0 text53 dist/default/debug\MSV.X.debug.o
+__end_of_ALARMAS_Init 2078 0 CODE 0 text13 dist/default/debug\MSV.X.debug.o
+__ramtop 800 0 RAM 0 ramtop C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_9.o
+___aldiv@dividend 4 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__Lpowerup 0 0 CODE 0 powerup dist/default/debug\MSV.X.debug.o
+UART_SendInt@i 12 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+UART_SendInt@j 13 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug\MSV.X.debug.o
+__H__absolute__ 0 0 ABS 0 __absolute__ dist/default/debug\MSV.X.debug.o
+I2C_ReadBurst@addr 18 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+MAX30102_Init@i 15 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/debug\MSV.X.debug.o
+_UART_Init 1FFC 0 CODE 0 text4 dist/default/debug\MSV.X.debug.o
+___heap_hi 0 0 ABS 0 - C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_9.o
+___heap_lo 0 0 ABS 0 - C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_9.o
+LEDS_SetEstado@estado 6 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+___param_bank 0 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+___intlo_stack_hi 0 0 STACK 2 stack C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_9.o
+___intlo_stack_lo 0 0 STACK 2 stack C:\Users\nicos\AppData\Local\Temp\xcAsivo.0\driver_tmp_9.o
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/debug\MSV.X.debug.o
+__end_of__initialization 1ED6 0 CODE 0 cinit dist/default/debug\MSV.X.debug.o
+__Libigdata 0 0 CODE 0 ibigdata dist/default/debug\MSV.X.debug.o
+__Lclrtext 0 0 ABS 0 clrtext dist/default/debug\MSV.X.debug.o
+_OLED_WriteInt 1430 0 CODE 0 text18 dist/default/debug\MSV.X.debug.o
+___lmul@product C 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_font5x7 7E43 0 MEDIUMCONST 0 mediumconst dist/default/debug\MSV.X.debug.o
+___lmul@multiplicand 8 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+___lldiv@quotient 18 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+BME280_CompensateTemp@var1 27 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+BME280_CompensateTemp@var2 2B 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__pcstackCOMRAM 2 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__end_of_I2C_WriteReg 1AE0 0 CODE 0 text41 dist/default/debug\MSV.X.debug.o
+__pmediumconst 7E42 0 MEDIUMCONST 0 mediumconst dist/default/debug\MSV.X.debug.o
+I2C_Write@_t_306 7 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_SSPCON1 FC6 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+_SSPCON2 FC5 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+_SSPSTAT FC7 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+___aldiv@counter C 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+BME280_ReadTemp@buf 4E 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_OLED_WriteTemp$1820 1F 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__end_of_main D4C 0 CODE 0 text0 dist/default/debug\MSV.X.debug.o
+__pintcode 8 0 CODE 0 intcode dist/default/debug\MSV.X.debug.o
+MAX30102_CalcBPM@bpm 32 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_CMCON FB4 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+_RCSTA FAB 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+_SPBRG FAF 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+_TRISA F92 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+_TRISB F93 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+_TRISC F94 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+_TRISD F95 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+_TRISE F96 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+_TXREG FAD 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+_TXSTA FAC 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+__HRAM 0 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+__Hbss 0 0 RAM 1 bss dist/default/debug\MSV.X.debug.o
+__Hram 0 0 ABS 0 ram dist/default/debug\MSV.X.debug.o
+__Hsfr 0 0 ABS 0 sfr dist/default/debug\MSV.X.debug.o
+__LRAM 1 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+__Lbss 0 0 RAM 1 bss dist/default/debug\MSV.X.debug.o
+__Lram 0 0 ABS 0 ram dist/default/debug\MSV.X.debug.o
+__Lsfr 0 0 ABS 0 sfr dist/default/debug\MSV.X.debug.o
+__end_of_OLED_MostrarVitales 12C4 0 CODE 0 text16 dist/default/debug\MSV.X.debug.o
+_SSPSTATbits FC7 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+I2C_Stop@_t 5 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+BME280_ReadTemp@adc_T 51 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_UART_SendVitals$1822 18 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+_BME280_Init 1068 0 CODE 0 text11 dist/default/debug\MSV.X.debug.o
+__Hsivt_hi 0 0 CODE 0 sivt_hi dist/default/debug\MSV.X.debug.o
+__Hsivt_lo 18 0 CODE 0 sivt_lo dist/default/debug\MSV.X.debug.o
+__initialization 1EA6 0 CODE 0 cinit dist/default/debug\MSV.X.debug.o
+I2C_WriteReg@status D 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+btemp0 1 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+btemp1 2 0 ABS 0 - dist/default/debug\MSV.X.debug.o
+__end_of_I2C_RepeatStart 1A60 0 CODE 0 text46 dist/default/debug\MSV.X.debug.o
+__pbssBANK0 60 0 BANK0 1 bssBANK0 dist/default/debug\MSV.X.debug.o
+__pbssBANK1 100 0 BANK1 1 bssBANK1 dist/default/debug\MSV.X.debug.o
+__pbssBANK2 200 0 BANK2 1 bssBANK2 dist/default/debug\MSV.X.debug.o
+_MAX30102_Init D4C 0 CODE 0 text6 dist/default/debug\MSV.X.debug.o
+__Hfardata 0 0 FARRAM 0 fardata dist/default/debug\MSV.X.debug.o
+__Hsmallconst 0 0 SMALLCONST 0 smallconst dist/default/debug\MSV.X.debug.o
+_temp_actual 80 0 BANK0 1 bssBANK0 dist/default/debug\MSV.X.debug.o
+I2C_Start@_t_296 7 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__Lifardata 0 0 CODE 0 ifardata dist/default/debug\MSV.X.debug.o
+charToIndex@c 4 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug\MSV.X.debug.o
+_bpm_actual 82 0 BANK0 1 bssBANK0 dist/default/debug\MSV.X.debug.o
+OLED_WriteString@str 14 0 COMRAM 1 cstackCOMRAM dist/default/debug\MSV.X.debug.o
+__Hintcode E 0 CODE 0 intcode dist/default/debug\MSV.X.debug.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 1 1
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cstackCOMRAM 1 2 2 5C 1
+reset_vec 0 0 0 4 1
+bssBANK0 1 60 60 33 1
+bssBANK1 1 100 100 C8 1
+bssBANK2 1 200 200 96 1
+intcode 0 8 8 2074 1
+mediumconst 0 7E42 7E42 1BE 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES

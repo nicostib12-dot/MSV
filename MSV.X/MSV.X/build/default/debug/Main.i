@@ -1,4 +1,4 @@
-# 1 "i2c.c"
+# 1 "Main.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 295 "<built-in>" 3
@@ -6,8 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "i2c.c" 2
-# 27 "i2c.c"
+# 1 "Main.c" 2
+# 75 "Main.c"
 # 1 "./i2c.h" 1
 # 31 "./i2c.h"
 # 1 "./config.h" 1
@@ -5963,202 +5963,277 @@ unsigned char I2C_ReadBurst(unsigned char addr,
                             unsigned char reg,
                             unsigned char *buf,
                             unsigned char len);
-# 28 "i2c.c" 2
-# 63 "i2c.c"
-void I2C_Init(void) {
+# 76 "Main.c" 2
+# 1 "./Oled.h" 1
+# 42 "./Oled.h"
+void OLED_Init(void);
 
 
 
 
-    TRISBbits.TRISB0 = 1;
-    TRISBbits.TRISB1 = 1;
+void OLED_Clear(void);
 
 
 
 
-    ANCON1bits.PCFG12 = 1;
-    ANCON1bits.PCFG10 = 1;
 
+void OLED_ClearLine(unsigned char page);
 
 
 
 
-    SSPCON1 = 0x28;
 
 
+void OLED_SetCursor(unsigned char col, unsigned char page);
 
 
 
-    SSPADD = 19;
 
 
 
+void OLED_WriteChar(char c);
 
-    PIR1bits.SSPIF = 0;
 
 
 
 
+void OLED_WriteString(const char *str);
 
-    SSPSTAT = 0x00;
-}
 
 
 
 
-unsigned char I2C_Start(void) {
 
-    do { unsigned int _t = 0; while ((((SSPCON2 & 0x1F) || SSPSTATbits.R_W))) { if (++_t >= 1000U) return (1); } } while(0);
+void OLED_WriteInt(unsigned int value);
 
 
-    SSPCON2bits.SEN = 1;
 
 
-    do { unsigned int _t = 0; while ((SSPCON2bits.SEN)) { if (++_t >= 1000U) return (1); } } while(0);
 
-    return 0;
-}
 
 
+void OLED_WriteTemp(unsigned int decimas);
+# 77 "Main.c" 2
+# 1 "./Bme280.h" 1
+# 63 "./Bme280.h"
+unsigned char BME280_Init(void);
+# 77 "./Bme280.h"
+unsigned int BME280_ReadTemp(void);
+# 78 "Main.c" 2
+# 1 "./Max30102.h" 1
+# 84 "./Max30102.h"
+unsigned char MAX30102_Init(void);
+# 99 "./Max30102.h"
+unsigned int MAX30102_GetBPM(void);
+# 79 "Main.c" 2
+# 1 "./Uart.h" 1
+# 55 "./Uart.h"
+void UART_Init(void);
 
 
-unsigned char I2C_Stop(void) {
-    do { unsigned int _t = 0; while ((((SSPCON2 & 0x1F) || SSPSTATbits.R_W))) { if (++_t >= 1000U) return (1); } } while(0);
 
 
-    SSPCON2bits.PEN = 1;
 
-    do { unsigned int _t = 0; while ((SSPCON2bits.PEN)) { if (++_t >= 1000U) return (1); } } while(0);
 
-    return 0;
-}
 
+void UART_SendChar(char c);
 
 
 
-unsigned char I2C_RepeatStart(void) {
-    do { unsigned int _t = 0; while ((((SSPCON2 & 0x1F) || SSPSTATbits.R_W))) { if (++_t >= 1000U) return (1); } } while(0);
 
 
-    SSPCON2bits.RSEN = 1;
+void UART_SendString(const char *str);
 
-    do { unsigned int _t = 0; while ((SSPCON2bits.RSEN)) { if (++_t >= 1000U) return (1); } } while(0);
 
-    return 0;
-}
 
 
 
 
-unsigned char I2C_Write(unsigned char data) {
-    do { unsigned int _t = 0; while ((((SSPCON2 & 0x1F) || SSPSTATbits.R_W))) { if (++_t >= 1000U) return (1); } } while(0);
+void UART_SendInt(unsigned int value);
+# 90 "./Uart.h"
+void UART_SendVitals(unsigned int bpm, unsigned int temp_decimas);
 
 
 
-    PIR1bits.SSPIF = 0;
-    SSPBUF = data;
 
 
-    do { unsigned int _t = 0; while ((!PIR1bits.SSPIF)) { if (++_t >= 1000U) return (1); } } while(0);
-    PIR1bits.SSPIF = 0;
 
 
+void UART_TxISR(void);
+# 80 "Main.c" 2
+# 1 "./Leds.h" 1
+# 42 "./Leds.h"
+typedef enum {
+    ESTADO_INIT = 0,
+    ESTADO_PREPARANDO,
+    ESTADO_EN_ESPERA,
+    ESTADO_ALARMA,
+    ESTADO_PAUSA
+} EstadoSistema;
+# 58 "./Leds.h"
+void LEDS_Init(void);
+# 67 "./Leds.h"
+void LEDS_SetEstado(EstadoSistema estado);
 
-    if (SSPCON2bits.ACKSTAT) {
-        return 2;
+
+
+
+
+EstadoSistema LEDS_GetEstado(void);
+# 81 "Main.c" 2
+# 1 "./Alarmas.h" 1
+# 34 "./Alarmas.h"
+void ALARMAS_Init(void);
+# 55 "./Alarmas.h"
+unsigned char ALARMAS_Evaluar(unsigned int bpm, unsigned int temp_decimas);
+
+
+
+
+
+void ALARMAS_Silenciar(void);
+# 82 "Main.c" 2
+
+
+
+
+
+
+static EstadoSistema estado_sistema = ESTADO_INIT;
+
+
+static unsigned int bpm_actual = 0U;
+
+
+static unsigned int temp_actual = 0U;
+
+
+static unsigned char boton_count = 0U;
+
+
+static unsigned char en_pausa = 0U;
+
+
+static unsigned char pausa_dibujada = 0U;
+
+
+
+
+static void Sistema_ConfigOscilador(void);
+static void Sistema_ConfigPines(void);
+static void Sistema_InitModulos(void);
+static void OLED_MostrarVitales(void);
+static void OLED_MostrarEstado(void);
+static void OLED_MostrarPausa(void);
+static void Boton_Verificar(void);
+
+
+
+
+int main(void) {
+
+
+    Sistema_ConfigOscilador();
+    Sistema_ConfigPines();
+
+
+    Sistema_InitModulos();
+
+
+
+
+    INTCONbits.GIE = 1;
+    INTCONbits.PEIE = 1;
+
+
+    estado_sistema = ESTADO_EN_ESPERA;
+    LEDS_SetEstado(estado_sistema);
+
+
+    UART_SendString("SISTEMA INICIADO\r\n");
+
+
+
+
+
+
+    while (1) {
+
+
+
+
+
+        __asm(" clrwdt");
+
+
+        if (!en_pausa) {
+
+
+
+            temp_actual = BME280_ReadTemp();
+
+
+
+            bpm_actual = MAX30102_GetBPM();
+
+
+
+            if (ALARMAS_Evaluar(bpm_actual, temp_actual)) {
+                estado_sistema = ESTADO_ALARMA;
+            } else {
+                estado_sistema = ESTADO_EN_ESPERA;
+            }
+
+
+            OLED_MostrarVitales();
+            OLED_MostrarEstado();
+
+
+
+            UART_SendVitals(bpm_actual, temp_actual);
+
+        } else {
+
+
+            if (!pausa_dibujada) {
+                OLED_MostrarPausa();
+                pausa_dibujada = 1U;
+            }
+            ALARMAS_Silenciar();
+            estado_sistema = ESTADO_PAUSA;
+        }
+
+
+
+
+        LEDS_SetEstado(estado_sistema);
+
+
+
+
+        Boton_Verificar();
+
+
+
+
+
+        if (estado_sistema == ESTADO_ALARMA) {
+
+            _delay((unsigned long)((785)*(8000000UL/4000.0)));
+        } else {
+            _delay((unsigned long)((985)*(8000000UL/4000.0)));
+        }
     }
 
     return 0;
 }
+# 224 "Main.c"
+static void Sistema_ConfigOscilador(void) {
+    OSCCON = 0x72;
 
 
 
-
-unsigned char I2C_Read(unsigned char ack) {
-    unsigned char data;
-
-    do { unsigned int _t = 0; while ((((SSPCON2 & 0x1F) || SSPSTATbits.R_W))) { if (++_t >= 1000U) return (1); } } while(0);
-
-
-
-    PIR1bits.SSPIF = 0;
-    SSPCON2bits.RCEN = 1;
-
-
-    do { unsigned int _t = 0; while ((!SSPSTATbits.BF)) { if (++_t >= 1000U) return (1); } } while(0);
-
-
-    data = SSPBUF;
-
-    do { unsigned int _t = 0; while ((((SSPCON2 & 0x1F) || SSPSTATbits.R_W))) { if (++_t >= 1000U) return (1); } } while(0);
-
-
-
-
-    SSPCON2bits.ACKDT = (ack) ? 0 : 1;
-    SSPCON2bits.ACKEN = 1;
-
-
-    do { unsigned int _t = 0; while ((SSPCON2bits.ACKEN)) { if (++_t >= 1000U) return (1); } } while(0);
-
-    return data;
-}
-
-
-
-
-
-unsigned char I2C_WriteReg(unsigned char addr,
-                           unsigned char reg,
-                           unsigned char data) {
-    unsigned char status;
-
-    status = I2C_Start();
-    if (status != 0) { I2C_Stop(); return status; }
-
-
-    status = I2C_Write((addr << 1) & 0xFE);
-    if (status != 0) { I2C_Stop(); return status; }
-
-    status = I2C_Write(reg);
-    if (status != 0) { I2C_Stop(); return status; }
-
-    status = I2C_Write(data);
-    if (status != 0) { I2C_Stop(); return status; }
-
-    return I2C_Stop();
-}
-
-
-
-
-
-unsigned char I2C_ReadReg(unsigned char addr, unsigned char reg) {
-    unsigned char data;
-    unsigned char status;
-
-
-    status = I2C_Start();
-    if (status != 0) { I2C_Stop(); return 0xFF; }
-
-    status = I2C_Write((addr << 1) & 0xFE);
-    if (status != 0) { I2C_Stop(); return 0xFF; }
-
-    status = I2C_Write(reg);
-    if (status != 0) { I2C_Stop(); return 0xFF; }
-
-
-    status = I2C_RepeatStart();
-    if (status != 0) { I2C_Stop(); return 0xFF; }
-
-    status = I2C_Write((addr << 1) | 0x01);
-    if (status != 0) { I2C_Stop(); return 0xFF; }
-
-
-    data = I2C_Read(0);
-
-    I2C_Stop();
-    return data;
+    while (!OSCCONbits.IOFS);
 }
 
 
@@ -6167,36 +6242,201 @@ unsigned char I2C_ReadReg(unsigned char addr, unsigned char reg) {
 
 
 
-unsigned char I2C_ReadBurst(unsigned char addr,
-                            unsigned char reg,
-                            unsigned char *buf,
-                            unsigned char len) {
-    unsigned char i;
-    unsigned char status;
-
-    if (buf == 0 || len == 0) return 1;
+static void Sistema_ConfigPines(void) {
 
 
-    status = I2C_Start();
-    if (status != 0) { I2C_Stop(); return status; }
-
-    status = I2C_Write((addr << 1) & 0xFE);
-    if (status != 0) { I2C_Stop(); return status; }
-
-    status = I2C_Write(reg);
-    if (status != 0) { I2C_Stop(); return status; }
+    CMCON = 0x07;
 
 
-    status = I2C_RepeatStart();
-    if (status != 0) { I2C_Stop(); return status; }
 
-    status = I2C_Write((addr << 1) | 0x01);
-    if (status != 0) { I2C_Stop(); return status; }
+    ADCON1 = 0x0F;
 
 
-    for (i = 0; i < len; i++) {
-        buf[i] = I2C_Read((i < (len - 1)) ? 1 : 0);
+
+    TRISA = 0x00;
+    LATA = 0x00;
+
+
+
+
+
+
+    TRISB = 0x07;
+    LATB = 0x00;
+
+
+
+    TRISC = 0x00;
+    LATC = 0x00;
+
+
+
+
+    TRISE = 0x00;
+    LATE = 0x00;
+}
+# 279 "Main.c"
+static void Sistema_InitModulos(void) {
+    unsigned char init_ok = 1U;
+
+
+    LEDS_Init();
+    LEDS_SetEstado(ESTADO_PREPARANDO);
+
+
+    I2C_Init();
+
+
+
+    OLED_Init();
+    OLED_Clear();
+    OLED_SetCursor(0, 0);
+    OLED_WriteString("INICIANDO");
+
+
+    OLED_SetCursor(0, 2);
+    if (BME280_Init() == 0) {
+        OLED_WriteString("BME280 OK");
+    } else {
+        OLED_WriteString("BME280 ERR");
+        init_ok = 0U;
+    }
+    _delay((unsigned long)((300)*(8000000UL/4000.0)));
+
+
+    OLED_SetCursor(0, 4);
+    if (MAX30102_Init() == 0) {
+        OLED_WriteString("MAX30102 OK");
+    } else {
+        OLED_WriteString("MAX30102 ERR");
+        init_ok = 0U;
+    }
+    _delay((unsigned long)((300)*(8000000UL/4000.0)));
+
+
+    UART_Init();
+
+
+    ALARMAS_Init();
+
+
+    OLED_SetCursor(0, 6);
+    if (init_ok) {
+        OLED_WriteString("LISTO");
+    } else {
+        OLED_WriteString("ERROR SENSOR");
+        UART_SendString("ERROR: SENSOR NO ENCONTRADO\r\n");
+
+
+        while (1);
     }
 
-    return I2C_Stop();
+    _delay((unsigned long)((800)*(8000000UL/4000.0)));
+
+
+    OLED_Clear();
+
+
+    OLED_SetCursor(4, 0);
+    OLED_WriteString("MONITOR VITAL");
+}
+
+
+
+
+
+
+
+static void OLED_MostrarVitales(void) {
+
+    OLED_ClearLine(2);
+    OLED_SetCursor(0, 2);
+    OLED_WriteString("BPM");
+    OLED_SetCursor(24, 2);
+
+    if (bpm_actual == 0U) {
+
+        OLED_WriteString("---");
+    } else {
+        OLED_WriteInt(bpm_actual);
+    }
+
+
+    OLED_ClearLine(4);
+    OLED_SetCursor(0, 4);
+    OLED_WriteString("TEMP");
+    OLED_SetCursor(30, 4);
+
+    if (temp_actual == 0U) {
+        OLED_WriteString("--.-");
+    } else {
+        OLED_WriteTemp(temp_actual);
+        OLED_WriteString(" C");
+    }
+}
+
+
+
+
+
+
+static void OLED_MostrarEstado(void) {
+    OLED_ClearLine(6);
+    OLED_SetCursor(0, 6);
+
+    if (estado_sistema == ESTADO_ALARMA) {
+        OLED_WriteString("ALARMA");
+    } else {
+        OLED_WriteString("NORMAL");
+    }
+}
+
+
+
+
+
+
+
+static void OLED_MostrarPausa(void) {
+    OLED_ClearLine(2);
+    OLED_ClearLine(4);
+    OLED_ClearLine(6);
+
+    OLED_SetCursor(10, 3);
+    OLED_WriteString("EN PAUSA");
+    OLED_SetCursor(4, 5);
+    OLED_WriteString("HOLD 3S REANUDAR");
+}
+# 425 "Main.c"
+static void Boton_Verificar(void) {
+
+    static unsigned char boton_procesado = 0U;
+
+
+
+    if (PORTBbits.RB2 == 0U) {
+        boton_count++;
+
+        if (boton_count >= 3U && !boton_procesado) {
+
+            en_pausa = (unsigned char)(!en_pausa);
+            boton_count = 0U;
+            boton_procesado = 1U;
+
+            if (!en_pausa) {
+
+                pausa_dibujada = 0U;
+                OLED_Clear();
+                OLED_SetCursor(4, 0);
+                OLED_WriteString("MONITOR VITAL");
+                UART_SendString("REANUDADO\r\n");
+            } else {
+                UART_SendString("EN PAUSA\r\n");
+            }
+        }
+    } else {
+
+        boton_count = 0U;
+        boton_procesado = 0U;
+    }
 }

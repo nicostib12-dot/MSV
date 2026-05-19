@@ -1,8 +1,8 @@
 /**
  * @file    main.c
- * @brief   Monitor Portatil de Signos Vitales ? archivo principal.
+ * @brief   Monitor Portatil de Signos Vitales - archivo principal.
  *
- * Practica 3 ? Microcontroladores Lenguaje C
+ * Practica 3 - Microcontroladores Lenguaje C
  * Ingenieria Electronica y Telecomunicaciones
  * Universidad del Cauca
  *
@@ -20,10 +20,10 @@
  * -------------------------------------------------------------------------
  *
  *   [INIT] --> [PREPARANDO] --> [EN_ESPERA] <--> [ALARMA]
- *                                    ^
- *                                    | (boton 3s)
- *                                    v
- *                               [PAUSA] <-- (boton 3s otra vez)
+ *                                    ^                ^
+ *                                    |   (boton 3s)   |
+ *                                    +----[PAUSA]-----+
+ *                                    (boton 3s para reanudar)
  *
  *   INIT       : Configuracion del oscilador y perifericos.
  *   PREPARANDO : Inicializacion de sensores I2C, duracion ~500 ms.
@@ -37,7 +37,7 @@
  *   1. Limpiar Watchdog Timer (CLRWDT)
  *   2. Leer BME280 (temperatura)
  *   3. Leer MAX30102 (BPM)
- *   4. Evaluar umbrales ? activar/desactivar buzzer
+ *   4. Evaluar umbrales - activar/desactivar buzzer
  *   5. Actualizar estado del sistema
  *   6. Actualizar LEDs
  *   7. Actualizar pantalla OLED
@@ -66,16 +66,19 @@
  *    Durante ese tiempo la pantalla muestra "BPM: ---".
  *  - La deteccion de pulsacion larga del boton (3 segundos) se hace por
  *    polling: se cuentan ciclos consecutivos con el boton presionado.
+ *  - boton_procesado evita que mantener el boton alterne el estado
+ *    repetidamente: el toggle solo ocurre una vez por pulsacion larga.
+ *  - pausa_dibujada evita redibujar la pantalla de pausa cada segundo,
+ *    reduciendo trafico I2C innecesario.
  */
 
-#include "config.h"
 #include "i2c.h"
-#include "oled.h"
-#include "bme280.h"
-#include "max30102.h"
-#include "uart.h"
-#include "leds.h"
-#include "alarmas.h"
+#include "Oled.h"
+#include "Bme280.h"
+#include "Max30102.h"
+#include "Uart.h"
+#include "Leds.h"
+#include "Alarmas.h"
 
 /* =========================================================
  *  VARIABLES GLOBALES DEL SISTEMA
@@ -95,6 +98,9 @@ static unsigned char boton_count = 0U;
 
 /** Bandera de modo pausa (1 = pausado, 0 = activo) */
 static unsigned char en_pausa = 0U;
+
+/** Bandera para dibujar la pantalla de pausa solo una vez al entrar en pausa */
+static unsigned char pausa_dibujada = 0U;
 
 /* =========================================================
  *  PROTOTIPOS DE FUNCIONES INTERNAS
@@ -169,12 +175,16 @@ int main(void) {
             OLED_MostrarEstado();
 
             /* Transmitir trama de signos vitales via UART.
-             * La transmision es asincrona (interrupcion) ? no bloquea. */
+             * La transmision es asincrona (interrupcion) - no bloquea. */
             UART_SendVitals(bpm_actual, temp_actual);
 
         } else {
-            /* En pausa: solo actualizar la pantalla con mensaje de pausa */
-            OLED_MostrarPausa();
+            /* En pausa: dibujar la pantalla solo la primera vez.
+             * Evita trafico I2C innecesario en cada ciclo de pausa. */
+            if (!pausa_dibujada) {
+                OLED_MostrarPausa();
+                pausa_dibujada = 1U;
+            }
             ALARMAS_Silenciar();
             estado_sistema = ESTADO_PAUSA;
         }
@@ -234,15 +244,17 @@ static void Sistema_ConfigPines(void) {
      * ADCON1 = 0x0F -> PCFG = 1111 -> todos digitales. */
     ADCON1 = 0x0F;
 
-    /* PORTA: no usado activamente ? configurar como salida baja
+    /* PORTA: no usado activamente - configurar como salida baja
      * para evitar pines flotantes que consuman corriente. */
     TRISA = 0x00;
     LATA  = 0x00;
 
-    /* PORTB: RB0 y RB1 se configuran en I2C_Init() como entradas.
-     *        RB2 (boton): entrada sin pull-up (pull-up externo en hardware).
-     *        RB3-RB7: salidas bajas para evitar flotantes. */
-    TRISB = 0x04;   /* Solo RB2 como entrada (0b00000100) */
+    /* PORTB: RB0(SDA) y RB1(SCL) como entradas requeridas por el modulo MSSP.
+     *        RB2 (boton): entrada con pull-up externo en hardware.
+     *        RB3-RB7: salidas bajas para evitar flotantes.
+     * Se declaran aqui explicitamente aunque I2C_Init() los reconfirma,
+     * para no depender del orden de inicializacion. */
+    TRISB = 0x07;   /* RB0, RB1, RB2 como entradas (0b00000111) */
     LATB  = 0x00;
 
     /* PORTC: RC6 (TX) y RC7 (RX) se configuran en UART_Init().
@@ -252,7 +264,7 @@ static void Sistema_ConfigPines(void) {
 
     /* PORTD: configurado completo como salida por LEDS_Init(). */
 
-    /* PORTE: no usado ? salidas bajas. */
+    /* PORTE: no usado - salidas bajas. */
     TRISE = 0x00;
     LATE  = 0x00;
 }
@@ -274,7 +286,7 @@ static void Sistema_InitModulos(void) {
     /* 1. Bus I2C por hardware (MSSP) */
     I2C_Init();
 
-    /* 2. Pantalla OLED ? primera en inicializarse para poder mostrar
+    /* 2. Pantalla OLED - primera en inicializarse para poder mostrar
      *    mensajes de estado durante la inicializacion de sensores. */
     OLED_Init();
     OLED_Clear();
@@ -313,13 +325,18 @@ static void Sistema_InitModulos(void) {
         OLED_WriteString("LISTO");
     } else {
         OLED_WriteString("ERROR SENSOR");
+        UART_SendString("ERROR: SENSOR NO ENCONTRADO\r\n");
+        /* Bloquear aqui. El WDT reiniciara el PIC tras ~1 s,
+         * permitiendo un intento de recuperacion automatica. */
+        while (1);
     }
+
     __delay_ms(800);
 
     /* Limpiar pantalla antes de entrar al bucle principal */
     OLED_Clear();
 
-    /* Titulo fijo en la parte superior ? se escribe una sola vez */
+    /* Titulo fijo en la parte superior - se escribe una sola vez */
     OLED_SetCursor(4, 0);
     OLED_WriteString("MONITOR VITAL");
 }
@@ -378,6 +395,7 @@ static void OLED_MostrarEstado(void) {
  *  OLED_MostrarPausa
  *
  *  Actualiza la pantalla cuando el sistema esta pausado.
+ *  Solo se llama una vez al entrar en pausa gracias a pausa_dibujada.
  * ========================================================= */
 static void OLED_MostrarPausa(void) {
     OLED_ClearLine(2);
@@ -399,21 +417,29 @@ static void OLED_MostrarPausa(void) {
  *  Si el boton esta presionado durante 3 ciclos consecutivos
  *  (aproximadamente 3 segundos), alterna el estado de pausa.
  *  El contador se resetea si el boton se suelta antes.
+ *
+ *  boton_procesado evita que mantener el boton presionado
+ *  alterne el estado repetidamente cada 3 ciclos: el toggle
+ *  ocurre una sola vez y se bloquea hasta soltar el boton.
  * ========================================================= */
 static void Boton_Verificar(void) {
+    /* Variable estatica local: persiste entre llamadas pero no es global */
+    static unsigned char boton_procesado = 0U;
+
     /* BOTON_PAUSA = RB2. El boton se conecta entre RB2 y GND.
      * Con pull-up externo: RB2 = 1 (suelto), RB2 = 0 (presionado). */
     if (BOTON_PAUSA == 0U) {
-        /* Boton presionado: incrementar contador */
         boton_count++;
 
-        if (boton_count >= 3U) {
+        if (boton_count >= 3U && !boton_procesado) {
             /* Pulsacion larga detectada: alternar modo pausa */
-            en_pausa = (unsigned char)(!en_pausa);
-            boton_count = 0U;
+            en_pausa        = (unsigned char)(!en_pausa);
+            boton_count     = 0U;
+            boton_procesado = 1U;   /* bloquear hasta que se suelte */
 
-            /* Si se reanuda, limpiar pantalla y restaurar titulo */
             if (!en_pausa) {
+                /* Al reanudar: resetear bandera de pantalla y restaurar titulo */
+                pausa_dibujada = 0U;
                 OLED_Clear();
                 OLED_SetCursor(4, 0);
                 OLED_WriteString("MONITOR VITAL");
@@ -423,7 +449,8 @@ static void Boton_Verificar(void) {
             }
         }
     } else {
-        /* Boton suelto: resetear contador */
-        boton_count = 0U;
+        /* Boton suelto: resetear ambos contadores */
+        boton_count     = 0U;
+        boton_procesado = 0U;
     }
 }
