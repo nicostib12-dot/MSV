@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=i2c.c Oled.c
+SOURCEFILES_QUOTED_IF_SPACED=i2c.c Oled.c Bme280.c Max30102.c Uart.c Leds.c Alarmas.c Main.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/i2c.p1 ${OBJECTDIR}/Oled.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/i2c.p1.d ${OBJECTDIR}/Oled.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/i2c.p1 ${OBJECTDIR}/Oled.p1 ${OBJECTDIR}/Bme280.p1 ${OBJECTDIR}/Max30102.p1 ${OBJECTDIR}/Uart.p1 ${OBJECTDIR}/Leds.p1 ${OBJECTDIR}/Alarmas.p1 ${OBJECTDIR}/Main.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/i2c.p1.d ${OBJECTDIR}/Oled.p1.d ${OBJECTDIR}/Bme280.p1.d ${OBJECTDIR}/Max30102.p1.d ${OBJECTDIR}/Uart.p1.d ${OBJECTDIR}/Leds.p1.d ${OBJECTDIR}/Alarmas.p1.d ${OBJECTDIR}/Main.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/i2c.p1 ${OBJECTDIR}/Oled.p1
+OBJECTFILES=${OBJECTDIR}/i2c.p1 ${OBJECTDIR}/Oled.p1 ${OBJECTDIR}/Bme280.p1 ${OBJECTDIR}/Max30102.p1 ${OBJECTDIR}/Uart.p1 ${OBJECTDIR}/Leds.p1 ${OBJECTDIR}/Alarmas.p1 ${OBJECTDIR}/Main.p1
 
 # Source Files
-SOURCEFILES=i2c.c Oled.c
+SOURCEFILES=i2c.c Oled.c Bme280.c Max30102.c Uart.c Leds.c Alarmas.c Main.c
 
 
 
@@ -104,6 +104,54 @@ ${OBJECTDIR}/Oled.p1: Oled.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/Oled.d ${OBJECTDIR}/Oled.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/Oled.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/Bme280.p1: Bme280.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Bme280.p1.d 
+	@${RM} ${OBJECTDIR}/Bme280.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Bme280.p1 Bme280.c 
+	@-${MV} ${OBJECTDIR}/Bme280.d ${OBJECTDIR}/Bme280.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Bme280.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/Max30102.p1: Max30102.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Max30102.p1.d 
+	@${RM} ${OBJECTDIR}/Max30102.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Max30102.p1 Max30102.c 
+	@-${MV} ${OBJECTDIR}/Max30102.d ${OBJECTDIR}/Max30102.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Max30102.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/Uart.p1: Uart.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Uart.p1.d 
+	@${RM} ${OBJECTDIR}/Uart.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Uart.p1 Uart.c 
+	@-${MV} ${OBJECTDIR}/Uart.d ${OBJECTDIR}/Uart.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Uart.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/Leds.p1: Leds.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Leds.p1.d 
+	@${RM} ${OBJECTDIR}/Leds.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Leds.p1 Leds.c 
+	@-${MV} ${OBJECTDIR}/Leds.d ${OBJECTDIR}/Leds.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Leds.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/Alarmas.p1: Alarmas.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Alarmas.p1.d 
+	@${RM} ${OBJECTDIR}/Alarmas.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Alarmas.p1 Alarmas.c 
+	@-${MV} ${OBJECTDIR}/Alarmas.d ${OBJECTDIR}/Alarmas.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Alarmas.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/Main.p1: Main.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Main.p1.d 
+	@${RM} ${OBJECTDIR}/Main.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Main.p1 Main.c 
+	@-${MV} ${OBJECTDIR}/Main.d ${OBJECTDIR}/Main.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Main.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 else
 ${OBJECTDIR}/i2c.p1: i2c.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
@@ -120,6 +168,54 @@ ${OBJECTDIR}/Oled.p1: Oled.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Oled.p1 Oled.c 
 	@-${MV} ${OBJECTDIR}/Oled.d ${OBJECTDIR}/Oled.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/Oled.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/Bme280.p1: Bme280.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Bme280.p1.d 
+	@${RM} ${OBJECTDIR}/Bme280.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Bme280.p1 Bme280.c 
+	@-${MV} ${OBJECTDIR}/Bme280.d ${OBJECTDIR}/Bme280.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Bme280.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/Max30102.p1: Max30102.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Max30102.p1.d 
+	@${RM} ${OBJECTDIR}/Max30102.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Max30102.p1 Max30102.c 
+	@-${MV} ${OBJECTDIR}/Max30102.d ${OBJECTDIR}/Max30102.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Max30102.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/Uart.p1: Uart.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Uart.p1.d 
+	@${RM} ${OBJECTDIR}/Uart.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Uart.p1 Uart.c 
+	@-${MV} ${OBJECTDIR}/Uart.d ${OBJECTDIR}/Uart.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Uart.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/Leds.p1: Leds.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Leds.p1.d 
+	@${RM} ${OBJECTDIR}/Leds.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Leds.p1 Leds.c 
+	@-${MV} ${OBJECTDIR}/Leds.d ${OBJECTDIR}/Leds.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Leds.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/Alarmas.p1: Alarmas.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Alarmas.p1.d 
+	@${RM} ${OBJECTDIR}/Alarmas.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Alarmas.p1 Alarmas.c 
+	@-${MV} ${OBJECTDIR}/Alarmas.d ${OBJECTDIR}/Alarmas.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Alarmas.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/Main.p1: Main.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Main.p1.d 
+	@${RM} ${OBJECTDIR}/Main.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Main.p1 Main.c 
+	@-${MV} ${OBJECTDIR}/Main.d ${OBJECTDIR}/Main.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Main.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

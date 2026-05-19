@@ -7,6 +7,11 @@
       <itemPath>config.h</itemPath>
       <itemPath>i2c.h</itemPath>
       <itemPath>Oled.h</itemPath>
+      <itemPath>Bme280.h</itemPath>
+      <itemPath>Max30102.h</itemPath>
+      <itemPath>Uart.h</itemPath>
+      <itemPath>Leds.h</itemPath>
+      <itemPath>Alarmas.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -22,6 +27,12 @@
                    projectFiles="true">
       <itemPath>i2c.c</itemPath>
       <itemPath>Oled.c</itemPath>
+      <itemPath>Bme280.c</itemPath>
+      <itemPath>Max30102.c</itemPath>
+      <itemPath>Uart.c</itemPath>
+      <itemPath>Leds.c</itemPath>
+      <itemPath>Alarmas.c</itemPath>
+      <itemPath>Main.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
