@@ -1,0 +1,312 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4550 ]
+[d frameptr 4065 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\almod.c
+[v ___almod __almod `(l  1 e 4 0 ]
+"9 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aodiv.c
+[v ___aodiv __aodiv `(o  1 e 8 0 ]
+"9 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aomod.c
+[v ___aomod __aomod `(o  1 e 8 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\atdiv.c
+[v ___atdiv __atdiv `(m  1 e 3 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\atmod.c
+[v ___atmod __atmod `(m  1 e 3 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"9 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lodiv.c
+[v ___lodiv __lodiv `(uo  1 e 8 0 ]
+"9 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lomod.c
+[v ___lomod __lomod `(uo  1 e 8 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\ltdiv.c
+[v ___ltdiv __ltdiv `(um  1 e 3 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\ltmod.c
+[v ___ltmod __ltmod `(um  1 e 3 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul24.c
+[v ___tmul __tmul `(um  1 e 3 0 ]
+"15 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"11 C:\Users\david\OneDrive\Desktop\fr\MSV\frei.X\i2c.c
+[v _I2C_Init I2C_Init `(v  1 e 1 0 ]
+"19
+[v _I2C_Start I2C_Start `(v  1 e 1 0 ]
+"27
+[v _I2C_Stop I2C_Stop `(v  1 e 1 0 ]
+"40
+[v _I2C_Write I2C_Write `(v  1 e 1 0 ]
+"14 C:\Users\david\OneDrive\Desktop\fr\MSV\frei.X\main.c
+[v _setup setup `(v  1 s 1 setup ]
+"30
+[v _main main `(v  1 e 1 0 ]
+"111 C:\Users\david\OneDrive\Desktop\fr\MSV\frei.X\oled.c
+[v _uint_to_str uint_to_str `(v  1 s 1 uint_to_str ]
+"141
+[v _OLED_Command OLED_Command `(v  1 e 1 0 ]
+"181
+[v _OLED_Init OLED_Init `(v  1 e 1 0 ]
+"248
+[v _OLED_Clear OLED_Clear `(v  1 e 1 0 ]
+"280
+[v _OLED_ClearLine OLED_ClearLine `(v  1 e 1 0 ]
+"319
+[v _OLED_SetCursor OLED_SetCursor `(v  1 e 1 0 ]
+"346
+[v _OLED_WriteChar OLED_WriteChar `(v  1 e 1 0 ]
+"380
+[v _OLED_WriteString OLED_WriteString `(v  1 e 1 0 ]
+[s S33 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"2481 C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h
+[s S158 . 1 `uc 1 INT0 1 0 :1:0 
+`uc 1 INT1 1 0 :1:1 
+`uc 1 INT2 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 PGM 1 0 :1:5 
+`uc 1 PGC 1 0 :1:6 
+`uc 1 PGD 1 0 :1:7 
+]
+[s S166 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP2_PA2 1 0 :1:3 
+]
+[u S169 . 1 `S33 1 . 1 0 `S158 1 . 1 0 `S166 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES169  1 e 1 @3969 ]
+"3071
+[v _LATB LATB `VEuc  1 e 1 @3978 ]
+[s S64 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"3098
+[s S73 . 1 `uc 1 LB0 1 0 :1:0 
+`uc 1 LB1 1 0 :1:1 
+`uc 1 LB2 1 0 :1:2 
+`uc 1 LB3 1 0 :1:3 
+`uc 1 LB4 1 0 :1:4 
+`uc 1 LB5 1 0 :1:5 
+`uc 1 LB6 1 0 :1:6 
+`uc 1 LB7 1 0 :1:7 
+]
+[u S82 . 1 `S64 1 . 1 0 `S73 1 . 1 0 ]
+[v _LATBbits LATBbits `VES82  1 e 1 @3978 ]
+"3261
+[v _LATD LATD `VEuc  1 e 1 @3980 ]
+[s S371 . 1 `uc 1 LATD0 1 0 :1:0 
+`uc 1 LATD1 1 0 :1:1 
+`uc 1 LATD2 1 0 :1:2 
+`uc 1 LATD3 1 0 :1:3 
+`uc 1 LATD4 1 0 :1:4 
+`uc 1 LATD5 1 0 :1:5 
+`uc 1 LATD6 1 0 :1:6 
+`uc 1 LATD7 1 0 :1:7 
+]
+"3288
+[s S380 . 1 `uc 1 LD0 1 0 :1:0 
+`uc 1 LD1 1 0 :1:1 
+`uc 1 LD2 1 0 :1:2 
+`uc 1 LD3 1 0 :1:3 
+`uc 1 LD4 1 0 :1:4 
+`uc 1 LD5 1 0 :1:5 
+`uc 1 LD6 1 0 :1:6 
+`uc 1 LD7 1 0 :1:7 
+]
+[u S389 . 1 `S371 1 . 1 0 `S380 1 . 1 0 ]
+[v _LATDbits LATDbits `VES389  1 e 1 @3980 ]
+"3623
+[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+[s S24 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"3655
+[u S42 . 1 `S24 1 . 1 0 `S33 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES42  1 e 1 @3987 ]
+"3999
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+"5585
+[v _CMCON CMCON `VEuc  1 e 1 @4020 ]
+"6579
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+"7984
+[v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
+[s S304 . 1 `uc 1 SCS 1 0 :2:0 
+`uc 1 IOFS 1 0 :1:2 
+`uc 1 OSTS 1 0 :1:3 
+`uc 1 IRCF 1 0 :3:4 
+`uc 1 IDLEN 1 0 :1:7 
+]
+"8007
+[s S310 . 1 `uc 1 SCS0 1 0 :1:0 
+`uc 1 SCS1 1 0 :1:1 
+`uc 1 FLTS 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 IRCF0 1 0 :1:4 
+`uc 1 IRCF1 1 0 :1:5 
+`uc 1 IRCF2 1 0 :1:6 
+]
+[u S318 . 1 `S304 1 . 1 0 `S310 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES318  1 e 1 @4051 ]
+[s S104 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 NOT_RBPU 1 0 :1:7 
+]
+"8530
+[s S107 . 1 `uc 1 RBIP 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 TMR0IP 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INTEDG2 1 0 :1:4 
+`uc 1 INTEDG1 1 0 :1:5 
+`uc 1 INTEDG0 1 0 :1:6 
+`uc 1 nRBPU 1 0 :1:7 
+]
+[s S116 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IP 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 RBPU 1 0 :1:7 
+]
+[u S121 . 1 `S104 1 . 1 0 `S107 1 . 1 0 `S116 1 . 1 0 ]
+[v _INTCON2bits INTCON2bits `VES121  1 e 1 @4081 ]
+"61 C:\Users\david\OneDrive\Desktop\fr\MSV\frei.X\oled.c
+[v _font5x7 font5x7 `C[40][5]uc  1 e 200 0 ]
+"30 C:\Users\david\OneDrive\Desktop\fr\MSV\frei.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"51
+} 0
+"14
+[v _setup setup `(v  1 s 1 setup ]
+{
+"28
+} 0
+"380 C:\Users\david\OneDrive\Desktop\fr\MSV\frei.X\oled.c
+[v _OLED_WriteString OLED_WriteString `(v  1 e 1 0 ]
+{
+[v OLED_WriteString@str str `*.35uc  1 p 2 11 ]
+"387
+} 0
+"346
+[v _OLED_WriteChar OLED_WriteChar `(v  1 e 1 0 ]
+{
+[v OLED_WriteChar@c c `uc  1 p 1 wreg ]
+"349
+[v OLED_WriteChar@index index `i  1 a 2 7 ]
+"348
+[v OLED_WriteChar@i i `uc  1 a 1 9 ]
+"346
+[v OLED_WriteChar@c c `uc  1 p 1 wreg ]
+"349
+[v OLED_WriteChar@c c `uc  1 p 1 10 ]
+"367
+} 1
+"319
+[v _OLED_SetCursor OLED_SetCursor `(v  1 e 1 0 ]
+{
+[v OLED_SetCursor@col col `uc  1 p 1 wreg ]
+[v OLED_SetCursor@col col `uc  1 p 1 wreg ]
+[v OLED_SetCursor@page page `uc  1 p 1 4 ]
+"321
+[v OLED_SetCursor@col col `uc  1 p 1 5 ]
+"325
+} 1
+"181
+[v _OLED_Init OLED_Init `(v  1 e 1 0 ]
+{
+"231
+} 0
+"248
+[v _OLED_Clear OLED_Clear `(v  1 e 1 0 ]
+{
+"250
+[v OLED_Clear@page page `uc  1 a 1 5 ]
+[v OLED_Clear@i i `uc  1 a 1 4 ]
+"265
+} 0
+"141
+[v _OLED_Command OLED_Command `(v  1 e 1 0 ]
+{
+[v OLED_Command@cmd cmd `uc  1 p 1 wreg ]
+[v OLED_Command@cmd cmd `uc  1 p 1 wreg ]
+"143
+[v OLED_Command@cmd cmd `uc  1 p 1 3 ]
+"148
+} 1
+"40 C:\Users\david\OneDrive\Desktop\fr\MSV\frei.X\i2c.c
+[v _I2C_Write I2C_Write `(v  1 e 1 0 ]
+{
+[v I2C_Write@data data `uc  1 p 1 wreg ]
+"41
+[v I2C_Write@i i `uc  1 a 1 2 ]
+"40
+[v I2C_Write@data data `uc  1 p 1 wreg ]
+"42
+[v I2C_Write@data data `uc  1 p 1 1 ]
+"53
+} 1
+"27
+[v _I2C_Stop I2C_Stop `(v  1 e 1 0 ]
+{
+"32
+} 0
+"19
+[v _I2C_Start I2C_Start `(v  1 e 1 0 ]
+{
+"25
+} 0
+"11
+[v _I2C_Init I2C_Init `(v  1 e 1 0 ]
+{
+"17
+} 0
