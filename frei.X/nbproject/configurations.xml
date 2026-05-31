@@ -7,6 +7,8 @@
       <itemPath>config.h</itemPath>
       <itemPath>i2c.h</itemPath>
       <itemPath>oled.h</itemPath>
+      <itemPath>max30102.h</itemPath>
+      <itemPath>card.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -23,6 +25,8 @@
       <itemPath>i2c.c</itemPath>
       <itemPath>oled.c</itemPath>
       <itemPath>main.c</itemPath>
+      <itemPath>max30102.c</itemPath>
+      <itemPath>card.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>

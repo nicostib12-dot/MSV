@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "max30102.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 295 "<built-in>" 3
@@ -6,14 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-
-
-
-
-
-
-
+# 1 "max30102.c" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -5913,7 +5906,7 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 2 3
-# 9 "main.c" 2
+# 2 "max30102.c" 2
 # 1 "./config.h" 1
 
 
@@ -5927,7 +5920,7 @@ unsigned char __t3rd16on(void);
 #pragma config LVP = OFF
 #pragma config PBADEN = OFF
 #pragma config MCLRE = ON
-# 10 "main.c" 2
+# 3 "max30102.c" 2
 # 1 "./i2c.h" 1
 # 28 "./i2c.h"
 void I2C_Init(void);
@@ -5948,32 +5941,7 @@ unsigned char I2C_Read(char ack);
 
 
 void I2C_RepeatedStart(void);
-# 11 "main.c" 2
-# 1 "./oled.h" 1
-# 23 "./oled.h"
-void OLED_Init(void);
-
-
-void OLED_Command(unsigned char cmd);
-void OLED_Data(unsigned char data);
-
-
-void OLED_Clear(void);
-void OLED_ClearLine(unsigned char linea);
-void OLED_SetCursor(unsigned char col, unsigned char page);
-
-
-void OLED_WriteChar(char c);
-void OLED_WriteString(char *str);
-
-
-void OLED_Splash(void);
-void OLED_Vitals(unsigned char temp_int, unsigned char temp_dec,
-                 unsigned char bpm, unsigned char alarma,
-                 unsigned char perfil);
-void OLED_Paused(void);
-void OLED_Error(char *msg);
-# 12 "main.c" 2
+# 4 "max30102.c" 2
 # 1 "./max30102.h" 1
 # 25 "./max30102.h"
 unsigned char MAX30102_ReadRegister(unsigned char reg, unsigned char *data);
@@ -5982,96 +5950,77 @@ unsigned char MAX30102_Check(void);
 unsigned char MAX30102_Init(void);
 unsigned char MAX30102_SamplesAvailable(void);
 unsigned char MAX30102_ReadSample(unsigned long *red, unsigned long *ir);
-# 13 "main.c" 2
-# 1 "./card.h" 1
+# 5 "max30102.c" 2
 
-
-
-
-
-extern long CAR_ultimo_delta;
-
-unsigned char CAR_HayDedo(unsigned long ir);
-unsigned char CAR_ProcesarMuestra(unsigned long red, unsigned long ir);
-unsigned char CAR_GetBPM(void);
-# 14 "main.c" 2
-
-static void setup(void) {
-    OSCCON = 0x72;
-    while (!OSCCONbits.IOFS);
-    _delay((unsigned long)((100)*(8000000/4000.0)));
-
-    TRISD = 0x00;
-    LATD = 0x00;
-
-    TRISB = 0xF8;
-    LATB = 0x00;
-
-    INTCON2bits.RBPU = 0;
-    CMCON = 0x07;
-    ADCON1 = 0x0F;
+unsigned char MAX30102_WriteRegister(unsigned char reg, unsigned char data) {
+    I2C_Start();
+    I2C_Write(0xAE);
+    I2C_Write(reg);
+    I2C_Write(data);
+    I2C_Stop();
+    return 1;
 }
 
-static void mostrar_bpm(unsigned char bpm, unsigned char hay_dedo) {
-    OLED_Clear();
-
-    OLED_SetCursor(0, 0);
-    OLED_WriteString("CARDIO.X");
-
-    OLED_SetCursor(0, 2);
-    if (hay_dedo)
-        OLED_WriteString("DEDO: SI");
-    else
-        OLED_WriteString("DEDO: NO");
-
-    OLED_SetCursor(0, 4);
-    OLED_WriteString("BPM:");
-
-    if (bpm >= 100)
-        OLED_WriteChar('0' + (bpm / 100));
-
-    OLED_WriteChar('0' + ((bpm / 10) % 10));
-    OLED_WriteChar('0' + (bpm % 10));
+unsigned char MAX30102_ReadRegister(unsigned char reg, unsigned char *data) {
+    I2C_Start();
+    I2C_Write(0xAE);
+    I2C_Write(reg);
+    I2C_RepeatedStart();
+    I2C_Write(0xAF);
+    *data = I2C_Read(0);
+    I2C_Stop();
+    return 1;
 }
 
-void main(void) {
-    unsigned long red, ir;
-    unsigned char bpm = 0;
-    unsigned char hay_dedo = 0;
-    unsigned char i;
+unsigned char MAX30102_Check(void) {
+    unsigned char part_id;
+    if (!MAX30102_ReadRegister(0xFF, &part_id)) return 0;
+    return (part_id == 0x15);
+}
 
-    setup();
-    I2C_Init();
-    OLED_Init();
+unsigned char MAX30102_Init(void) {
+    unsigned char status;
+    if (!MAX30102_Check()) return 0;
+    MAX30102_WriteRegister(0x09, 0x40);
+    _delay((unsigned long)((20)*(8000000/4000.0)));
+    MAX30102_WriteRegister(0x04, 0x00);
+    MAX30102_WriteRegister(0x05, 0x00);
+    MAX30102_WriteRegister(0x06, 0x00);
+    MAX30102_WriteRegister(0x08, 0x50);
+    MAX30102_WriteRegister(0x0A, 0x27);
+    MAX30102_WriteRegister(0x0C, 0x1F);
+    MAX30102_WriteRegister(0x0D, 0x1F);
+    MAX30102_WriteRegister(0x09, 0x03);
+    MAX30102_ReadRegister(0x00, &status);
+    MAX30102_ReadRegister(0x01, &status);
+    return 1;
+}
 
-    OLED_Clear();
-    OLED_SetCursor(0, 0);
-    OLED_WriteString("INICIANDO MAX");
-    _delay((unsigned long)((1000)*(8000000/4000.0)));
+unsigned char MAX30102_SamplesAvailable(void) {
+    unsigned char write_ptr, read_ptr;
+    MAX30102_ReadRegister(0x04, &write_ptr);
+    MAX30102_ReadRegister(0x06, &read_ptr);
+    return (write_ptr - read_ptr) & 0x1F;
+}
 
-    if (!MAX30102_Init()) {
-        OLED_Error("MAX ERR");
-        while (1);
-    }
-
-    OLED_Clear();
-    OLED_SetCursor(0, 0);
-    OLED_WriteString("MAX30102 OK");
-    _delay((unsigned long)((1000)*(8000000/4000.0)));
-
-    while (1) {
-        for (i = 0; i < 20; i++) {
-            if (MAX30102_ReadSample(&red, &ir)) {
-                bpm = CAR_ProcesarMuestra(red, ir);
-                hay_dedo = CAR_HayDedo(ir);
-            }
-
-            _delay((unsigned long)((15)*(8000000/4000.0)));
-        }
-
-        LATDbits.LATD0 = 1;
-        LATDbits.LATD1 = hay_dedo ? 1 : 0;
-
-        mostrar_bpm(bpm, hay_dedo);
-    }
+unsigned char MAX30102_ReadSample(unsigned long *red, unsigned long *ir) {
+    unsigned char data[6];
+    if (MAX30102_SamplesAvailable() == 0) return 0;
+    I2C_Start();
+    I2C_Write(0xAE);
+    I2C_Write(0x07);
+    I2C_RepeatedStart();
+    I2C_Write(0xAF);
+    data[0] = I2C_Read(1);
+    data[1] = I2C_Read(1);
+    data[2] = I2C_Read(1);
+    data[3] = I2C_Read(1);
+    data[4] = I2C_Read(1);
+    data[5] = I2C_Read(0);
+    I2C_Stop();
+    *red = (((unsigned long)data[0] & 0x03) << 16) |
+           ((unsigned long)data[1] << 8) | data[2];
+    *ir = (((unsigned long)data[3] & 0x03) << 16) |
+           ((unsigned long)data[4] << 8) | data[5];
+    return 1;
 }

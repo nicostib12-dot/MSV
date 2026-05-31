@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "card.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 295 "<built-in>" 3
@@ -6,11 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-
-
-
-
+# 1 "card.c" 2
+# 1 "./card.h" 1
 
 
 
@@ -5913,67 +5910,14 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 2 3
-# 9 "main.c" 2
-# 1 "./config.h" 1
+# 5 "./card.h" 2
 
+extern long CAR_ultimo_delta;
 
-
-
-
-
-
-#pragma config FOSC = INTOSCIO_EC
-#pragma config WDT = OFF
-#pragma config LVP = OFF
-#pragma config PBADEN = OFF
-#pragma config MCLRE = ON
-# 10 "main.c" 2
-# 1 "./i2c.h" 1
-# 28 "./i2c.h"
-void I2C_Init(void);
-
-
-void I2C_Start(void);
-
-
-void I2C_Stop(void);
-# 45 "./i2c.h"
-void I2C_Write(unsigned char data);
-# 57 "./i2c.h"
-unsigned char I2C_Read(char ack);
-
-
-
-
-
-
-void I2C_RepeatedStart(void);
-# 11 "main.c" 2
-# 1 "./oled.h" 1
-# 23 "./oled.h"
-void OLED_Init(void);
-
-
-void OLED_Command(unsigned char cmd);
-void OLED_Data(unsigned char data);
-
-
-void OLED_Clear(void);
-void OLED_ClearLine(unsigned char linea);
-void OLED_SetCursor(unsigned char col, unsigned char page);
-
-
-void OLED_WriteChar(char c);
-void OLED_WriteString(char *str);
-
-
-void OLED_Splash(void);
-void OLED_Vitals(unsigned char temp_int, unsigned char temp_dec,
-                 unsigned char bpm, unsigned char alarma,
-                 unsigned char perfil);
-void OLED_Paused(void);
-void OLED_Error(char *msg);
-# 12 "main.c" 2
+unsigned char CAR_HayDedo(unsigned long ir);
+unsigned char CAR_ProcesarMuestra(unsigned long red, unsigned long ir);
+unsigned char CAR_GetBPM(void);
+# 2 "card.c" 2
 # 1 "./max30102.h" 1
 # 25 "./max30102.h"
 unsigned char MAX30102_ReadRegister(unsigned char reg, unsigned char *data);
@@ -5982,96 +5926,76 @@ unsigned char MAX30102_Check(void);
 unsigned char MAX30102_Init(void);
 unsigned char MAX30102_SamplesAvailable(void);
 unsigned char MAX30102_ReadSample(unsigned long *red, unsigned long *ir);
-# 13 "main.c" 2
-# 1 "./card.h" 1
+# 3 "card.c" 2
+
+long CAR_ultimo_delta = 0;
 
 
 
 
 
-extern long CAR_ultimo_delta;
 
-unsigned char CAR_HayDedo(unsigned long ir);
-unsigned char CAR_ProcesarMuestra(unsigned long red, unsigned long ir);
-unsigned char CAR_GetBPM(void);
-# 14 "main.c" 2
+static unsigned long ir_buffer[16];
+static unsigned char buf_idx = 0;
+static unsigned long ir_promedio_ant = 0;
+static unsigned char bpm_actual = 0;
+static unsigned int muestras_pico = 0;
+static unsigned char en_pico = 0;
+static unsigned char picos_contados = 0;
 
-static void setup(void) {
-    OSCCON = 0x72;
-    while (!OSCCONbits.IOFS);
-    _delay((unsigned long)((100)*(8000000/4000.0)));
-
-    TRISD = 0x00;
-    LATD = 0x00;
-
-    TRISB = 0xF8;
-    LATB = 0x00;
-
-    INTCON2bits.RBPU = 0;
-    CMCON = 0x07;
-    ADCON1 = 0x0F;
-}
-
-static void mostrar_bpm(unsigned char bpm, unsigned char hay_dedo) {
-    OLED_Clear();
-
-    OLED_SetCursor(0, 0);
-    OLED_WriteString("CARDIO.X");
-
-    OLED_SetCursor(0, 2);
-    if (hay_dedo)
-        OLED_WriteString("DEDO: SI");
-    else
-        OLED_WriteString("DEDO: NO");
-
-    OLED_SetCursor(0, 4);
-    OLED_WriteString("BPM:");
-
-    if (bpm >= 100)
-        OLED_WriteChar('0' + (bpm / 100));
-
-    OLED_WriteChar('0' + ((bpm / 10) % 10));
-    OLED_WriteChar('0' + (bpm % 10));
-}
-
-void main(void) {
-    unsigned long red, ir;
-    unsigned char bpm = 0;
-    unsigned char hay_dedo = 0;
+static unsigned long calcular_promedio(void) {
+    unsigned long suma = 0;
     unsigned char i;
-
-    setup();
-    I2C_Init();
-    OLED_Init();
-
-    OLED_Clear();
-    OLED_SetCursor(0, 0);
-    OLED_WriteString("INICIANDO MAX");
-    _delay((unsigned long)((1000)*(8000000/4000.0)));
-
-    if (!MAX30102_Init()) {
-        OLED_Error("MAX ERR");
-        while (1);
-    }
-
-    OLED_Clear();
-    OLED_SetCursor(0, 0);
-    OLED_WriteString("MAX30102 OK");
-    _delay((unsigned long)((1000)*(8000000/4000.0)));
-
-    while (1) {
-        for (i = 0; i < 20; i++) {
-            if (MAX30102_ReadSample(&red, &ir)) {
-                bpm = CAR_ProcesarMuestra(red, ir);
-                hay_dedo = CAR_HayDedo(ir);
-            }
-
-            _delay((unsigned long)((15)*(8000000/4000.0)));
-        }
-
-        LATDbits.LATD0 = 1;
-        LATDbits.LATD1 = hay_dedo ? 1 : 0;
-
-        mostrar_bpm(bpm, hay_dedo);
-    }
+    for (i = 0; i < 16; i++) suma += ir_buffer[i];
+    return suma / 16;
 }
+
+unsigned char CAR_HayDedo(unsigned long ir) {
+    return (ir > 50000UL) ? 1 : 0;
+}
+
+unsigned char CAR_ProcesarMuestra(unsigned long red, unsigned long ir) {
+    unsigned long promedio;
+    long delta;
+
+    if (!CAR_HayDedo(ir)) {
+        unsigned char i;
+        buf_idx = 0;
+        bpm_actual = 0;
+        muestras_pico = 0;
+        en_pico = 0;
+        picos_contados = 0;
+        ir_promedio_ant = 0;
+        CAR_ultimo_delta = 0;
+        for (i = 0; i < 16; i++) ir_buffer[i] = 0;
+        return 0;
+    }
+
+    ir_buffer[buf_idx] = ir;
+    buf_idx = (buf_idx + 1) % 16;
+    muestras_pico++;
+
+    promedio = calcular_promedio();
+    delta = (long)ir_promedio_ant - (long)promedio;
+    CAR_ultimo_delta = delta;
+
+    if (delta > 80 && !en_pico) {
+        en_pico = 1;
+        picos_contados++;
+        if (picos_contados >= 2 && muestras_pico > 0) {
+            unsigned int bpm_calc = (unsigned int)(3960UL / muestras_pico);
+            if (bpm_calc >= 40 && bpm_calc <= 180) {
+                bpm_actual = (unsigned char)bpm_calc;
+            }
+        }
+        muestras_pico = 0;
+        picos_contados = (picos_contados > 8) ? 1 : picos_contados;
+    } else if (delta < -40) {
+        en_pico = 0;
+    }
+
+    ir_promedio_ant = promedio;
+    return bpm_actual;
+}
+
+unsigned char CAR_GetBPM(void) { return bpm_actual; }

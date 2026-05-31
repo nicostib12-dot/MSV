@@ -1,112 +1,23 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"7984 C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 7984: extern volatile unsigned char OSCCON __attribute__((address(0xFD3)));
-[v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
-"7990
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 7990:     struct {
-[s S344 :2 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
-[n S344 . SCS IOFS OSTS IRCF IDLEN ]
-"7997
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 7997:     struct {
-[s S345 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S345 . SCS0 SCS1 FLTS . IRCF0 IRCF1 IRCF2 ]
-"7989
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 7989: typedef union {
-[u S343 `S344 1 `S345 1 ]
-[n S343 . . . ]
-"8007
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 8007: extern volatile OSCCONbits_t OSCCONbits __attribute__((address(0xFD3)));
-[v _OSCCONbits `VS343 ~T0 @X0 0 e@4051 ]
+"31 ./i2c.h
+[; ;./i2c.h: 31: void I2C_Start(void);
+[v _I2C_Start `(v ~T0 @X0 0 ef ]
+"45
+[; ;./i2c.h: 45: void I2C_Write(unsigned char data);
+[v _I2C_Write `(v ~T0 @X0 0 ef1`uc ]
+"34
+[; ;./i2c.h: 34: void I2C_Stop(void);
+[v _I2C_Stop `(v ~T0 @X0 0 ef ]
+"64
+[; ;./i2c.h: 64: void I2C_RepeatedStart(void);
+[v _I2C_RepeatedStart `(v ~T0 @X0 0 ef ]
+"57
+[; ;./i2c.h: 57: unsigned char I2C_Read(char ack);
+[v _I2C_Read `(uc ~T0 @X0 0 ef1`uc ]
 [v F205 `(v ~T0 @X0 1 tf1`ul ]
 "20 C:\Program Files\Microchip\xc8\v3.10\pic\include/builtins.h
 [v __delay `JF205 ~T0 @X0 0 e ]
 [p i __delay ]
-"3999 C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3999: extern volatile unsigned char TRISD __attribute__((address(0xF95)));
-[v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
-"3261
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3261: extern volatile unsigned char LATD __attribute__((address(0xF8C)));
-[v _LATD `Vuc ~T0 @X0 0 e@3980 ]
-"3623
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3623: extern volatile unsigned char TRISB __attribute__((address(0xF93)));
-[v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
-"3071
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3071: extern volatile unsigned char LATB __attribute__((address(0xF8A)));
-[v _LATB `Vuc ~T0 @X0 0 e@3978 ]
-"8509
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 8509:     struct {
-[s S356 :7 `uc 1 :1 `uc 1 ]
-[n S356 . . NOT_RBPU ]
-"8513
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 8513:     struct {
-[s S357 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S357 . RBIP . TMR0IP . INTEDG2 INTEDG1 INTEDG0 nRBPU ]
-"8523
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 8523:     struct {
-[s S358 :2 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 ]
-[n S358 . . T0IP . RBPU ]
-"8508
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 8508: typedef union {
-[u S355 `S356 1 `S357 1 `S358 1 ]
-[n S355 . . . . ]
-"8530
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 8530: extern volatile INTCON2bits_t INTCON2bits __attribute__((address(0xFF1)));
-[v _INTCON2bits `VS355 ~T0 @X0 0 e@4081 ]
-"5585
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 5585: extern volatile unsigned char CMCON __attribute__((address(0xFB4)));
-[v _CMCON `Vuc ~T0 @X0 0 e@4020 ]
-"6579
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 6579: extern volatile unsigned char ADCON1 __attribute__((address(0xFC1)));
-[v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
-"30 ./oled.h
-[; ;./oled.h: 30: void OLED_Clear(void);
-[v _OLED_Clear `(v ~T0 @X0 0 ef ]
-"32
-[; ;./oled.h: 32: void OLED_SetCursor(unsigned char col, unsigned char page);
-[v _OLED_SetCursor `(v ~T0 @X0 0 ef2`uc`uc ]
-"36
-[; ;./oled.h: 36: void OLED_WriteString(char *str);
-[v _OLED_WriteString `(v ~T0 @X0 0 ef1`*uc ]
-"35
-[; ;./oled.h: 35: void OLED_WriteChar(char c);
-[v _OLED_WriteChar `(v ~T0 @X0 0 ef1`uc ]
-[p mainexit ]
-"28 ./i2c.h
-[; ;./i2c.h: 28: void I2C_Init(void);
-[v _I2C_Init `(v ~T0 @X0 0 ef ]
-"23 ./oled.h
-[; ;./oled.h: 23: void OLED_Init(void);
-[v _OLED_Init `(v ~T0 @X0 0 ef ]
-"28 ./max30102.h
-[; ;./max30102.h: 28: unsigned char MAX30102_Init(void);
-[v _MAX30102_Init `(uc ~T0 @X0 0 ef ]
-"44 ./oled.h
-[; ;./oled.h: 44: void OLED_Error(char *msg);
-[v _OLED_Error `(v ~T0 @X0 0 ef1`*uc ]
-"30 ./max30102.h
-[; ;./max30102.h: 30: unsigned char MAX30102_ReadSample(unsigned long *red, unsigned long *ir);
-[v _MAX30102_ReadSample `(uc ~T0 @X0 0 ef2`*ul`*ul ]
-"9 ./card.h
-[; ;./card.h: 9: unsigned char CAR_ProcesarMuestra(unsigned long red, unsigned long ir);
-[v _CAR_ProcesarMuestra `(uc ~T0 @X0 0 ef2`ul`ul ]
-"8
-[; ;./card.h: 8: unsigned char CAR_HayDedo(unsigned long ir);
-[v _CAR_HayDedo `(uc ~T0 @X0 0 ef1`ul ]
-"3267 C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3267:     struct {
-[s S136 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S136 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
-"3277
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3277:     struct {
-[s S137 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S137 . LD0 LD1 LD2 LD3 LD4 LD5 LD6 LD7 ]
-"3266
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3266: typedef union {
-[u S135 `S136 1 `S137 1 ]
-[n S135 . . . ]
-"3288
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3288: extern volatile LATDbits_t LATDbits __attribute__((address(0xF8C)));
-[v _LATDbits `VS135 ~T0 @X0 0 e@3980 ]
 "52 C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h
 [; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 52: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -627,238 +538,244 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x PBADEN  =  OFF ]
 "12
 [p x MCLRE    =  ON ]
-"15 main.c
-[; ;main.c: 15: static void setup(void) {
-[v _setup `(v ~T0 @X0 1 sf ]
+"6 max30102.c
+[; ;max30102.c: 6: unsigned char MAX30102_WriteRegister(unsigned char reg, unsigned char data) {
+[v _MAX30102_WriteRegister `(uc ~T0 @X0 1 ef2`uc`uc ]
 {
-[e :U _setup ]
+[e :U _MAX30102_WriteRegister ]
+[v _reg `uc ~T0 @X0 1 r1 ]
+[v _data `uc ~T0 @X0 1 r2 ]
 [f ]
-"16
-[; ;main.c: 16:     OSCCON = 0x72;
-[e = _OSCCON -> -> 114 `i `uc ]
-"17
-[; ;main.c: 17:     while (!OSCCONbits.IOFS);
-[e $U 392  ]
-[e :U 393 ]
-[e :U 392 ]
-[e $ ! != -> . . _OSCCONbits 0 1 `i -> 0 `i 393  ]
-[e :U 394 ]
-"18
-[; ;main.c: 18:     _delay((unsigned long)((100)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"20
-[; ;main.c: 20:     TRISD = 0x00;
-[e = _TRISD -> -> 0 `i `uc ]
-"21
-[; ;main.c: 21:     LATD = 0x00;
-[e = _LATD -> -> 0 `i `uc ]
-"23
-[; ;main.c: 23:     TRISB = 0xF8;
-[e = _TRISB -> -> 248 `i `uc ]
-"24
-[; ;main.c: 24:     LATB = 0x00;
-[e = _LATB -> -> 0 `i `uc ]
-"26
-[; ;main.c: 26:     INTCON2bits.RBPU = 0;
-[e = . . _INTCON2bits 2 3 -> -> 0 `i `uc ]
-"27
-[; ;main.c: 27:     CMCON = 0x07;
-[e = _CMCON -> -> 7 `i `uc ]
-"28
-[; ;main.c: 28:     ADCON1 = 0x0F;
-[e = _ADCON1 -> -> 15 `i `uc ]
-"29
-[; ;main.c: 29: }
+"7
+[; ;max30102.c: 7:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"8
+[; ;max30102.c: 8:     I2C_Write(0xAE);
+[e ( _I2C_Write (1 -> -> 174 `i `uc ]
+"9
+[; ;max30102.c: 9:     I2C_Write(reg);
+[e ( _I2C_Write (1 _reg ]
+"10
+[; ;max30102.c: 10:     I2C_Write(data);
+[e ( _I2C_Write (1 _data ]
+"11
+[; ;max30102.c: 11:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"12
+[; ;max30102.c: 12:     return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 391  ]
+"13
+[; ;max30102.c: 13: }
 [e :UE 391 ]
 }
-"31
-[; ;main.c: 31: static void mostrar_bpm(unsigned char bpm, unsigned char hay_dedo) {
-[v _mostrar_bpm `(v ~T0 @X0 1 sf2`uc`uc ]
+"15
+[; ;max30102.c: 15: unsigned char MAX30102_ReadRegister(unsigned char reg, unsigned char *data) {
+[v _MAX30102_ReadRegister `(uc ~T0 @X0 1 ef2`uc`*uc ]
 {
-[e :U _mostrar_bpm ]
-[v _bpm `uc ~T0 @X0 1 r1 ]
-[v _hay_dedo `uc ~T0 @X0 1 r2 ]
+[e :U _MAX30102_ReadRegister ]
+[v _reg `uc ~T0 @X0 1 r1 ]
+[v _data `*uc ~T0 @X0 1 r2 ]
 [f ]
+"16
+[; ;max30102.c: 16:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"17
+[; ;max30102.c: 17:     I2C_Write(0xAE);
+[e ( _I2C_Write (1 -> -> 174 `i `uc ]
+"18
+[; ;max30102.c: 18:     I2C_Write(reg);
+[e ( _I2C_Write (1 _reg ]
+"19
+[; ;max30102.c: 19:     I2C_RepeatedStart();
+[e ( _I2C_RepeatedStart ..  ]
+"20
+[; ;max30102.c: 20:     I2C_Write(0xAF);
+[e ( _I2C_Write (1 -> -> 175 `i `uc ]
+"21
+[; ;max30102.c: 21:     *data = I2C_Read(0);
+[e = *U _data ( _I2C_Read (1 -> -> 0 `i `uc ]
+"22
+[; ;max30102.c: 22:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"23
+[; ;max30102.c: 23:     return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 392  ]
+"24
+[; ;max30102.c: 24: }
+[e :UE 392 ]
+}
+"26
+[; ;max30102.c: 26: unsigned char MAX30102_Check(void) {
+[v _MAX30102_Check `(uc ~T0 @X0 1 ef ]
+{
+[e :U _MAX30102_Check ]
+[f ]
+"27
+[; ;max30102.c: 27:     unsigned char part_id;
+[v _part_id `uc ~T0 @X0 1 a ]
+"28
+[; ;max30102.c: 28:     if (!MAX30102_ReadRegister(0xFF, &part_id)) return 0;
+[e $ ! ! != -> ( _MAX30102_ReadRegister (2 , -> -> 255 `i `uc &U _part_id `i -> 0 `i 394  ]
+[e ) -> -> 0 `i `uc ]
+[e $UE 393  ]
+[e :U 394 ]
+"29
+[; ;max30102.c: 29:     return (part_id == 0x15);
+[e ) -> -> == -> _part_id `i -> 21 `i `i `uc ]
+[e $UE 393  ]
+"30
+[; ;max30102.c: 30: }
+[e :UE 393 ]
+}
 "32
-[; ;main.c: 32:     OLED_Clear();
-[e ( _OLED_Clear ..  ]
+[; ;max30102.c: 32: unsigned char MAX30102_Init(void) {
+[v _MAX30102_Init `(uc ~T0 @X0 1 ef ]
+{
+[e :U _MAX30102_Init ]
+[f ]
+"33
+[; ;max30102.c: 33:     unsigned char status;
+[v _status `uc ~T0 @X0 1 a ]
 "34
-[; ;main.c: 34:     OLED_SetCursor(0, 0);
-[e ( _OLED_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"35
-[; ;main.c: 35:     OLED_WriteString("CARDIO.X");
-[e ( _OLED_WriteString (1 :s 1C ]
-"37
-[; ;main.c: 37:     OLED_SetCursor(0, 2);
-[e ( _OLED_SetCursor (2 , -> -> 0 `i `uc -> -> 2 `i `uc ]
-"38
-[; ;main.c: 38:     if (hay_dedo)
-[e $ ! != -> _hay_dedo `i -> 0 `i 396  ]
-"39
-[; ;main.c: 39:         OLED_WriteString("DEDO: SI");
-[e ( _OLED_WriteString (1 :s 2C ]
-[e $U 397  ]
-"40
-[; ;main.c: 40:     else
+[; ;max30102.c: 34:     if (!MAX30102_Check()) return 0;
+[e $ ! ! != -> ( _MAX30102_Check ..  `i -> 0 `i 396  ]
+[e ) -> -> 0 `i `uc ]
+[e $UE 395  ]
 [e :U 396 ]
+"35
+[; ;max30102.c: 35:     MAX30102_WriteRegister(0x09, 0x40);
+[e ( _MAX30102_WriteRegister (2 , -> -> 9 `i `uc -> -> 64 `i `uc ]
+"36
+[; ;max30102.c: 36:     _delay((unsigned long)((20)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"37
+[; ;max30102.c: 37:     MAX30102_WriteRegister(0x04, 0x00);
+[e ( _MAX30102_WriteRegister (2 , -> -> 4 `i `uc -> -> 0 `i `uc ]
+"38
+[; ;max30102.c: 38:     MAX30102_WriteRegister(0x05, 0x00);
+[e ( _MAX30102_WriteRegister (2 , -> -> 5 `i `uc -> -> 0 `i `uc ]
+"39
+[; ;max30102.c: 39:     MAX30102_WriteRegister(0x06, 0x00);
+[e ( _MAX30102_WriteRegister (2 , -> -> 6 `i `uc -> -> 0 `i `uc ]
+"40
+[; ;max30102.c: 40:     MAX30102_WriteRegister(0x08, 0x50);
+[e ( _MAX30102_WriteRegister (2 , -> -> 8 `i `uc -> -> 80 `i `uc ]
 "41
-[; ;main.c: 41:         OLED_WriteString("DEDO: NO");
-[e ( _OLED_WriteString (1 :s 3C ]
-[e :U 397 ]
+[; ;max30102.c: 41:     MAX30102_WriteRegister(0x0A, 0x27);
+[e ( _MAX30102_WriteRegister (2 , -> -> 10 `i `uc -> -> 39 `i `uc ]
+"42
+[; ;max30102.c: 42:     MAX30102_WriteRegister(0x0C, 0x1F);
+[e ( _MAX30102_WriteRegister (2 , -> -> 12 `i `uc -> -> 31 `i `uc ]
 "43
-[; ;main.c: 43:     OLED_SetCursor(0, 4);
-[e ( _OLED_SetCursor (2 , -> -> 0 `i `uc -> -> 4 `i `uc ]
+[; ;max30102.c: 43:     MAX30102_WriteRegister(0x0D, 0x1F);
+[e ( _MAX30102_WriteRegister (2 , -> -> 13 `i `uc -> -> 31 `i `uc ]
 "44
-[; ;main.c: 44:     OLED_WriteString("BPM:");
-[e ( _OLED_WriteString (1 :s 4C ]
+[; ;max30102.c: 44:     MAX30102_WriteRegister(0x09, 0x03);
+[e ( _MAX30102_WriteRegister (2 , -> -> 9 `i `uc -> -> 3 `i `uc ]
+"45
+[; ;max30102.c: 45:     MAX30102_ReadRegister(0x00, &status);
+[e ( _MAX30102_ReadRegister (2 , -> -> 0 `i `uc &U _status ]
 "46
-[; ;main.c: 46:     if (bpm >= 100)
-[e $ ! >= -> _bpm `i -> 100 `i 398  ]
+[; ;max30102.c: 46:     MAX30102_ReadRegister(0x01, &status);
+[e ( _MAX30102_ReadRegister (2 , -> -> 1 `i `uc &U _status ]
 "47
-[; ;main.c: 47:         OLED_WriteChar('0' + (bpm / 100));
-[e ( _OLED_WriteChar (1 -> + -> 48 `ui -> / -> _bpm `i -> 100 `i `ui `uc ]
-[e :U 398 ]
-"49
-[; ;main.c: 49:     OLED_WriteChar('0' + ((bpm / 10) % 10));
-[e ( _OLED_WriteChar (1 -> + -> 48 `ui -> % / -> _bpm `i -> 10 `i -> 10 `i `ui `uc ]
-"50
-[; ;main.c: 50:     OLED_WriteChar('0' + (bpm % 10));
-[e ( _OLED_WriteChar (1 -> + -> 48 `ui -> % -> _bpm `i -> 10 `i `ui `uc ]
-"51
-[; ;main.c: 51: }
+[; ;max30102.c: 47:     return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 395  ]
+"48
+[; ;max30102.c: 48: }
 [e :UE 395 ]
 }
-[v $root$_main `(v ~T0 @X0 0 e ]
-"53
-[; ;main.c: 53: void main(void) {
-[v _main `(v ~T0 @X0 1 ef ]
+"50
+[; ;max30102.c: 50: unsigned char MAX30102_SamplesAvailable(void) {
+[v _MAX30102_SamplesAvailable `(uc ~T0 @X0 1 ef ]
 {
-[e :U _main ]
+[e :U _MAX30102_SamplesAvailable ]
 [f ]
+"51
+[; ;max30102.c: 51:     unsigned char write_ptr, read_ptr;
+[v _write_ptr `uc ~T0 @X0 1 a ]
+[v _read_ptr `uc ~T0 @X0 1 a ]
+"52
+[; ;max30102.c: 52:     MAX30102_ReadRegister(0x04, &write_ptr);
+[e ( _MAX30102_ReadRegister (2 , -> -> 4 `i `uc &U _write_ptr ]
+"53
+[; ;max30102.c: 53:     MAX30102_ReadRegister(0x06, &read_ptr);
+[e ( _MAX30102_ReadRegister (2 , -> -> 6 `i `uc &U _read_ptr ]
 "54
-[; ;main.c: 54:     unsigned long red, ir;
-[v _red `ul ~T0 @X0 1 a ]
-[v _ir `ul ~T0 @X0 1 a ]
+[; ;max30102.c: 54:     return (write_ptr - read_ptr) & 0x1F;
+[e ) -> & - -> _write_ptr `i -> _read_ptr `i -> 31 `i `uc ]
+[e $UE 397  ]
 "55
-[; ;main.c: 55:     unsigned char bpm = 0;
-[v _bpm `uc ~T0 @X0 1 a ]
-[e = _bpm -> -> 0 `i `uc ]
-"56
-[; ;main.c: 56:     unsigned char hay_dedo = 0;
-[v _hay_dedo `uc ~T0 @X0 1 a ]
-[e = _hay_dedo -> -> 0 `i `uc ]
+[; ;max30102.c: 55: }
+[e :UE 397 ]
+}
 "57
-[; ;main.c: 57:     unsigned char i;
-[v _i `uc ~T0 @X0 1 a ]
+[; ;max30102.c: 57: unsigned char MAX30102_ReadSample(unsigned long *red, unsigned long *ir) {
+[v _MAX30102_ReadSample `(uc ~T0 @X0 1 ef2`*ul`*ul ]
+{
+[e :U _MAX30102_ReadSample ]
+[v _red `*ul ~T0 @X0 1 r1 ]
+[v _ir `*ul ~T0 @X0 1 r2 ]
+[f ]
+"58
+[; ;max30102.c: 58:     unsigned char data[6];
+[v _data `uc ~T0 @X0 -> 6 `i a ]
 "59
-[; ;main.c: 59:     setup();
-[e ( _setup ..  ]
+[; ;max30102.c: 59:     if (MAX30102_SamplesAvailable() == 0) return 0;
+[e $ ! == -> ( _MAX30102_SamplesAvailable ..  `i -> 0 `i 399  ]
+[e ) -> -> 0 `i `uc ]
+[e $UE 398  ]
+[e :U 399 ]
 "60
-[; ;main.c: 60:     I2C_Init();
-[e ( _I2C_Init ..  ]
+[; ;max30102.c: 60:     I2C_Start();
+[e ( _I2C_Start ..  ]
 "61
-[; ;main.c: 61:     OLED_Init();
-[e ( _OLED_Init ..  ]
+[; ;max30102.c: 61:     I2C_Write(0xAE);
+[e ( _I2C_Write (1 -> -> 174 `i `uc ]
+"62
+[; ;max30102.c: 62:     I2C_Write(0x07);
+[e ( _I2C_Write (1 -> -> 7 `i `uc ]
 "63
-[; ;main.c: 63:     OLED_Clear();
-[e ( _OLED_Clear ..  ]
+[; ;max30102.c: 63:     I2C_RepeatedStart();
+[e ( _I2C_RepeatedStart ..  ]
 "64
-[; ;main.c: 64:     OLED_SetCursor(0, 0);
-[e ( _OLED_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;max30102.c: 64:     I2C_Write(0xAF);
+[e ( _I2C_Write (1 -> -> 175 `i `uc ]
 "65
-[; ;main.c: 65:     OLED_WriteString("INICIANDO MAX");
-[e ( _OLED_WriteString (1 :s 5C ]
+[; ;max30102.c: 65:     data[0] = I2C_Read(1);
+[e = *U + &U _data * -> -> -> 0 `i `ui `ux -> -> # *U &U _data `ui `ux ( _I2C_Read (1 -> -> 1 `i `uc ]
 "66
-[; ;main.c: 66:     _delay((unsigned long)((1000)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;max30102.c: 66:     data[1] = I2C_Read(1);
+[e = *U + &U _data * -> -> -> 1 `i `ui `ux -> -> # *U &U _data `ui `ux ( _I2C_Read (1 -> -> 1 `i `uc ]
+"67
+[; ;max30102.c: 67:     data[2] = I2C_Read(1);
+[e = *U + &U _data * -> -> -> 2 `i `ui `ux -> -> # *U &U _data `ui `ux ( _I2C_Read (1 -> -> 1 `i `uc ]
 "68
-[; ;main.c: 68:     if (!MAX30102_Init()) {
-[e $ ! ! != -> ( _MAX30102_Init ..  `i -> 0 `i 400  ]
-{
+[; ;max30102.c: 68:     data[3] = I2C_Read(1);
+[e = *U + &U _data * -> -> -> 3 `i `ui `ux -> -> # *U &U _data `ui `ux ( _I2C_Read (1 -> -> 1 `i `uc ]
 "69
-[; ;main.c: 69:         OLED_Error("MAX ERR");
-[e ( _OLED_Error (1 :s 6C ]
+[; ;max30102.c: 69:     data[4] = I2C_Read(1);
+[e = *U + &U _data * -> -> -> 4 `i `ui `ux -> -> # *U &U _data `ui `ux ( _I2C_Read (1 -> -> 1 `i `uc ]
 "70
-[; ;main.c: 70:         while (1);
-[e :U 402 ]
-[e :U 401 ]
-[e $U 402  ]
-[e :U 403 ]
+[; ;max30102.c: 70:     data[5] = I2C_Read(0);
+[e = *U + &U _data * -> -> -> 5 `i `ui `ux -> -> # *U &U _data `ui `ux ( _I2C_Read (1 -> -> 0 `i `uc ]
 "71
-[; ;main.c: 71:     }
-}
-[e :U 400 ]
-"73
-[; ;main.c: 73:     OLED_Clear();
-[e ( _OLED_Clear ..  ]
+[; ;max30102.c: 71:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"72
+[; ;max30102.c: 72:     *red = (((unsigned long)data[0] & 0x03) << 16) |
+[e = *U _red | | << & -> *U + &U _data * -> -> -> 0 `i `ui `ux -> -> # *U &U _data `ui `ux `ul -> -> -> 3 `i `l `ul -> 16 `i << -> *U + &U _data * -> -> -> 1 `i `ui `ux -> -> # *U &U _data `ui `ux `ul -> 8 `i -> *U + &U _data * -> -> -> 2 `i `ui `ux -> -> # *U &U _data `ui `ux `ul ]
 "74
-[; ;main.c: 74:     OLED_SetCursor(0, 0);
-[e ( _OLED_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"75
-[; ;main.c: 75:     OLED_WriteString("MAX30102 OK");
-[e ( _OLED_WriteString (1 :s 7C ]
+[; ;max30102.c: 74:     *ir = (((unsigned long)data[3] & 0x03) << 16) |
+[e = *U _ir | | << & -> *U + &U _data * -> -> -> 3 `i `ui `ux -> -> # *U &U _data `ui `ux `ul -> -> -> 3 `i `l `ul -> 16 `i << -> *U + &U _data * -> -> -> 4 `i `ui `ux -> -> # *U &U _data `ui `ux `ul -> 8 `i -> *U + &U _data * -> -> -> 5 `i `ui `ux -> -> # *U &U _data `ui `ux `ul ]
 "76
-[; ;main.c: 76:     _delay((unsigned long)((1000)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"78
-[; ;main.c: 78:     while (1) {
-[e :U 405 ]
-{
-"79
-[; ;main.c: 79:         for (i = 0; i < 20; i++) {
-{
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 20 `i 407  ]
-[e $U 408  ]
-[e :U 407 ]
-{
-"80
-[; ;main.c: 80:             if (MAX30102_ReadSample(&red, &ir)) {
-[e $ ! != -> ( _MAX30102_ReadSample (2 , &U _red &U _ir `i -> 0 `i 410  ]
-{
-"81
-[; ;main.c: 81:                 bpm = CAR_ProcesarMuestra(red, ir);
-[e = _bpm ( _CAR_ProcesarMuestra (2 , _red _ir ]
-"82
-[; ;main.c: 82:                 hay_dedo = CAR_HayDedo(ir);
-[e = _hay_dedo ( _CAR_HayDedo (1 _ir ]
-"83
-[; ;main.c: 83:             }
+[; ;max30102.c: 76:     return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 398  ]
+"77
+[; ;max30102.c: 77: }
+[e :UE 398 ]
 }
-[e :U 410 ]
-"85
-[; ;main.c: 85:             _delay((unsigned long)((15)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 15 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"86
-[; ;main.c: 86:         }
-}
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 20 `i 407  ]
-[e :U 408 ]
-}
-"88
-[; ;main.c: 88:         LATDbits.LATD0 = 1;
-[e = . . _LATDbits 0 0 -> -> 1 `i `uc ]
-"89
-[; ;main.c: 89:         LATDbits.LATD1 = hay_dedo ? 1 : 0;
-[e = . . _LATDbits 0 1 -> ? != -> _hay_dedo `i -> 0 `i : -> 1 `i -> 0 `i `uc ]
-"91
-[; ;main.c: 91:         mostrar_bpm(bpm, hay_dedo);
-[e ( _mostrar_bpm (2 , _bpm _hay_dedo ]
-"92
-[; ;main.c: 92:     }
-}
-[e :U 404 ]
-[e $U 405  ]
-[e :U 406 ]
-"93
-[; ;main.c: 93: }
-[e :UE 399 ]
-}
-[a 5C 73 78 73 67 73 65 78 68 79 32 77 65 88 0 ]
-[a 1C 67 65 82 68 73 79 46 88 0 ]
-[a 6C 77 65 88 32 69 82 82 0 ]
-[a 3C 68 69 68 79 58 32 78 79 0 ]
-[a 7C 77 65 88 51 48 49 48 50 32 79 75 0 ]
-[a 2C 68 69 68 79 58 32 83 73 0 ]
-[a 4C 66 80 77 58 0 ]

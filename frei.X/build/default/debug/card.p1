@@ -1,112 +1,4 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"7984 C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 7984: extern volatile unsigned char OSCCON __attribute__((address(0xFD3)));
-[v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
-"7990
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 7990:     struct {
-[s S344 :2 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
-[n S344 . SCS IOFS OSTS IRCF IDLEN ]
-"7997
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 7997:     struct {
-[s S345 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S345 . SCS0 SCS1 FLTS . IRCF0 IRCF1 IRCF2 ]
-"7989
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 7989: typedef union {
-[u S343 `S344 1 `S345 1 ]
-[n S343 . . . ]
-"8007
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 8007: extern volatile OSCCONbits_t OSCCONbits __attribute__((address(0xFD3)));
-[v _OSCCONbits `VS343 ~T0 @X0 0 e@4051 ]
-[v F205 `(v ~T0 @X0 1 tf1`ul ]
-"20 C:\Program Files\Microchip\xc8\v3.10\pic\include/builtins.h
-[v __delay `JF205 ~T0 @X0 0 e ]
-[p i __delay ]
-"3999 C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3999: extern volatile unsigned char TRISD __attribute__((address(0xF95)));
-[v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
-"3261
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3261: extern volatile unsigned char LATD __attribute__((address(0xF8C)));
-[v _LATD `Vuc ~T0 @X0 0 e@3980 ]
-"3623
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3623: extern volatile unsigned char TRISB __attribute__((address(0xF93)));
-[v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
-"3071
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3071: extern volatile unsigned char LATB __attribute__((address(0xF8A)));
-[v _LATB `Vuc ~T0 @X0 0 e@3978 ]
-"8509
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 8509:     struct {
-[s S356 :7 `uc 1 :1 `uc 1 ]
-[n S356 . . NOT_RBPU ]
-"8513
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 8513:     struct {
-[s S357 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S357 . RBIP . TMR0IP . INTEDG2 INTEDG1 INTEDG0 nRBPU ]
-"8523
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 8523:     struct {
-[s S358 :2 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 ]
-[n S358 . . T0IP . RBPU ]
-"8508
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 8508: typedef union {
-[u S355 `S356 1 `S357 1 `S358 1 ]
-[n S355 . . . . ]
-"8530
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 8530: extern volatile INTCON2bits_t INTCON2bits __attribute__((address(0xFF1)));
-[v _INTCON2bits `VS355 ~T0 @X0 0 e@4081 ]
-"5585
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 5585: extern volatile unsigned char CMCON __attribute__((address(0xFB4)));
-[v _CMCON `Vuc ~T0 @X0 0 e@4020 ]
-"6579
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 6579: extern volatile unsigned char ADCON1 __attribute__((address(0xFC1)));
-[v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
-"30 ./oled.h
-[; ;./oled.h: 30: void OLED_Clear(void);
-[v _OLED_Clear `(v ~T0 @X0 0 ef ]
-"32
-[; ;./oled.h: 32: void OLED_SetCursor(unsigned char col, unsigned char page);
-[v _OLED_SetCursor `(v ~T0 @X0 0 ef2`uc`uc ]
-"36
-[; ;./oled.h: 36: void OLED_WriteString(char *str);
-[v _OLED_WriteString `(v ~T0 @X0 0 ef1`*uc ]
-"35
-[; ;./oled.h: 35: void OLED_WriteChar(char c);
-[v _OLED_WriteChar `(v ~T0 @X0 0 ef1`uc ]
-[p mainexit ]
-"28 ./i2c.h
-[; ;./i2c.h: 28: void I2C_Init(void);
-[v _I2C_Init `(v ~T0 @X0 0 ef ]
-"23 ./oled.h
-[; ;./oled.h: 23: void OLED_Init(void);
-[v _OLED_Init `(v ~T0 @X0 0 ef ]
-"28 ./max30102.h
-[; ;./max30102.h: 28: unsigned char MAX30102_Init(void);
-[v _MAX30102_Init `(uc ~T0 @X0 0 ef ]
-"44 ./oled.h
-[; ;./oled.h: 44: void OLED_Error(char *msg);
-[v _OLED_Error `(v ~T0 @X0 0 ef1`*uc ]
-"30 ./max30102.h
-[; ;./max30102.h: 30: unsigned char MAX30102_ReadSample(unsigned long *red, unsigned long *ir);
-[v _MAX30102_ReadSample `(uc ~T0 @X0 0 ef2`*ul`*ul ]
-"9 ./card.h
-[; ;./card.h: 9: unsigned char CAR_ProcesarMuestra(unsigned long red, unsigned long ir);
-[v _CAR_ProcesarMuestra `(uc ~T0 @X0 0 ef2`ul`ul ]
-"8
-[; ;./card.h: 8: unsigned char CAR_HayDedo(unsigned long ir);
-[v _CAR_HayDedo `(uc ~T0 @X0 0 ef1`ul ]
-"3267 C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3267:     struct {
-[s S136 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S136 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
-"3277
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3277:     struct {
-[s S137 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S137 . LD0 LD1 LD2 LD3 LD4 LD5 LD6 LD7 ]
-"3266
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3266: typedef union {
-[u S135 `S136 1 `S137 1 ]
-[n S135 . . . ]
-"3288
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3288: extern volatile LATDbits_t LATDbits __attribute__((address(0xF8C)));
-[v _LATDbits `VS135 ~T0 @X0 0 e@3980 ]
 "52 C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h
 [; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 52: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -617,248 +509,251 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8891
 [; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 8891: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"8 ./config.h
-[p x FOSC      =  INTOSCIO_EC ]
-"9
-[p x WDT        =  OFF ]
-"10
-[p x LVP        =  OFF ]
+"4 card.c
+[; ;card.c: 4: long CAR_ultimo_delta = 0;
+[v _CAR_ultimo_delta `l ~T0 @X0 1 e ]
+[i _CAR_ultimo_delta
+-> -> 0 `i `l
+]
 "11
-[p x PBADEN  =  OFF ]
+[; ;card.c: 11: static unsigned long ir_buffer[16];
+[v _ir_buffer `ul ~T0 @X0 -> 16 `i s ]
 "12
-[p x MCLRE    =  ON ]
-"15 main.c
-[; ;main.c: 15: static void setup(void) {
-[v _setup `(v ~T0 @X0 1 sf ]
-{
-[e :U _setup ]
-[f ]
+[; ;card.c: 12: static unsigned char buf_idx = 0;
+[v _buf_idx `uc ~T0 @X0 1 s ]
+[i _buf_idx
+-> -> 0 `i `uc
+]
+"13
+[; ;card.c: 13: static unsigned long ir_promedio_ant = 0;
+[v _ir_promedio_ant `ul ~T0 @X0 1 s ]
+[i _ir_promedio_ant
+-> -> -> 0 `i `l `ul
+]
+"14
+[; ;card.c: 14: static unsigned char bpm_actual = 0;
+[v _bpm_actual `uc ~T0 @X0 1 s ]
+[i _bpm_actual
+-> -> 0 `i `uc
+]
+"15
+[; ;card.c: 15: static unsigned int muestras_pico = 0;
+[v _muestras_pico `ui ~T0 @X0 1 s ]
+[i _muestras_pico
+-> -> 0 `i `ui
+]
 "16
-[; ;main.c: 16:     OSCCON = 0x72;
-[e = _OSCCON -> -> 114 `i `uc ]
+[; ;card.c: 16: static unsigned char en_pico = 0;
+[v _en_pico `uc ~T0 @X0 1 s ]
+[i _en_pico
+-> -> 0 `i `uc
+]
 "17
-[; ;main.c: 17:     while (!OSCCONbits.IOFS);
-[e $U 392  ]
-[e :U 393 ]
-[e :U 392 ]
-[e $ ! != -> . . _OSCCONbits 0 1 `i -> 0 `i 393  ]
-[e :U 394 ]
-"18
-[; ;main.c: 18:     _delay((unsigned long)((100)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;card.c: 17: static unsigned char picos_contados = 0;
+[v _picos_contados `uc ~T0 @X0 1 s ]
+[i _picos_contados
+-> -> 0 `i `uc
+]
+"19
+[; ;card.c: 19: static unsigned long calcular_promedio(void) {
+[v _calcular_promedio `(ul ~T0 @X0 1 sf ]
+{
+[e :U _calcular_promedio ]
+[f ]
 "20
-[; ;main.c: 20:     TRISD = 0x00;
-[e = _TRISD -> -> 0 `i `uc ]
+[; ;card.c: 20:     unsigned long suma = 0;
+[v _suma `ul ~T0 @X0 1 a ]
+[e = _suma -> -> -> 0 `i `l `ul ]
 "21
-[; ;main.c: 21:     LATD = 0x00;
-[e = _LATD -> -> 0 `i `uc ]
-"23
-[; ;main.c: 23:     TRISB = 0xF8;
-[e = _TRISB -> -> 248 `i `uc ]
-"24
-[; ;main.c: 24:     LATB = 0x00;
-[e = _LATB -> -> 0 `i `uc ]
-"26
-[; ;main.c: 26:     INTCON2bits.RBPU = 0;
-[e = . . _INTCON2bits 2 3 -> -> 0 `i `uc ]
-"27
-[; ;main.c: 27:     CMCON = 0x07;
-[e = _CMCON -> -> 7 `i `uc ]
-"28
-[; ;main.c: 28:     ADCON1 = 0x0F;
-[e = _ADCON1 -> -> 15 `i `uc ]
-"29
-[; ;main.c: 29: }
-[e :UE 391 ]
-}
-"31
-[; ;main.c: 31: static void mostrar_bpm(unsigned char bpm, unsigned char hay_dedo) {
-[v _mostrar_bpm `(v ~T0 @X0 1 sf2`uc`uc ]
-{
-[e :U _mostrar_bpm ]
-[v _bpm `uc ~T0 @X0 1 r1 ]
-[v _hay_dedo `uc ~T0 @X0 1 r2 ]
-[f ]
-"32
-[; ;main.c: 32:     OLED_Clear();
-[e ( _OLED_Clear ..  ]
-"34
-[; ;main.c: 34:     OLED_SetCursor(0, 0);
-[e ( _OLED_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"35
-[; ;main.c: 35:     OLED_WriteString("CARDIO.X");
-[e ( _OLED_WriteString (1 :s 1C ]
-"37
-[; ;main.c: 37:     OLED_SetCursor(0, 2);
-[e ( _OLED_SetCursor (2 , -> -> 0 `i `uc -> -> 2 `i `uc ]
-"38
-[; ;main.c: 38:     if (hay_dedo)
-[e $ ! != -> _hay_dedo `i -> 0 `i 396  ]
-"39
-[; ;main.c: 39:         OLED_WriteString("DEDO: SI");
-[e ( _OLED_WriteString (1 :s 2C ]
-[e $U 397  ]
-"40
-[; ;main.c: 40:     else
-[e :U 396 ]
-"41
-[; ;main.c: 41:         OLED_WriteString("DEDO: NO");
-[e ( _OLED_WriteString (1 :s 3C ]
-[e :U 397 ]
-"43
-[; ;main.c: 43:     OLED_SetCursor(0, 4);
-[e ( _OLED_SetCursor (2 , -> -> 0 `i `uc -> -> 4 `i `uc ]
-"44
-[; ;main.c: 44:     OLED_WriteString("BPM:");
-[e ( _OLED_WriteString (1 :s 4C ]
-"46
-[; ;main.c: 46:     if (bpm >= 100)
-[e $ ! >= -> _bpm `i -> 100 `i 398  ]
-"47
-[; ;main.c: 47:         OLED_WriteChar('0' + (bpm / 100));
-[e ( _OLED_WriteChar (1 -> + -> 48 `ui -> / -> _bpm `i -> 100 `i `ui `uc ]
-[e :U 398 ]
-"49
-[; ;main.c: 49:     OLED_WriteChar('0' + ((bpm / 10) % 10));
-[e ( _OLED_WriteChar (1 -> + -> 48 `ui -> % / -> _bpm `i -> 10 `i -> 10 `i `ui `uc ]
-"50
-[; ;main.c: 50:     OLED_WriteChar('0' + (bpm % 10));
-[e ( _OLED_WriteChar (1 -> + -> 48 `ui -> % -> _bpm `i -> 10 `i `ui `uc ]
-"51
-[; ;main.c: 51: }
-[e :UE 395 ]
-}
-[v $root$_main `(v ~T0 @X0 0 e ]
-"53
-[; ;main.c: 53: void main(void) {
-[v _main `(v ~T0 @X0 1 ef ]
-{
-[e :U _main ]
-[f ]
-"54
-[; ;main.c: 54:     unsigned long red, ir;
-[v _red `ul ~T0 @X0 1 a ]
-[v _ir `ul ~T0 @X0 1 a ]
-"55
-[; ;main.c: 55:     unsigned char bpm = 0;
-[v _bpm `uc ~T0 @X0 1 a ]
-[e = _bpm -> -> 0 `i `uc ]
-"56
-[; ;main.c: 56:     unsigned char hay_dedo = 0;
-[v _hay_dedo `uc ~T0 @X0 1 a ]
-[e = _hay_dedo -> -> 0 `i `uc ]
-"57
-[; ;main.c: 57:     unsigned char i;
+[; ;card.c: 21:     unsigned char i;
 [v _i `uc ~T0 @X0 1 a ]
-"59
-[; ;main.c: 59:     setup();
-[e ( _setup ..  ]
-"60
-[; ;main.c: 60:     I2C_Init();
-[e ( _I2C_Init ..  ]
-"61
-[; ;main.c: 61:     OLED_Init();
-[e ( _OLED_Init ..  ]
-"63
-[; ;main.c: 63:     OLED_Clear();
-[e ( _OLED_Clear ..  ]
-"64
-[; ;main.c: 64:     OLED_SetCursor(0, 0);
-[e ( _OLED_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"65
-[; ;main.c: 65:     OLED_WriteString("INICIANDO MAX");
-[e ( _OLED_WriteString (1 :s 5C ]
-"66
-[; ;main.c: 66:     _delay((unsigned long)((1000)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"68
-[; ;main.c: 68:     if (!MAX30102_Init()) {
-[e $ ! ! != -> ( _MAX30102_Init ..  `i -> 0 `i 400  ]
-{
-"69
-[; ;main.c: 69:         OLED_Error("MAX ERR");
-[e ( _OLED_Error (1 :s 6C ]
-"70
-[; ;main.c: 70:         while (1);
-[e :U 402 ]
-[e :U 401 ]
-[e $U 402  ]
-[e :U 403 ]
-"71
-[; ;main.c: 71:     }
-}
-[e :U 400 ]
-"73
-[; ;main.c: 73:     OLED_Clear();
-[e ( _OLED_Clear ..  ]
-"74
-[; ;main.c: 74:     OLED_SetCursor(0, 0);
-[e ( _OLED_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"75
-[; ;main.c: 75:     OLED_WriteString("MAX30102 OK");
-[e ( _OLED_WriteString (1 :s 7C ]
-"76
-[; ;main.c: 76:     _delay((unsigned long)((1000)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"78
-[; ;main.c: 78:     while (1) {
-[e :U 405 ]
-{
-"79
-[; ;main.c: 79:         for (i = 0; i < 20; i++) {
+"22
+[; ;card.c: 22:     for (i = 0; i < 16; i++) suma += ir_buffer[i];
 {
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 20 `i 407  ]
-[e $U 408  ]
-[e :U 407 ]
-{
-"80
-[; ;main.c: 80:             if (MAX30102_ReadSample(&red, &ir)) {
-[e $ ! != -> ( _MAX30102_ReadSample (2 , &U _red &U _ir `i -> 0 `i 410  ]
-{
-"81
-[; ;main.c: 81:                 bpm = CAR_ProcesarMuestra(red, ir);
-[e = _bpm ( _CAR_ProcesarMuestra (2 , _red _ir ]
-"82
-[; ;main.c: 82:                 hay_dedo = CAR_HayDedo(ir);
-[e = _hay_dedo ( _CAR_HayDedo (1 _ir ]
-"83
-[; ;main.c: 83:             }
-}
-[e :U 410 ]
-"85
-[; ;main.c: 85:             _delay((unsigned long)((15)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 15 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"86
-[; ;main.c: 86:         }
-}
+[e $ < -> _i `i -> 16 `i 392  ]
+[e $U 393  ]
+[e :U 392 ]
+[e =+ _suma *U + &U _ir_buffer * -> _i `ux -> -> # *U &U _ir_buffer `ui `ux ]
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 20 `i 407  ]
-[e :U 408 ]
+[e $ < -> _i `i -> 16 `i 392  ]
+[e :U 393 ]
 }
-"88
-[; ;main.c: 88:         LATDbits.LATD0 = 1;
-[e = . . _LATDbits 0 0 -> -> 1 `i `uc ]
-"89
-[; ;main.c: 89:         LATDbits.LATD1 = hay_dedo ? 1 : 0;
-[e = . . _LATDbits 0 1 -> ? != -> _hay_dedo `i -> 0 `i : -> 1 `i -> 0 `i `uc ]
-"91
-[; ;main.c: 91:         mostrar_bpm(bpm, hay_dedo);
-[e ( _mostrar_bpm (2 , _bpm _hay_dedo ]
-"92
-[; ;main.c: 92:     }
+"23
+[; ;card.c: 23:     return suma / 16;
+[e ) / _suma -> -> -> 16 `i `l `ul ]
+[e $UE 391  ]
+"24
+[; ;card.c: 24: }
+[e :UE 391 ]
 }
+"26
+[; ;card.c: 26: unsigned char CAR_HayDedo(unsigned long ir) {
+[v _CAR_HayDedo `(uc ~T0 @X0 1 ef1`ul ]
+{
+[e :U _CAR_HayDedo ]
+[v _ir `ul ~T0 @X0 1 r1 ]
+[f ]
+"27
+[; ;card.c: 27:     return (ir > 50000UL) ? 1 : 0;
+[e ) -> ? > _ir -> 50000 `ul : -> 1 `i -> 0 `i `uc ]
+[e $UE 395  ]
+"28
+[; ;card.c: 28: }
+[e :UE 395 ]
+}
+"30
+[; ;card.c: 30: unsigned char CAR_ProcesarMuestra(unsigned long red, unsigned long ir) {
+[v _CAR_ProcesarMuestra `(uc ~T0 @X0 1 ef2`ul`ul ]
+{
+[e :U _CAR_ProcesarMuestra ]
+[v _red `ul ~T0 @X0 1 r1 ]
+[v _ir `ul ~T0 @X0 1 r2 ]
+[f ]
+"31
+[; ;card.c: 31:     unsigned long promedio;
+[v _promedio `ul ~T0 @X0 1 a ]
+"32
+[; ;card.c: 32:     long delta;
+[v _delta `l ~T0 @X0 1 a ]
+"34
+[; ;card.c: 34:     if (!CAR_HayDedo(ir)) {
+[e $ ! ! != -> ( _CAR_HayDedo (1 _ir `i -> 0 `i 397  ]
+{
+"35
+[; ;card.c: 35:         unsigned char i;
+[v _i `uc ~T0 @X0 1 a ]
+"36
+[; ;card.c: 36:         buf_idx = 0;
+[e = _buf_idx -> -> 0 `i `uc ]
+"37
+[; ;card.c: 37:         bpm_actual = 0;
+[e = _bpm_actual -> -> 0 `i `uc ]
+"38
+[; ;card.c: 38:         muestras_pico = 0;
+[e = _muestras_pico -> -> 0 `i `ui ]
+"39
+[; ;card.c: 39:         en_pico = 0;
+[e = _en_pico -> -> 0 `i `uc ]
+"40
+[; ;card.c: 40:         picos_contados = 0;
+[e = _picos_contados -> -> 0 `i `uc ]
+"41
+[; ;card.c: 41:         ir_promedio_ant = 0;
+[e = _ir_promedio_ant -> -> -> 0 `i `l `ul ]
+"42
+[; ;card.c: 42:         CAR_ultimo_delta = 0;
+[e = _CAR_ultimo_delta -> -> 0 `i `l ]
+"43
+[; ;card.c: 43:         for (i = 0; i < 16; i++) ir_buffer[i] = 0;
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 16 `i 398  ]
+[e $U 399  ]
+[e :U 398 ]
+[e = *U + &U _ir_buffer * -> _i `ux -> -> # *U &U _ir_buffer `ui `ux -> -> -> 0 `i `l `ul ]
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 16 `i 398  ]
+[e :U 399 ]
+}
+"44
+[; ;card.c: 44:         return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 396  ]
+"45
+[; ;card.c: 45:     }
+}
+[e :U 397 ]
+"47
+[; ;card.c: 47:     ir_buffer[buf_idx] = ir;
+[e = *U + &U _ir_buffer * -> _buf_idx `ux -> -> # *U &U _ir_buffer `ui `ux _ir ]
+"48
+[; ;card.c: 48:     buf_idx = (buf_idx + 1) % 16;
+[e = _buf_idx -> % + -> _buf_idx `i -> 1 `i -> 16 `i `uc ]
+"49
+[; ;card.c: 49:     muestras_pico++;
+[e ++ _muestras_pico -> -> 1 `i `ui ]
+"51
+[; ;card.c: 51:     promedio = calcular_promedio();
+[e = _promedio ( _calcular_promedio ..  ]
+"52
+[; ;card.c: 52:     delta = (long)ir_promedio_ant - (long)promedio;
+[e = _delta - -> _ir_promedio_ant `l -> _promedio `l ]
+"53
+[; ;card.c: 53:     CAR_ultimo_delta = delta;
+[e = _CAR_ultimo_delta _delta ]
+"55
+[; ;card.c: 55:     if (delta > 80 && !en_pico) {
+[e $ ! && > _delta -> -> 80 `i `l ! != -> _en_pico `i -> 0 `i 401  ]
+{
+"56
+[; ;card.c: 56:         en_pico = 1;
+[e = _en_pico -> -> 1 `i `uc ]
+"57
+[; ;card.c: 57:         picos_contados++;
+[e ++ _picos_contados -> -> 1 `i `uc ]
+"58
+[; ;card.c: 58:         if (picos_contados >= 2 && muestras_pico > 0) {
+[e $ ! && >= -> _picos_contados `i -> 2 `i > _muestras_pico -> -> 0 `i `ui 402  ]
+{
+"59
+[; ;card.c: 59:             unsigned int bpm_calc = (unsigned int)(3960UL / muestras_pico);
+[v _bpm_calc `ui ~T0 @X0 1 a ]
+[e = _bpm_calc -> / -> 3960 `ul -> _muestras_pico `ul `ui ]
+"60
+[; ;card.c: 60:             if (bpm_calc >= 40 && bpm_calc <= 180) {
+[e $ ! && >= _bpm_calc -> -> 40 `i `ui <= _bpm_calc -> -> 180 `i `ui 403  ]
+{
+"61
+[; ;card.c: 61:                 bpm_actual = (unsigned char)bpm_calc;
+[e = _bpm_actual -> _bpm_calc `uc ]
+"62
+[; ;card.c: 62:             }
+}
+[e :U 403 ]
+"63
+[; ;card.c: 63:         }
+}
+[e :U 402 ]
+"64
+[; ;card.c: 64:         muestras_pico = 0;
+[e = _muestras_pico -> -> 0 `i `ui ]
+"65
+[; ;card.c: 65:         picos_contados = (picos_contados > 8) ? 1 : picos_contados;
+[e = _picos_contados -> ? > -> _picos_contados `i -> 8 `i : -> 1 `i -> _picos_contados `i `uc ]
+"66
+[; ;card.c: 66:     } else if (delta < -40) {
+}
+[e $U 404  ]
+[e :U 401 ]
+[e $ ! < _delta -> -U -> 40 `i `l 405  ]
+{
+"67
+[; ;card.c: 67:         en_pico = 0;
+[e = _en_pico -> -> 0 `i `uc ]
+"68
+[; ;card.c: 68:     }
+}
+[e :U 405 ]
 [e :U 404 ]
-[e $U 405  ]
-[e :U 406 ]
-"93
-[; ;main.c: 93: }
-[e :UE 399 ]
+"70
+[; ;card.c: 70:     ir_promedio_ant = promedio;
+[e = _ir_promedio_ant _promedio ]
+"71
+[; ;card.c: 71:     return bpm_actual;
+[e ) _bpm_actual ]
+[e $UE 396  ]
+"72
+[; ;card.c: 72: }
+[e :UE 396 ]
 }
-[a 5C 73 78 73 67 73 65 78 68 79 32 77 65 88 0 ]
-[a 1C 67 65 82 68 73 79 46 88 0 ]
-[a 6C 77 65 88 32 69 82 82 0 ]
-[a 3C 68 69 68 79 58 32 78 79 0 ]
-[a 7C 77 65 88 51 48 49 48 50 32 79 75 0 ]
-[a 2C 68 69 68 79 58 32 83 73 0 ]
-[a 4C 66 80 77 58 0 ]
+"74
+[; ;card.c: 74: unsigned char CAR_GetBPM(void) { return bpm_actual; }
+[v _CAR_GetBPM `(uc ~T0 @X0 1 ef ]
+{
+[e :U _CAR_GetBPM ]
+[f ]
+[e ) _bpm_actual ]
+[e $UE 406  ]
+[e :UE 406 ]
+}
