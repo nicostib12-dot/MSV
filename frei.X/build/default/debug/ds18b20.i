@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "ds18b20.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 295 "<built-in>" 3
@@ -6,12 +6,9 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-
-
-
-
-
+# 1 "ds18b20.c" 2
+# 15 "ds18b20.c"
+# 1 "./config.h" 1
 
 
 
@@ -5914,12 +5911,7 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 2 3
-# 10 "main.c" 2
-# 1 "./config.h" 1
-
-
-
-
+# 5 "./config.h" 2
 
 
 
@@ -5928,53 +5920,7 @@ unsigned char __t3rd16on(void);
 #pragma config LVP = OFF
 #pragma config PBADEN = OFF
 #pragma config MCLRE = ON
-# 11 "main.c" 2
-# 1 "./i2c.h" 1
-# 28 "./i2c.h"
-void I2C_Init(void);
-
-
-void I2C_Start(void);
-
-
-void I2C_Stop(void);
-# 45 "./i2c.h"
-void I2C_Write(unsigned char data);
-# 57 "./i2c.h"
-unsigned char I2C_Read(char ack);
-
-
-
-
-
-
-void I2C_RepeatedStart(void);
-# 12 "main.c" 2
-# 1 "./oled.h" 1
-# 23 "./oled.h"
-void OLED_Init(void);
-
-
-void OLED_Command(unsigned char cmd);
-void OLED_Data(unsigned char data);
-
-
-void OLED_Clear(void);
-void OLED_ClearLine(unsigned char linea);
-void OLED_SetCursor(unsigned char col, unsigned char page);
-
-
-void OLED_WriteChar(char c);
-void OLED_WriteString(char *str);
-
-
-void OLED_Splash(void);
-void OLED_Vitals(unsigned char temp_int, unsigned char temp_dec,
-                 unsigned char bpm, unsigned char alarma,
-                 unsigned char perfil);
-void OLED_Paused(void);
-void OLED_Error(char *msg);
-# 13 "main.c" 2
+# 16 "ds18b20.c" 2
 # 1 "./ds18b20.h" 1
 # 10 "./ds18b20.h"
 unsigned char DS18B20_Reset(void);
@@ -5983,132 +5929,138 @@ unsigned char DS18B20_ReadByte(void);
 unsigned char DS18B20_StartConversion(void);
 void DS18B20_WaitConversion(void);
 float DS18B20_ReadTemp(void);
-# 14 "main.c" 2
-# 1 "./max30102.h" 1
-# 25 "./max30102.h"
-unsigned char MAX30102_ReadRegister(unsigned char reg, unsigned char *data);
-unsigned char MAX30102_WriteRegister(unsigned char reg, unsigned char data);
-unsigned char MAX30102_Check(void);
-unsigned char MAX30102_Init(void);
-unsigned char MAX30102_SamplesAvailable(void);
-unsigned char MAX30102_ReadSample(unsigned long *red, unsigned long *ir);
-# 15 "main.c" 2
-# 1 "./card.h" 1
+# 17 "ds18b20.c" 2
 
 
 
 
-
-extern long CAR_ultimo_delta;
-
-unsigned char CAR_HayDedo(unsigned long ir);
-unsigned char CAR_ProcesarMuestra(unsigned long red, unsigned long ir);
-unsigned char CAR_GetBPM(void);
-# 16 "main.c" 2
-
-
-
-static void setup(void) {
-    OSCCON = 0x72;
-    while (!OSCCONbits.IOFS);
-    _delay((unsigned long)((100)*(8000000/4000.0)));
-
-    TRISD = 0x40;
-    LATD = 0x00;
-
-    TRISB = 0xF8;
-    LATB = 0x00;
-
-    INTCON2bits.RBPU = 0;
-    CMCON = 0x07;
-    ADCON1 = 0x0F;
+static void OW_Release(void) {
+    LATDbits.LATD6 = 1;
+    TRISDbits.TRISD6 = 1;
 }
 
-void main(void) {
-    unsigned long red, ir;
-    unsigned char bpm = 0;
-    unsigned char hay_dedo = 0;
-    unsigned char hay_temp = 0;
-    unsigned char activo = 0;
-    unsigned char alarma = 0;
-    unsigned char i;
-    unsigned char ciclo_temp = 0;
 
-    float temp_f = 0.0f;
-    unsigned char temp_int = 0;
-    unsigned char temp_dec = 0;
 
-    setup();
-    I2C_Init();
-    OLED_Init();
 
-    OLED_Splash();
-    _delay((unsigned long)((1500)*(8000000/4000.0)));
 
-    LATDbits.LATD2 = 1;
-    if (!DS18B20_Reset()) {
-        OLED_Error("DS18 ERR");
-        _delay((unsigned long)((2000)*(8000000/4000.0)));
+unsigned char DS18B20_Reset(void) {
+    unsigned char presence;
+
+
+    OW_Release();
+    _delay((unsigned long)((10)*(8000000/4000000.0)));
+
+
+    if (PORTDbits.RD6 == 0) return 0;
+
+
+    LATDbits.LATD6 = 0;
+    TRISDbits.TRISD6 = 0;
+    _delay((unsigned long)((500)*(8000000/4000000.0)));
+
+
+    OW_Release();
+    _delay((unsigned long)((70)*(8000000/4000000.0)));
+
+    presence = (PORTDbits.RD6 == 0);
+
+    _delay((unsigned long)((430)*(8000000/4000000.0)));
+
+    return presence;
+}
+
+
+
+
+static void OW_WriteBit(unsigned char bit) {
+    if (bit) {
+
+        LATDbits.LATD6 = 0; TRISDbits.TRISD6 = 0;
+        _delay((unsigned long)((2)*(8000000/4000000.0)));
+        OW_Release();
+        _delay((unsigned long)((62)*(8000000/4000000.0)));
     } else {
-        DS18B20_StartConversion();
-        DS18B20_WaitConversion();
-        temp_f = DS18B20_ReadTemp();
 
-        if (temp_f > -55.0f && temp_f < 125.0f) {
-            temp_int = (unsigned char)temp_f;
-            temp_dec = (unsigned char)((temp_f - (float)temp_int) * 10.0f);
-            hay_temp = (temp_f >= 30.0f) ? 1 : 0;
-        }
-
-        DS18B20_StartConversion();
+        LATDbits.LATD6 = 0; TRISDbits.TRISD6 = 0;
+        _delay((unsigned long)((64)*(8000000/4000000.0)));
+        OW_Release();
+        _delay((unsigned long)((2)*(8000000/4000000.0)));
     }
-    LATDbits.LATD2 = 0;
+}
 
-    if (!MAX30102_Init()) {
-        OLED_Error("MAX ERR");
-        while (1);
+
+
+
+static unsigned char OW_ReadBit(void) {
+    unsigned char bit;
+    LATDbits.LATD6 = 0; TRISDbits.TRISD6 = 0;
+    _delay((unsigned long)((2)*(8000000/4000000.0)));
+    OW_Release();
+    _delay((unsigned long)((10)*(8000000/4000000.0)));
+    bit = PORTDbits.RD6;
+    _delay((unsigned long)((52)*(8000000/4000000.0)));
+    return bit;
+}
+
+
+
+
+void DS18B20_WriteByte(unsigned char byte) {
+    unsigned char i;
+    for (i = 0; i < 8; i++) {
+        OW_WriteBit(byte & 0x01);
+        byte >>= 1;
     }
+}
 
-    OLED_Clear();
-    LATDbits.LATD0 = 1;
-
-    while (1) {
-        for (i = 0; i < 20; i++) {
-            if (MAX30102_ReadSample(&red, &ir)) {
-                bpm = CAR_ProcesarMuestra(red, ir);
-                hay_dedo = CAR_HayDedo(ir);
-            }
-
-            _delay((unsigned long)((15)*(8000000/4000.0)));
-        }
-
-        ciclo_temp++;
-
-        if (ciclo_temp >= 25) {
-            ciclo_temp = 0;
-
-            temp_f = DS18B20_ReadTemp();
-
-            if (temp_f > -55.0f && temp_f < 125.0f) {
-                temp_int = (unsigned char)temp_f;
-                temp_dec = (unsigned char)((temp_f - (float)temp_int) * 10.0f);
-                hay_temp = (temp_f >= 30.0f) ? 1 : 0;
-            }
-
-            DS18B20_StartConversion();
-        }
-
-        activo = (hay_dedo || hay_temp) ? 1 : 0;
-        alarma = 0;
-
-        LATDbits.LATD0 = 1;
-        LATDbits.LATD1 = activo ? 1 : 0;
-        LATDbits.LATD2 = 0;
-        LATDbits.LATD3 = alarma ? 1 : 0;
-
-        if (!activo)
-            OLED_Paused();
-        else
-            OLED_Vitals(temp_int, temp_dec, bpm, alarma, 0);
+unsigned char DS18B20_ReadByte(void) {
+    unsigned char i, data = 0;
+    for (i = 0; i < 8; i++) {
+        data >>= 1;
+        if (OW_ReadBit()) data |= 0x80;
     }
+    return data;
+}
+
+
+
+
+unsigned char DS18B20_StartConversion(void) {
+    if (!DS18B20_Reset()) return 0;
+    DS18B20_WriteByte(0xCC);
+    DS18B20_WriteByte(0x44);
+    return 1;
+}
+
+
+
+
+
+
+
+void DS18B20_WaitConversion(void) {
+    _delay((unsigned long)((100)*(8000000/4000.0))); _delay((unsigned long)((100)*(8000000/4000.0)));
+    _delay((unsigned long)((100)*(8000000/4000.0))); _delay((unsigned long)((100)*(8000000/4000.0)));
+    _delay((unsigned long)((100)*(8000000/4000.0))); _delay((unsigned long)((100)*(8000000/4000.0)));
+    _delay((unsigned long)((100)*(8000000/4000.0))); _delay((unsigned long)((100)*(8000000/4000.0)));
+}
+# 142 "ds18b20.c"
+float DS18B20_ReadTemp(void) {
+    unsigned char lsb, msb;
+    int raw;
+
+    if (!DS18B20_Reset()) return -999.0f;
+
+    DS18B20_WriteByte(0xCC);
+    DS18B20_WriteByte(0xBE);
+
+    lsb = DS18B20_ReadByte();
+    msb = DS18B20_ReadByte();
+
+    if (lsb == 0xFF && msb == 0xFF) return -998.0f;
+    if (lsb == 0x00 && msb == 0x00) return -998.0f;
+    if (lsb == 0x50 && msb == 0x05) return -997.0f;
+
+    raw = (int)((unsigned int)((msb << 8) | lsb));
+    return (float)raw / 16.0f;
 }
