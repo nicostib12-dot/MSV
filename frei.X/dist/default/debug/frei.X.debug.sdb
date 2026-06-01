@@ -105,9 +105,13 @@
 [v _I2C_Write I2C_Write `(v  1 e 1 0 ]
 "55
 [v _I2C_Read I2C_Read `(uc  1 e 1 0 ]
-"19 C:\Users\david\OneDrive\Desktop\fr\MSV\frei.X\main.c
+"38 C:\Users\david\OneDrive\Desktop\fr\MSV\frei.X\main.c
 [v _setup setup `(v  1 s 1 setup ]
-"35
+"56
+[v _blink_amarillo blink_amarillo `(v  1 s 1 blink_amarillo ]
+"64
+[v _mostrar_perfil mostrar_perfil `(v  1 s 1 mostrar_perfil ]
+"76
 [v _main main `(v  1 e 1 0 ]
 "6 C:\Users\david\OneDrive\Desktop\fr\MSV\frei.X\max30102.c
 [v _MAX30102_WriteRegister MAX30102_WriteRegister `(uc  1 e 1 0 ]
@@ -145,6 +149,16 @@
 [v _OLED_Paused OLED_Paused `(v  1 e 1 0 ]
 "516
 [v _OLED_Error OLED_Error `(v  1 e 1 0 ]
+"9 C:\Users\david\OneDrive\Desktop\fr\MSV\frei.X\uart.c
+[v _UART_Init UART_Init `(v  1 e 1 0 ]
+"36
+[v _UART_WriteChar UART_WriteChar `(v  1 e 1 0 ]
+"42
+[v _UART_WriteString UART_WriteString `(v  1 e 1 0 ]
+"51
+[v _send_uint send_uint `(v  1 s 1 send_uint ]
+"71
+[v _UART_SendVitals UART_SendVitals `(v  1 e 1 0 ]
 [s S33 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
@@ -168,7 +182,7 @@
 ]
 [u S169 . 1 `S33 1 . 1 0 `S158 1 . 1 0 `S166 1 . 1 0 ]
 [v _PORTBbits PORTBbits `VES169  1 e 1 @3969 ]
-[s S575 . 1 `uc 1 RD0 1 0 :1:0 
+[s S674 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
 `uc 1 RD3 1 0 :1:3 
@@ -178,7 +192,7 @@
 `uc 1 RD7 1 0 :1:7 
 ]
 "2734
-[s S617 . 1 `uc 1 SPP0 1 0 :1:0 
+[s S716 . 1 `uc 1 SPP0 1 0 :1:0 
 `uc 1 SPP1 1 0 :1:1 
 `uc 1 SPP2 1 0 :1:2 
 `uc 1 SPP3 1 0 :1:3 
@@ -187,11 +201,11 @@
 `uc 1 SPP6 1 0 :1:6 
 `uc 1 SPP7 1 0 :1:7 
 ]
-[s S626 . 1 `uc 1 . 1 0 :7:0 
+[s S725 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 SS2 1 0 :1:7 
 ]
-[u S629 . 1 `S575 1 . 1 0 `S617 1 . 1 0 `S626 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES629  1 e 1 @3971 ]
+[u S728 . 1 `S674 1 . 1 0 `S716 1 . 1 0 `S725 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES728  1 e 1 @3971 ]
 "3071
 [v _LATB LATB `VEuc  1 e 1 @3978 ]
 [s S64 . 1 `uc 1 LATB0 1 0 :1:0 
@@ -217,7 +231,7 @@
 [v _LATBbits LATBbits `VES82  1 e 1 @3978 ]
 "3261
 [v _LATD LATD `VEuc  1 e 1 @3980 ]
-[s S369 . 1 `uc 1 LATD0 1 0 :1:0 
+[s S366 . 1 `uc 1 LATD0 1 0 :1:0 
 `uc 1 LATD1 1 0 :1:1 
 `uc 1 LATD2 1 0 :1:2 
 `uc 1 LATD3 1 0 :1:3 
@@ -227,7 +241,7 @@
 `uc 1 LATD7 1 0 :1:7 
 ]
 "3288
-[s S378 . 1 `uc 1 LD0 1 0 :1:0 
+[s S375 . 1 `uc 1 LD0 1 0 :1:0 
 `uc 1 LD1 1 0 :1:1 
 `uc 1 LD2 1 0 :1:2 
 `uc 1 LD3 1 0 :1:3 
@@ -236,8 +250,8 @@
 `uc 1 LD6 1 0 :1:6 
 `uc 1 LD7 1 0 :1:7 
 ]
-[u S387 . 1 `S369 1 . 1 0 `S378 1 . 1 0 ]
-[v _LATDbits LATDbits `VES387  1 e 1 @3980 ]
+[u S384 . 1 `S366 1 . 1 0 `S375 1 . 1 0 ]
+[v _LATDbits LATDbits `VES384  1 e 1 @3980 ]
 "3623
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
 [s S24 . 1 `uc 1 TRISB0 1 0 :1:0 
@@ -252,9 +266,26 @@
 "3655
 [u S42 . 1 `S24 1 . 1 0 `S33 1 . 1 0 ]
 [v _TRISBbits TRISBbits `VES42  1 e 1 @3987 ]
+[s S794 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"3873
+[s S801 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+[u S808 . 1 `S794 1 . 1 0 `S801 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES808  1 e 1 @3988 ]
 "3999
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
-[s S566 . 1 `uc 1 TRISD0 1 0 :1:0 
+[s S665 . 1 `uc 1 TRISD0 1 0 :1:0 
 `uc 1 TRISD1 1 0 :1:1 
 `uc 1 TRISD2 1 0 :1:2 
 `uc 1 TRISD3 1 0 :1:3 
@@ -264,8 +295,68 @@
 `uc 1 TRISD7 1 0 :1:7 
 ]
 "4031
-[u S584 . 1 `S566 1 . 1 0 `S575 1 . 1 0 ]
-[v _TRISDbits TRISDbits `VES584  1 e 1 @3989 ]
+[u S683 . 1 `S665 1 . 1 0 `S674 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES683  1 e 1 @3989 ]
+[s S880 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"4975
+[s S889 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 ADEN 1 0 :1:3 
+]
+[s S892 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 SRENA 1 0 :1:5 
+]
+[s S895 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[s S898 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S901 . 1 `uc 1 RCD8 1 0 :1:0 
+]
+[u S903 . 1 `S880 1 . 1 0 `S889 1 . 1 0 `S892 1 . 1 0 `S895 1 . 1 0 `S898 1 . 1 0 `S901 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES903  1 e 1 @4011 ]
+[s S828 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"5183
+[s S837 . 1 `uc 1 TX9D1 1 0 :1:0 
+`uc 1 TRMT1 1 0 :1:1 
+`uc 1 BRGH1 1 0 :1:2 
+`uc 1 SENDB1 1 0 :1:3 
+`uc 1 SYNC1 1 0 :1:4 
+`uc 1 TXEN1 1 0 :1:5 
+`uc 1 TX91 1 0 :1:6 
+`uc 1 CSRC1 1 0 :1:7 
+]
+[s S846 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[s S849 . 1 `uc 1 TXD8 1 0 :1:0 
+]
+[u S851 . 1 `S828 1 . 1 0 `S837 1 . 1 0 `S846 1 . 1 0 `S849 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES851  1 e 1 @4012 ]
+"5400
+[v _TXREG TXREG `VEuc  1 e 1 @4013 ]
+"5412
+[v _RCREG RCREG `VEuc  1 e 1 @4014 ]
+"5424
+[v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
+"5436
+[v _SPBRGH SPBRGH `VEuc  1 e 1 @4016 ]
 "5585
 [v _CMCON CMCON `VEuc  1 e 1 @4020 ]
 "6579
@@ -327,39 +418,75 @@
 [v _picos_contados picos_contados `uc  1 s 1 picos_contados ]
 "61 C:\Users\david\OneDrive\Desktop\fr\MSV\frei.X\oled.c
 [v _font5x7 font5x7 `C[40][5]uc  1 e 200 0 ]
-"35 C:\Users\david\OneDrive\Desktop\fr\MSV\frei.X\main.c
+"76 C:\Users\david\OneDrive\Desktop\fr\MSV\frei.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"45
-[v main@temp_f temp_f `f  1 a 4 79 ]
-"36
-[v main@ir ir `ul  1 a 4 74 ]
-[v main@red red `ul  1 a 4 67 ]
-"46
-[v main@temp_int temp_int `uc  1 a 1 78 ]
-"42
-[v main@i i `uc  1 a 1 73 ]
-"41
-[v main@alarma alarma `uc  1 a 1 72 ]
-"40
-[v main@activo activo `uc  1 a 1 71 ]
-"47
-[v main@temp_dec temp_dec `uc  1 a 1 66 ]
-"43
-[v main@ciclo_temp ciclo_temp `uc  1 a 1 65 ]
-"39
+"154
+[v main@btn_ahora btn_ahora `uc  1 a 1 74 ]
+"94
+[v main@temp_f temp_f `f  1 a 4 87 ]
+"77
+[v main@ir ir `ul  1 a 4 78 ]
+[v main@red red `ul  1 a 4 70 ]
+"78
+[v main@bpm bpm `uc  1 a 1 86 ]
+"91
+[v main@perfil perfil `uc  1 a 1 85 ]
+"82
+[v main@alarma alarma `uc  1 a 1 84 ]
+"95
+[v main@temp_int temp_int `uc  1 a 1 83 ]
+"81
+[v main@activo activo `uc  1 a 1 82 ]
+"97
+[v main@temp_valida temp_valida `uc  1 a 1 77 ]
+"96
+[v main@temp_dec temp_dec `uc  1 a 1 76 ]
+"83
+[v main@i i `uc  1 a 1 75 ]
+"87
+[v main@ciclo_buzzer ciclo_buzzer `uc  1 a 1 69 ]
+"89
+[v main@buzzer_estado buzzer_estado `uc  1 a 1 68 ]
+"88
+[v main@ciclo_uart ciclo_uart `uc  1 a 1 67 ]
+"86
+[v main@ciclo_temp ciclo_temp `uc  1 a 1 66 ]
+"85
+[v main@ciclo_oled ciclo_oled `uc  1 a 1 65 ]
+"80
 [v main@hay_temp hay_temp `uc  1 a 1 64 ]
-"38
-[v main@hay_dedo hay_dedo `uc  1 a 1 62 ]
-"37
-[v main@bpm bpm `uc  1 a 1 61 ]
-"122
+"92
+[v main@btn_ant btn_ant `uc  1 a 1 62 ]
+"79
+[v main@hay_dedo hay_dedo `uc  1 a 1 61 ]
+"244
 } 0
-"19
+"38
 [v _setup setup `(v  1 s 1 setup ]
 {
-"33
+"54
 } 0
+"64
+[v _mostrar_perfil mostrar_perfil `(v  1 s 1 mostrar_perfil ]
+{
+[v mostrar_perfil@deportista deportista `uc  1 p 1 wreg ]
+[v mostrar_perfil@deportista deportista `uc  1 p 1 wreg ]
+[v mostrar_perfil@deportista deportista `uc  1 p 1 15 ]
+"73
+} 1
+"56
+[v _blink_amarillo blink_amarillo `(v  1 s 1 blink_amarillo ]
+{
+[v blink_amarillo@n n `uc  1 p 1 wreg ]
+"57
+[v blink_amarillo@k k `uc  1 a 1 3 ]
+"56
+[v blink_amarillo@n n `uc  1 p 1 wreg ]
+"58
+[v blink_amarillo@n n `uc  1 p 1 2 ]
+"62
+} 1
 "43 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\fltol.c
 [v ___fltol __fltol `(l  1 e 4 0 ]
 {
@@ -396,17 +523,17 @@
 "8 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S1147 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S1437 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S1152 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S1155 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1147 1 fAsBytes 4 0 `S1152 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S1155  1 a 4 43 ]
+[s S1442 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1445 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1437 1 fAsBytes 4 0 `S1442 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1445  1 a 4 43 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 37 ]
-[s S1223 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S1513 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S1226 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1223 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S1226  1 a 2 47 ]
+[u S1516 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1513 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1516  1 a 2 47 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 42 ]
 "11
@@ -424,6 +551,61 @@
 [v ___flge@ff1 ff1 `d  1 p 4 0 ]
 [v ___flge@ff2 ff2 `d  1 p 4 4 ]
 "19
+} 0
+"4 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+{
+[v ___fleq@ff1 ff1 `d  1 p 4 0 ]
+[v ___fleq@ff2 ff2 `d  1 p 4 4 ]
+"12
+} 0
+"71 C:\Users\david\OneDrive\Desktop\fr\MSV\frei.X\uart.c
+[v _UART_SendVitals UART_SendVitals `(v  1 e 1 0 ]
+{
+[v UART_SendVitals@temp_int temp_int `uc  1 p 1 wreg ]
+[v UART_SendVitals@temp_int temp_int `uc  1 p 1 wreg ]
+[v UART_SendVitals@temp_dec temp_dec `uc  1 p 1 19 ]
+"72
+[v UART_SendVitals@bpm bpm `uc  1 p 1 20 ]
+[v UART_SendVitals@perfil perfil `uc  1 p 1 21 ]
+"73
+[v UART_SendVitals@alarma alarma `uc  1 p 1 22 ]
+"76
+[v UART_SendVitals@temp_int temp_int `uc  1 p 1 23 ]
+"97
+} 1
+"51
+[v _send_uint send_uint `(v  1 s 1 send_uint ]
+{
+"52
+[v send_uint@buf buf `[4]uc  1 a 4 13 ]
+"54
+[v send_uint@tmp tmp `[4]uc  1 a 4 9 ]
+"53
+[v send_uint@j j `uc  1 a 1 18 ]
+[v send_uint@i i `uc  1 a 1 17 ]
+"51
+[v send_uint@n n `ui  1 p 2 7 ]
+"68
+} 0
+"42
+[v _UART_WriteString UART_WriteString `(v  1 e 1 0 ]
+{
+[v UART_WriteString@str str `*.32Cuc  1 p 2 1 ]
+"47
+} 0
+"36
+[v _UART_WriteChar UART_WriteChar `(v  1 e 1 0 ]
+{
+[v UART_WriteChar@c c `uc  1 p 1 wreg ]
+[v UART_WriteChar@c c `uc  1 p 1 wreg ]
+[v UART_WriteChar@c c `uc  1 p 1 0 ]
+"39
+} 1
+"9
+[v _UART_Init UART_Init `(v  1 e 1 0 ]
+{
+"33
 } 0
 "443 C:\Users\david\OneDrive\Desktop\fr\MSV\frei.X\oled.c
 [v _OLED_Vitals OLED_Vitals `(v  1 e 1 0 ]

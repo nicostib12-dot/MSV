@@ -1,173 +1,85 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"7984 C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 7984: extern volatile unsigned char OSCCON __attribute__((address(0xFD3)));
-[v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
-"7990
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 7990:     struct {
-[s S344 :2 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
-[n S344 . SCS IOFS OSTS IRCF IDLEN ]
-"7997
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 7997:     struct {
-[s S345 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S345 . SCS0 SCS1 FLTS . IRCF0 IRCF1 IRCF2 ]
-"7989
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 7989: typedef union {
-[u S343 `S344 1 `S345 1 ]
-[n S343 . . . ]
-"8007
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 8007: extern volatile OSCCONbits_t OSCCONbits __attribute__((address(0xFD3)));
-[v _OSCCONbits `VS343 ~T0 @X0 0 e@4051 ]
-[v F205 `(v ~T0 @X0 1 tf1`ul ]
-"20 C:\Program Files\Microchip\xc8\v3.10\pic\include/builtins.h
-[v __delay `JF205 ~T0 @X0 0 e ]
-[p i __delay ]
-"3999 C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3999: extern volatile unsigned char TRISD __attribute__((address(0xF95)));
-[v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
-"3261
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3261: extern volatile unsigned char LATD __attribute__((address(0xF8C)));
-[v _LATD `Vuc ~T0 @X0 0 e@3980 ]
-"3623
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3623: extern volatile unsigned char TRISB __attribute__((address(0xF93)));
-[v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
-"3071
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3071: extern volatile unsigned char LATB __attribute__((address(0xF8A)));
-[v _LATB `Vuc ~T0 @X0 0 e@3978 ]
-"8509
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 8509:     struct {
-[s S356 :7 `uc 1 :1 `uc 1 ]
-[n S356 . . NOT_RBPU ]
-"8513
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 8513:     struct {
-[s S357 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S357 . RBIP . TMR0IP . INTEDG2 INTEDG1 INTEDG0 nRBPU ]
-"8523
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 8523:     struct {
-[s S358 :2 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 ]
-[n S358 . . T0IP . RBPU ]
-"8508
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 8508: typedef union {
-[u S355 `S356 1 `S357 1 `S358 1 ]
-[n S355 . . . . ]
-"8530
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 8530: extern volatile INTCON2bits_t INTCON2bits __attribute__((address(0xFF1)));
-[v _INTCON2bits `VS355 ~T0 @X0 0 e@4081 ]
-"5585
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 5585: extern volatile unsigned char CMCON __attribute__((address(0xFB4)));
-[v _CMCON `Vuc ~T0 @X0 0 e@4020 ]
-"6579
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 6579: extern volatile unsigned char ADCON1 __attribute__((address(0xFC1)));
-[v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
-"3267
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3267:     struct {
-[s S136 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S136 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
-"3277
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3277:     struct {
-[s S137 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S137 . LD0 LD1 LD2 LD3 LD4 LD5 LD6 LD7 ]
-"3266
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3266: typedef union {
-[u S135 `S136 1 `S137 1 ]
-[n S135 . . . ]
-"3288
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3288: extern volatile LATDbits_t LATDbits __attribute__((address(0xF8C)));
-[v _LATDbits `VS135 ~T0 @X0 0 e@3980 ]
-"30 ./oled.h
-[; ;./oled.h: 30: void OLED_Clear(void);
-[v _OLED_Clear `(v ~T0 @X0 0 ef ]
-"32
-[; ;./oled.h: 32: void OLED_SetCursor(unsigned char col, unsigned char page);
-[v _OLED_SetCursor `(v ~T0 @X0 0 ef2`uc`uc ]
-"36
-[; ;./oled.h: 36: void OLED_WriteString(char *str);
-[v _OLED_WriteString `(v ~T0 @X0 0 ef1`*uc ]
-[p mainexit ]
-"28 ./i2c.h
-[; ;./i2c.h: 28: void I2C_Init(void);
-[v _I2C_Init `(v ~T0 @X0 0 ef ]
-"20 ./uart.h
-[; ;./uart.h: 20: void UART_Init(void);
-[v _UART_Init `(v ~T0 @X0 0 ef ]
-"23 ./oled.h
-[; ;./oled.h: 23: void OLED_Init(void);
-[v _OLED_Init `(v ~T0 @X0 0 ef ]
-"22 ./uart.h
-[; ;./uart.h: 22: void UART_WriteString(const char *str);
-[v _UART_WriteString `(v ~T0 @X0 0 ef1`*Cuc ]
-"39 ./oled.h
-[; ;./oled.h: 39: void OLED_Splash(void);
-[v _OLED_Splash `(v ~T0 @X0 0 ef ]
-"10 ./ds18b20.h
-[; ;./ds18b20.h: 10: unsigned char DS18B20_Reset(void);
-[v _DS18B20_Reset `(uc ~T0 @X0 0 ef ]
-"44 ./oled.h
-[; ;./oled.h: 44: void OLED_Error(char *msg);
-[v _OLED_Error `(v ~T0 @X0 0 ef1`*uc ]
-"13 ./ds18b20.h
-[; ;./ds18b20.h: 13: unsigned char DS18B20_StartConversion(void);
-[v _DS18B20_StartConversion `(uc ~T0 @X0 0 ef ]
-"14
-[; ;./ds18b20.h: 14: void DS18B20_WaitConversion(void);
-[v _DS18B20_WaitConversion `(v ~T0 @X0 0 ef ]
-"15
-[; ;./ds18b20.h: 15: float DS18B20_ReadTemp(void);
-[v _DS18B20_ReadTemp `(f ~T0 @X0 0 ef ]
-"28 ./max30102.h
-[; ;./max30102.h: 28: unsigned char MAX30102_Init(void);
-[v _MAX30102_Init `(uc ~T0 @X0 0 ef ]
-"2457 C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 2457:     struct {
-[s S107 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S107 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
-"2467
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 2467:     struct {
-[s S108 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S108 . INT0 INT1 INT2 . PGM PGC PGD ]
-"2476
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 2476:     struct {
-[s S109 :3 `uc 1 :1 `uc 1 ]
-[n S109 . . CCP2_PA2 ]
-"2456
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 2456: typedef union {
-[u S106 `S107 1 `S108 1 `S109 1 ]
-[n S106 . . . . ]
-"2481
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 2481: extern volatile PORTBbits_t PORTBbits __attribute__((address(0xF81)));
-[v _PORTBbits `VS106 ~T0 @X0 0 e@3969 ]
-"30 ./max30102.h
-[; ;./max30102.h: 30: unsigned char MAX30102_ReadSample(unsigned long *red, unsigned long *ir);
-[v _MAX30102_ReadSample `(uc ~T0 @X0 0 ef2`*ul`*ul ]
-"9 ./card.h
-[; ;./card.h: 9: unsigned char CAR_ProcesarMuestra(unsigned long red, unsigned long ir);
-[v _CAR_ProcesarMuestra `(uc ~T0 @X0 0 ef2`ul`ul ]
-"8
-[; ;./card.h: 8: unsigned char CAR_HayDedo(unsigned long ir);
-[v _CAR_HayDedo `(uc ~T0 @X0 0 ef1`ul ]
-"3077 C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3077:     struct {
-[s S130 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S130 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
-"3087
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3087:     struct {
-[s S131 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S131 . LB0 LB1 LB2 LB3 LB4 LB5 LB6 LB7 ]
-"3076
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3076: typedef union {
-[u S129 `S130 1 `S131 1 ]
-[n S129 . . . ]
-"3098
-[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3098: extern volatile LATBbits_t LATBbits __attribute__((address(0xF8A)));
-[v _LATBbits `VS129 ~T0 @X0 0 e@3978 ]
-"43 ./oled.h
-[; ;./oled.h: 43: void OLED_Paused(void);
-[v _OLED_Paused `(v ~T0 @X0 0 ef ]
-"40
-[; ;./oled.h: 40: void OLED_Vitals(unsigned char temp_int, unsigned char temp_dec,
-[v _OLED_Vitals `(v ~T0 @X0 0 ef5`uc`uc`uc`uc`uc ]
-"27 ./uart.h
-[; ;./uart.h: 27: void UART_SendVitals(unsigned char temp_int, unsigned char temp_dec,
-[v _UART_SendVitals `(v ~T0 @X0 0 ef5`uc`uc`uc`uc`uc ]
+"3856 C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h
+[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3856:     struct {
+[s S154 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S154 . TRISC0 TRISC1 TRISC2 . TRISC6 TRISC7 ]
+"3864
+[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3864:     struct {
+[s S155 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S155 . RC0 RC1 RC2 . RC6 RC7 ]
+"3855
+[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3855: typedef union {
+[u S153 `S154 1 `S155 1 ]
+[n S153 . . . ]
+"3873
+[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 3873: extern volatile TRISCbits_t TRISCbits __attribute__((address(0xF94)));
+[v _TRISCbits `VS153 ~T0 @X0 0 e@3988 ]
+"5424
+[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 5424: extern volatile unsigned char SPBRG __attribute__((address(0xFAF)));
+[v _SPBRG `Vuc ~T0 @X0 0 e@4015 ]
+"5436
+[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 5436: extern volatile unsigned char SPBRGH __attribute__((address(0xFB0)));
+[v _SPBRGH `Vuc ~T0 @X0 0 e@4016 ]
+"5155
+[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 5155:     struct {
+[s S210 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S210 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
+"5165
+[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 5165:     struct {
+[s S211 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S211 . TX9D1 TRMT1 BRGH1 SENDB1 SYNC1 TXEN1 TX91 CSRC1 ]
+"5175
+[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 5175:     struct {
+[s S212 :6 `uc 1 :1 `uc 1 ]
+[n S212 . . TX8_9 ]
+"5179
+[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 5179:     struct {
+[s S213 :1 `uc 1 ]
+[n S213 . TXD8 ]
+"5154
+[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 5154: typedef union {
+[u S209 `S210 1 `S211 1 `S212 1 `S213 1 ]
+[n S209 . . . . . ]
+"5183
+[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 5183: extern volatile TXSTAbits_t TXSTAbits __attribute__((address(0xFAC)));
+[v _TXSTAbits `VS209 ~T0 @X0 0 e@4012 ]
+"4945
+[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 4945:     struct {
+[s S196 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S196 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
+"4955
+[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 4955:     struct {
+[s S197 :3 `uc 1 :1 `uc 1 ]
+[n S197 . . ADEN ]
+"4959
+[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 4959:     struct {
+[s S198 :5 `uc 1 :1 `uc 1 ]
+[n S198 . . SRENA ]
+"4963
+[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 4963:     struct {
+[s S199 :6 `uc 1 :1 `uc 1 ]
+[n S199 . . RC8_9 ]
+"4967
+[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 4967:     struct {
+[s S200 :6 `uc 1 :1 `uc 1 ]
+[n S200 . . RC9 ]
+"4971
+[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 4971:     struct {
+[s S201 :1 `uc 1 ]
+[n S201 . RCD8 ]
+"4944
+[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 4944: typedef union {
+[u S195 `S196 1 `S197 1 `S198 1 `S199 1 `S200 1 `S201 1 ]
+[n S195 . . . . . . . ]
+"4975
+[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 4975: extern volatile RCSTAbits_t RCSTAbits __attribute__((address(0xFAB)));
+[v _RCSTAbits `VS195 ~T0 @X0 0 e@4011 ]
+"5412
+[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 5412: extern volatile unsigned char RCREG __attribute__((address(0xFAE)));
+[v _RCREG `Vuc ~T0 @X0 0 e@4014 ]
+"5400
+[; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 5400: extern volatile unsigned char TXREG __attribute__((address(0xFAD)));
+[v _TXREG `Vuc ~T0 @X0 0 e@4013 ]
 "52 C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h
 [; ;C:/Users/david/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\pic\include\proc/pic18f4550.h: 52: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -688,659 +600,250 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x PBADEN  =  OFF ]
 "12
 [p x MCLRE    =  ON ]
-"38 main.c
-[; ;main.c: 38: static void setup(void) {
-[v _setup `(v ~T0 @X0 1 sf ]
+"9 uart.c
+[; ;uart.c: 9: void UART_Init(void) {
+[v _UART_Init `(v ~T0 @X0 1 ef ]
 {
-[e :U _setup ]
+[e :U _UART_Init ]
 [f ]
-"39
-[; ;main.c: 39:     OSCCON = 0x72;
-[e = _OSCCON -> -> 114 `i `uc ]
-"40
-[; ;main.c: 40:     while (!OSCCONbits.IOFS);
-[e $U 392  ]
-[e :U 393 ]
-[e :U 392 ]
-[e $ ! != -> . . _OSCCONbits 0 1 `i -> 0 `i 393  ]
-[e :U 394 ]
-"41
-[; ;main.c: 41:     _delay((unsigned long)((100)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"43
-[; ;main.c: 43:     TRISD = 0x40;
-[e = _TRISD -> -> 64 `i `uc ]
-"44
-[; ;main.c: 44:     LATD = 0x00;
-[e = _LATD -> -> 0 `i `uc ]
-"46
-[; ;main.c: 46:     TRISB = 0xF8;
-[e = _TRISB -> -> 248 `i `uc ]
-"47
-[; ;main.c: 47:     LATB = 0x00;
-[e = _LATB -> -> 0 `i `uc ]
-"51
-[; ;main.c: 51:     INTCON2bits.RBPU = 0;
-[e = . . _INTCON2bits 2 3 -> -> 0 `i `uc ]
-"52
-[; ;main.c: 52:     CMCON = 0x07;
-[e = _CMCON -> -> 7 `i `uc ]
-"53
-[; ;main.c: 53:     ADCON1 = 0x0F;
-[e = _ADCON1 -> -> 15 `i `uc ]
-"54
-[; ;main.c: 54: }
+"13
+[; ;uart.c: 13:     TRISCbits.TRISC6 = 1;
+[e = . . _TRISCbits 0 4 -> -> 1 `i `uc ]
+"14
+[; ;uart.c: 14:     TRISCbits.TRISC7 = 1;
+[e = . . _TRISCbits 0 5 -> -> 1 `i `uc ]
+"19
+[; ;uart.c: 19:     SPBRG = 51;
+[e = _SPBRG -> -> 51 `i `uc ]
+"20
+[; ;uart.c: 20:     SPBRGH = 0;
+[e = _SPBRGH -> -> 0 `i `uc ]
+"23
+[; ;uart.c: 23:     TXSTAbits.TXEN = 1;
+[e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
+"24
+[; ;uart.c: 24:     TXSTAbits.SYNC = 0;
+[e = . . _TXSTAbits 0 4 -> -> 0 `i `uc ]
+"25
+[; ;uart.c: 25:     TXSTAbits.BRGH = 1;
+[e = . . _TXSTAbits 0 2 -> -> 1 `i `uc ]
+"28
+[; ;uart.c: 28:     RCSTAbits.SPEN = 1;
+[e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
+"29
+[; ;uart.c: 29:     RCSTAbits.CREN = 1;
+[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
+"32
+[; ;uart.c: 32:     (void)RCREG;
+[e _RCREG ]
+"33
+[; ;uart.c: 33: }
 [e :UE 391 ]
 }
-"56
-[; ;main.c: 56: static void blink_amarillo(unsigned char n) {
-[v _blink_amarillo `(v ~T0 @X0 1 sf1`uc ]
+"36
+[; ;uart.c: 36: void UART_WriteChar(unsigned char c) {
+[v _UART_WriteChar `(v ~T0 @X0 1 ef1`uc ]
 {
-[e :U _blink_amarillo ]
-[v _n `uc ~T0 @X0 1 r1 ]
+[e :U _UART_WriteChar ]
+[v _c `uc ~T0 @X0 1 r1 ]
 [f ]
-"57
-[; ;main.c: 57:     unsigned char k;
-[v _k `uc ~T0 @X0 1 a ]
-"58
-[; ;main.c: 58:     for (k = 0; k < n; k++) {
+"37
+[; ;uart.c: 37:     while (!TXSTAbits.TRMT);
+[e $U 393  ]
+[e :U 394 ]
+[e :U 393 ]
+[e $ ! != -> . . _TXSTAbits 0 1 `i -> 0 `i 394  ]
+[e :U 395 ]
+"38
+[; ;uart.c: 38:     TXREG = c;
+[e = _TXREG _c ]
+"39
+[; ;uart.c: 39: }
+[e :UE 392 ]
+}
+"42
+[; ;uart.c: 42: void UART_WriteString(const char *str) {
+[v _UART_WriteString `(v ~T0 @X0 1 ef1`*Cuc ]
 {
-[e = _k -> -> 0 `i `uc ]
-[e $U 399  ]
-[e :U 396 ]
+[e :U _UART_WriteString ]
+[v _str `*Cuc ~T0 @X0 1 r1 ]
+[f ]
+"43
+[; ;uart.c: 43:     while (*str) {
+[e $U 397  ]
+[e :U 398 ]
+{
+"44
+[; ;uart.c: 44:         UART_WriteChar((unsigned char)*str);
+[e ( _UART_WriteChar (1 -> *U _str `uc ]
+"45
+[; ;uart.c: 45:         str++;
+[e ++ _str * -> -> 1 `i `x -> -> # *U _str `i `x ]
+"46
+[; ;uart.c: 46:     }
+}
+[e :U 397 ]
+"43
+[; ;uart.c: 43:     while (*str) {
+[e $ != -> *U _str `i -> 0 `i 398  ]
+[e :U 399 ]
+"47
+[; ;uart.c: 47: }
+[e :UE 396 ]
+}
+"51
+[; ;uart.c: 51: static void send_uint(unsigned int n) {
+[v _send_uint `(v ~T0 @X0 1 sf1`ui ]
+{
+[e :U _send_uint ]
+[v _n `ui ~T0 @X0 1 r1 ]
+[f ]
+"52
+[; ;uart.c: 52:     char buf[4];
+[v _buf `uc ~T0 @X0 -> 4 `i a ]
+"53
+[; ;uart.c: 53:     unsigned char i = 0, j = 0;
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[v _j `uc ~T0 @X0 1 a ]
+[e = _j -> -> 0 `i `uc ]
+"54
+[; ;uart.c: 54:     char tmp[4];
+[v _tmp `uc ~T0 @X0 -> 4 `i a ]
+"56
+[; ;uart.c: 56:     if (n == 0) { UART_WriteChar('0'); return; }
+[e $ ! == _n -> -> 0 `i `ui 401  ]
+{
+[e ( _UART_WriteChar (1 -> -> 48 `ui `uc ]
+[e $UE 400  ]
+}
+[e :U 401 ]
+"58
+[; ;uart.c: 58:     while (n > 0) {
+[e $U 402  ]
+[e :U 403 ]
 {
 "59
-[; ;main.c: 59:         LATDbits.LATD2 = 1; _delay((unsigned long)((200)*(8000000/4000.0)));
-[e = . . _LATDbits 0 2 -> -> 1 `i `uc ]
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;uart.c: 59:         tmp[i++] = '0' + (n % 10);
+[e = *U + &U _tmp * -> ++ _i -> -> 1 `i `uc `ux -> -> # *U &U _tmp `ui `ux -> + -> 48 `ui % _n -> -> 10 `i `ui `uc ]
 "60
-[; ;main.c: 60:         LATDbits.LATD2 = 0; _delay((unsigned long)((200)*(8000000/4000.0)));
-[e = . . _LATDbits 0 2 -> -> 0 `i `uc ]
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;uart.c: 60:         n /= 10;
+[e =/ _n -> -> 10 `i `ui ]
 "61
-[; ;main.c: 61:     }
+[; ;uart.c: 61:     }
 }
-[e ++ _k -> -> 1 `i `uc ]
-[e :U 399 ]
-[e $ < -> _k `i -> _n `i 396  ]
-[e :U 397 ]
-}
-"62
-[; ;main.c: 62: }
-[e :UE 395 ]
-}
-"64
-[; ;main.c: 64: static void mostrar_perfil(unsigned char deportista) {
-[v _mostrar_perfil `(v ~T0 @X0 1 sf1`uc ]
-{
-[e :U _mostrar_perfil ]
-[v _deportista `uc ~T0 @X0 1 r1 ]
-[f ]
-"65
-[; ;main.c: 65:     OLED_Clear();
-[e ( _OLED_Clear ..  ]
-"66
-[; ;main.c: 66:     OLED_SetCursor(10, 2);
-[e ( _OLED_SetCursor (2 , -> -> 10 `i `uc -> -> 2 `i `uc ]
-"67
-[; ;main.c: 67:     if (deportista)
-[e $ ! != -> _deportista `i -> 0 `i 401  ]
-"68
-[; ;main.c: 68:         OLED_WriteString("PERFIL: DEPORTISTA");
-[e ( _OLED_WriteString (1 :s 1C ]
-[e $U 402  ]
-"69
-[; ;main.c: 69:     else
-[e :U 401 ]
-"70
-[; ;main.c: 70:         OLED_WriteString("PERFIL: NORMAL");
-[e ( _OLED_WriteString (1 :s 2C ]
 [e :U 402 ]
-"71
-[; ;main.c: 71:     _delay((unsigned long)((1000)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"72
-[; ;main.c: 72:     OLED_Clear();
-[e ( _OLED_Clear ..  ]
-"73
-[; ;main.c: 73: }
+"58
+[; ;uart.c: 58:     while (n > 0) {
+[e $ > _n -> -> 0 `i `ui 403  ]
+[e :U 404 ]
+"63
+[; ;uart.c: 63:     while (i > 0) buf[j++] = tmp[--i];
+[e $U 405  ]
+[e :U 406 ]
+[e = *U + &U _buf * -> ++ _j -> -> 1 `i `uc `ux -> -> # *U &U _buf `ui `ux *U + &U _tmp * -> =- _i -> -> 1 `i `uc `ux -> -> # *U &U _tmp `ui `ux ]
+[e :U 405 ]
+[e $ > -> _i `i -> 0 `i 406  ]
+[e :U 407 ]
+"64
+[; ;uart.c: 64:     buf[j] = '\0';
+[e = *U + &U _buf * -> _j `ux -> -> # *U &U _buf `ui `ux -> -> 0 `ui `uc ]
+"66
+[; ;uart.c: 66:     j = 0;
+[e = _j -> -> 0 `i `uc ]
+"67
+[; ;uart.c: 67:     while (buf[j]) UART_WriteChar((unsigned char)buf[j++]);
+[e $U 408  ]
+[e :U 409 ]
+[e ( _UART_WriteChar (1 -> *U + &U _buf * -> ++ _j -> -> 1 `i `uc `ux -> -> # *U &U _buf `ui `ux `uc ]
+[e :U 408 ]
+[e $ != -> *U + &U _buf * -> _j `ux -> -> # *U &U _buf `ui `ux `i -> 0 `i 409  ]
+[e :U 410 ]
+"68
+[; ;uart.c: 68: }
 [e :UE 400 ]
 }
-[v $root$_main `(v ~T0 @X0 0 e ]
-"76
-[; ;main.c: 76: void main(void) {
-[v _main `(v ~T0 @X0 1 ef ]
+"71
+[; ;uart.c: 71: void UART_SendVitals(unsigned char temp_int, unsigned char temp_dec,
+[v _UART_SendVitals `(v ~T0 @X0 1 ef5`uc`uc`uc`uc`uc ]
+"73
+[; ;uart.c: 73:                      unsigned char alarma) {
 {
-[e :U _main ]
+[e :U _UART_SendVitals ]
+"71
+[; ;uart.c: 71: void UART_SendVitals(unsigned char temp_int, unsigned char temp_dec,
+[v _temp_int `uc ~T0 @X0 1 r1 ]
+[v _temp_dec `uc ~T0 @X0 1 r2 ]
+"72
+[; ;uart.c: 72:                      unsigned char bpm, unsigned char perfil,
+[v _bpm `uc ~T0 @X0 1 r3 ]
+[v _perfil `uc ~T0 @X0 1 r4 ]
+"73
+[; ;uart.c: 73:                      unsigned char alarma) {
+[v _alarma `uc ~T0 @X0 1 r5 ]
 [f ]
+"76
+[; ;uart.c: 76:     UART_WriteString("T:");
+[e ( _UART_WriteString (1 :s 1C ]
 "77
-[; ;main.c: 77:     unsigned long red, ir;
-[v _red `ul ~T0 @X0 1 a ]
-[v _ir `ul ~T0 @X0 1 a ]
+[; ;uart.c: 77:     send_uint(temp_int);
+[e ( _send_uint (1 -> _temp_int `ui ]
 "78
-[; ;main.c: 78:     unsigned char bpm = 0;
-[v _bpm `uc ~T0 @X0 1 a ]
-[e = _bpm -> -> 0 `i `uc ]
+[; ;uart.c: 78:     UART_WriteChar('.');
+[e ( _UART_WriteChar (1 -> -> 46 `ui `uc ]
 "79
-[; ;main.c: 79:     unsigned char hay_dedo = 0;
-[v _hay_dedo `uc ~T0 @X0 1 a ]
-[e = _hay_dedo -> -> 0 `i `uc ]
-"80
-[; ;main.c: 80:     unsigned char hay_temp = 0;
-[v _hay_temp `uc ~T0 @X0 1 a ]
-[e = _hay_temp -> -> 0 `i `uc ]
+[; ;uart.c: 79:     send_uint(temp_dec);
+[e ( _send_uint (1 -> _temp_dec `ui ]
 "81
-[; ;main.c: 81:     unsigned char activo = 0;
-[v _activo `uc ~T0 @X0 1 a ]
-[e = _activo -> -> 0 `i `uc ]
-"82
-[; ;main.c: 82:     unsigned char alarma = 0;
-[v _alarma `uc ~T0 @X0 1 a ]
-[e = _alarma -> -> 0 `i `uc ]
+[; ;uart.c: 81:     UART_WriteString(" B:");
+[e ( _UART_WriteString (1 :s 2C ]
 "83
-[; ;main.c: 83:     unsigned char i;
-[v _i `uc ~T0 @X0 1 a ]
-"85
-[; ;main.c: 85:     unsigned char ciclo_oled = 0;
-[v _ciclo_oled `uc ~T0 @X0 1 a ]
-[e = _ciclo_oled -> -> 0 `i `uc ]
-"86
-[; ;main.c: 86:     unsigned char ciclo_temp = 0;
-[v _ciclo_temp `uc ~T0 @X0 1 a ]
-[e = _ciclo_temp -> -> 0 `i `uc ]
-"87
-[; ;main.c: 87:     unsigned char ciclo_buzzer = 0;
-[v _ciclo_buzzer `uc ~T0 @X0 1 a ]
-[e = _ciclo_buzzer -> -> 0 `i `uc ]
-"88
-[; ;main.c: 88:     unsigned char ciclo_uart = 0;
-[v _ciclo_uart `uc ~T0 @X0 1 a ]
-[e = _ciclo_uart -> -> 0 `i `uc ]
-"89
-[; ;main.c: 89:     unsigned char buzzer_estado = 0;
-[v _buzzer_estado `uc ~T0 @X0 1 a ]
-[e = _buzzer_estado -> -> 0 `i `uc ]
-"91
-[; ;main.c: 91:     unsigned char perfil = 0;
-[v _perfil `uc ~T0 @X0 1 a ]
-[e = _perfil -> -> 0 `i `uc ]
-"92
-[; ;main.c: 92:     unsigned char btn_ant = 1;
-[v _btn_ant `uc ~T0 @X0 1 a ]
-[e = _btn_ant -> -> 1 `i `uc ]
-"94
-[; ;main.c: 94:     float temp_f = 0.0f;
-[v _temp_f `f ~T0 @X0 1 a ]
-[e = _temp_f -> .0.0 `f ]
-"95
-[; ;main.c: 95:     unsigned char temp_int = 0;
-[v _temp_int `uc ~T0 @X0 1 a ]
-[e = _temp_int -> -> 0 `i `uc ]
-"96
-[; ;main.c: 96:     unsigned char temp_dec = 0;
-[v _temp_dec `uc ~T0 @X0 1 a ]
-[e = _temp_dec -> -> 0 `i `uc ]
-"97
-[; ;main.c: 97:     unsigned char temp_valida = 0;
-[v _temp_valida `uc ~T0 @X0 1 a ]
-[e = _temp_valida -> -> 0 `i `uc ]
-"99
-[; ;main.c: 99:     setup();
-[e ( _setup ..  ]
-"100
-[; ;main.c: 100:     I2C_Init();
-[e ( _I2C_Init ..  ]
-"101
-[; ;main.c: 101:     UART_Init();
-[e ( _UART_Init ..  ]
-"102
-[; ;main.c: 102:     OLED_Init();
-[e ( _OLED_Init ..  ]
-"104
-[; ;main.c: 104:     UART_WriteString("=== CARDIO.X INICIANDO ===\r\n");
-[e ( _UART_WriteString (1 :s 3C ]
-"106
-[; ;main.c: 106:     blink_amarillo(3);
-[e ( _blink_amarillo (1 -> -> 3 `i `uc ]
-"107
-[; ;main.c: 107:     OLED_Splash();
-[e ( _OLED_Splash ..  ]
-"108
-[; ;main.c: 108:     _delay((unsigned long)((2000)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"111
-[; ;main.c: 111:     LATDbits.LATD2 = 1;
-[e = . . _LATDbits 0 2 -> -> 1 `i `uc ]
-"112
-[; ;main.c: 112:     if (!DS18B20_Reset()) {
-[e $ ! ! != -> ( _DS18B20_Reset ..  `i -> 0 `i 404  ]
-{
-"113
-[; ;main.c: 113:         OLED_Error("DS18 ERR");
-[e ( _OLED_Error (1 :s 4C ]
-"114
-[; ;main.c: 114:         UART_WriteString("ERR: DS18B20 no encontrado\r\n");
-[e ( _UART_WriteString (1 :s 5C ]
-"115
-[; ;main.c: 115:         _delay((unsigned long)((2000)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"116
-[; ;main.c: 116:     } else {
-}
-[e $U 405  ]
-[e :U 404 ]
-{
-"117
-[; ;main.c: 117:         DS18B20_StartConversion();
-[e ( _DS18B20_StartConversion ..  ]
-"118
-[; ;main.c: 118:         DS18B20_WaitConversion();
-[e ( _DS18B20_WaitConversion ..  ]
-"119
-[; ;main.c: 119:         temp_f = DS18B20_ReadTemp();
-[e = _temp_f ( _DS18B20_ReadTemp ..  ]
-"121
-[; ;main.c: 121:         if (temp_f > -55.0f && temp_f < 125.0f) {
-[e $ ! && > _temp_f -U -> .55.0 `f < _temp_f -> .125.0 `f 406  ]
-{
-"122
-[; ;main.c: 122:             temp_valida = 1;
-[e = _temp_valida -> -> 1 `i `uc ]
-"123
-[; ;main.c: 123:             temp_int = (unsigned char)temp_f;
-[e = _temp_int -> _temp_f `uc ]
-"124
-[; ;main.c: 124:             temp_dec = (unsigned char)((temp_f - (float)temp_int) * 10.0f);
-[e = _temp_dec -> * - _temp_f -> _temp_int `f -> .10.0 `f `uc ]
-"125
-[; ;main.c: 125:             hay_temp = (temp_f >= 30.0f) ? 1 : 0;
-[e = _hay_temp -> ? >= _temp_f -> .30.0 `f : -> 1 `i -> 0 `i `uc ]
-"126
-[; ;main.c: 126:             UART_WriteString("DS18B20 OK\r\n");
-[e ( _UART_WriteString (1 :s 6C ]
-"127
-[; ;main.c: 127:         } else {
-}
-[e $U 407  ]
-[e :U 406 ]
-{
-"128
-[; ;main.c: 128:             if (temp_f == -997.0f) { OLED_Error("POR 85C"); UART_WriteString("ERR: POR 85C\r\n"); }
-[e $ ! == _temp_f -U -> .997.0 `f 408  ]
-{
-[e ( _OLED_Error (1 :s 7C ]
-[e ( _UART_WriteString (1 :s 8C ]
-}
-[e $U 409  ]
-"129
-[; ;main.c: 129:             else if (temp_f == -998.0f) { OLED_Error("RAW ERR"); UART_WriteString("ERR: RAW\r\n"); }
-[e :U 408 ]
-[e $ ! == _temp_f -U -> .998.0 `f 410  ]
-{
-[e ( _OLED_Error (1 :s 9C ]
-[e ( _UART_WriteString (1 :s 10C ]
-}
-[e $U 411  ]
-"130
-[; ;main.c: 130:             else { OLED_Error("NO SENS"); UART_WriteString("ERR: SIN SENSOR\r\n"); }
-[e :U 410 ]
-{
-[e ( _OLED_Error (1 :s 11C ]
-[e ( _UART_WriteString (1 :s 12C ]
-}
-[e :U 411 ]
-[e :U 409 ]
-"131
-[; ;main.c: 131:             _delay((unsigned long)((2000)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"132
-[; ;main.c: 132:         }
-}
-[e :U 407 ]
-"133
-[; ;main.c: 133:         DS18B20_StartConversion();
-[e ( _DS18B20_StartConversion ..  ]
-"134
-[; ;main.c: 134:     }
-}
-[e :U 405 ]
-"135
-[; ;main.c: 135:     LATDbits.LATD2 = 0;
-[e = . . _LATDbits 0 2 -> -> 0 `i `uc ]
-"138
-[; ;main.c: 138:     if (!MAX30102_Init()) {
-[e $ ! ! != -> ( _MAX30102_Init ..  `i -> 0 `i 412  ]
-{
-"139
-[; ;main.c: 139:         OLED_Error("MAX ERR");
-[e ( _OLED_Error (1 :s 13C ]
-"140
-[; ;main.c: 140:         UART_WriteString("ERR: MAX30102 no encontrado\r\n");
-[e ( _UART_WriteString (1 :s 14C ]
-"141
-[; ;main.c: 141:         while (1);
-[e :U 414 ]
-[e :U 413 ]
-[e $U 414  ]
-[e :U 415 ]
-"142
-[; ;main.c: 142:     }
-}
+[; ;uart.c: 83:     if (bpm < 100) UART_WriteChar('0');
+[e $ ! < -> _bpm `i -> 100 `i 412  ]
+[e ( _UART_WriteChar (1 -> -> 48 `ui `uc ]
 [e :U 412 ]
-"143
-[; ;main.c: 143:     UART_WriteString("MAX30102 OK\r\n");
-[e ( _UART_WriteString (1 :s 15C ]
-"144
-[; ;main.c: 144:     UART_WriteString("=== SISTEMA LISTO ===\r\n");
-[e ( _UART_WriteString (1 :s 16C ]
-"146
-[; ;main.c: 146:     LATDbits.LATD0 = 1;
-[e = . . _LATDbits 0 0 -> -> 1 `i `uc ]
-"147
-[; ;main.c: 147:     OLED_Clear();
-[e ( _OLED_Clear ..  ]
-"150
-[; ;main.c: 150:     while (1) {
-[e :U 417 ]
-{
-"153
-[; ;main.c: 153:         {
-{
-"154
-[; ;main.c: 154:             unsigned char btn_ahora = PORTBbits.RB3;
-[v _btn_ahora `uc ~T0 @X0 1 a ]
-[e = _btn_ahora . . _PORTBbits 0 3 ]
-"155
-[; ;main.c: 155:             if (btn_ant == 1 && btn_ahora == 0) {
-[e $ ! && == -> _btn_ant `i -> 1 `i == -> _btn_ahora `i -> 0 `i 419  ]
-{
-"156
-[; ;main.c: 156:                 perfil ^= 1;
-[e =^ _perfil -> -> 1 `i `uc ]
-"157
-[; ;main.c: 157:                 mostrar_perfil(perfil);
-[e ( _mostrar_perfil (1 _perfil ]
-"159
-[; ;main.c: 159:                 if (perfil == 0)
-[e $ ! == -> _perfil `i -> 0 `i 420  ]
-"160
-[; ;main.c: 160:                     UART_WriteString("PERFIL: NORMAL\r\n");
-[e ( _UART_WriteString (1 :s 17C ]
-[e $U 421  ]
-"161
-[; ;main.c: 161:                 else
-[e :U 420 ]
-"162
-[; ;main.c: 162:                     UART_WriteString("PERFIL: DEPORTISTA\r\n");
-[e ( _UART_WriteString (1 :s 18C ]
-[e :U 421 ]
-"163
-[; ;main.c: 163:             }
+"84
+[; ;uart.c: 84:     if (bpm < 10) UART_WriteChar('0');
+[e $ ! < -> _bpm `i -> 10 `i 413  ]
+[e ( _UART_WriteChar (1 -> -> 48 `ui `uc ]
+[e :U 413 ]
+"85
+[; ;uart.c: 85:     send_uint(bpm);
+[e ( _send_uint (1 -> _bpm `ui ]
+"87
+[; ;uart.c: 87:     UART_WriteString(" P:");
+[e ( _UART_WriteString (1 :s 3C ]
+"88
+[; ;uart.c: 88:     if (perfil == 0)
+[e $ ! == -> _perfil `i -> 0 `i 414  ]
+"89
+[; ;uart.c: 89:         UART_WriteString("NOR");
+[e ( _UART_WriteString (1 :s 4C ]
+[e $U 415  ]
+"90
+[; ;uart.c: 90:     else
+[e :U 414 ]
+"91
+[; ;uart.c: 91:         UART_WriteString("DEP");
+[e ( _UART_WriteString (1 :s 5C ]
+[e :U 415 ]
+"93
+[; ;uart.c: 93:     UART_WriteString(" AL:");
+[e ( _UART_WriteString (1 :s 6C ]
+"94
+[; ;uart.c: 94:     UART_WriteChar(alarma ? '1' : '0');
+[e ( _UART_WriteChar (1 -> ? != -> _alarma `i -> 0 `i : -> 49 `ui -> 48 `ui `uc ]
+"96
+[; ;uart.c: 96:     UART_WriteString("\r\n");
+[e ( _UART_WriteString (1 :s 7C ]
+"97
+[; ;uart.c: 97: }
+[e :UE 411 ]
 }
-[e :U 419 ]
-"164
-[; ;main.c: 164:             btn_ant = btn_ahora;
-[e = _btn_ant _btn_ahora ]
-"165
-[; ;main.c: 165:         }
-}
-"168
-[; ;main.c: 168:         for (i = 0; i < 20; i++) {
-{
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 20 `i 422  ]
-[e $U 423  ]
-[e :U 422 ]
-{
-"169
-[; ;main.c: 169:             if (MAX30102_ReadSample(&red, &ir)) {
-[e $ ! != -> ( _MAX30102_ReadSample (2 , &U _red &U _ir `i -> 0 `i 425  ]
-{
-"170
-[; ;main.c: 170:                 bpm = CAR_ProcesarMuestra(red, ir);
-[e = _bpm ( _CAR_ProcesarMuestra (2 , _red _ir ]
-"171
-[; ;main.c: 171:                 hay_dedo = CAR_HayDedo(ir);
-[e = _hay_dedo ( _CAR_HayDedo (1 _ir ]
-"172
-[; ;main.c: 172:             }
-}
-[e :U 425 ]
-"173
-[; ;main.c: 173:             _delay((unsigned long)((15)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 15 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"174
-[; ;main.c: 174:         }
-}
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 20 `i 422  ]
-[e :U 423 ]
-}
-"177
-[; ;main.c: 177:         ciclo_temp++;
-[e ++ _ciclo_temp -> -> 1 `i `uc ]
-"178
-[; ;main.c: 178:         if (ciclo_temp >= 25) {
-[e $ ! >= -> _ciclo_temp `i -> 25 `i 426  ]
-{
-"179
-[; ;main.c: 179:             ciclo_temp = 0;
-[e = _ciclo_temp -> -> 0 `i `uc ]
-"180
-[; ;main.c: 180:             temp_f = DS18B20_ReadTemp();
-[e = _temp_f ( _DS18B20_ReadTemp ..  ]
-"181
-[; ;main.c: 181:             if (temp_f > -55.0f && temp_f < 125.0f) {
-[e $ ! && > _temp_f -U -> .55.0 `f < _temp_f -> .125.0 `f 427  ]
-{
-"182
-[; ;main.c: 182:                 temp_valida = 1;
-[e = _temp_valida -> -> 1 `i `uc ]
-"183
-[; ;main.c: 183:                 temp_int = (unsigned char)temp_f;
-[e = _temp_int -> _temp_f `uc ]
-"184
-[; ;main.c: 184:                 temp_dec = (unsigned char)((temp_f - (float)temp_int) * 10.0f);
-[e = _temp_dec -> * - _temp_f -> _temp_int `f -> .10.0 `f `uc ]
-"185
-[; ;main.c: 185:                 hay_temp = (temp_f >= 30.0f) ? 1 : 0;
-[e = _hay_temp -> ? >= _temp_f -> .30.0 `f : -> 1 `i -> 0 `i `uc ]
-"186
-[; ;main.c: 186:             }
-}
-[e :U 427 ]
-"187
-[; ;main.c: 187:             DS18B20_StartConversion();
-[e ( _DS18B20_StartConversion ..  ]
-"188
-[; ;main.c: 188:         }
-}
-[e :U 426 ]
-"190
-[; ;main.c: 190:         activo = (hay_dedo || hay_temp) ? 1 : 0;
-[e = _activo -> ? || != -> _hay_dedo `i -> 0 `i != -> _hay_temp `i -> 0 `i : -> 1 `i -> 0 `i `uc ]
-"193
-[; ;main.c: 193:         alarma = 0;
-[e = _alarma -> -> 0 `i `uc ]
-"194
-[; ;main.c: 194:         if (activo && bpm > 0) {
-[e $ ! && != -> _activo `i -> 0 `i > -> _bpm `i -> 0 `i 428  ]
-{
-"195
-[; ;main.c: 195:             if (perfil == 0) {
-[e $ ! == -> _perfil `i -> 0 `i 429  ]
-{
-"196
-[; ;main.c: 196:                 if (bpm < 50 || bpm > 120) alarma = 1;
-[e $ ! || < -> _bpm `i -> 50 `i > -> _bpm `i -> 120 `i 430  ]
-[e = _alarma -> -> 1 `i `uc ]
-[e :U 430 ]
-"197
-[; ;main.c: 197:                 if (temp_valida && temp_f > 38.5f) alarma = 1;
-[e $ ! && != -> _temp_valida `i -> 0 `i > _temp_f -> .38.5 `f 431  ]
-[e = _alarma -> -> 1 `i `uc ]
-[e :U 431 ]
-"198
-[; ;main.c: 198:             } else {
-}
-[e $U 432  ]
-[e :U 429 ]
-{
-"199
-[; ;main.c: 199:                 if (bpm < 40 || bpm > 180) alarma = 1;
-[e $ ! || < -> _bpm `i -> 40 `i > -> _bpm `i -> 180 `i 433  ]
-[e = _alarma -> -> 1 `i `uc ]
-[e :U 433 ]
-"200
-[; ;main.c: 200:                 if (temp_valida && temp_f > 39.0f) alarma = 1;
-[e $ ! && != -> _temp_valida `i -> 0 `i > _temp_f -> .39.0 `f 434  ]
-[e = _alarma -> -> 1 `i `uc ]
-[e :U 434 ]
-"201
-[; ;main.c: 201:             }
-}
-[e :U 432 ]
-"202
-[; ;main.c: 202:         }
-}
-[e :U 428 ]
-"205
-[; ;main.c: 205:         LATDbits.LATD0 = 1;
-[e = . . _LATDbits 0 0 -> -> 1 `i `uc ]
-"206
-[; ;main.c: 206:         LATDbits.LATD1 = activo ? 1 : 0;
-[e = . . _LATDbits 0 1 -> ? != -> _activo `i -> 0 `i : -> 1 `i -> 0 `i `uc ]
-"207
-[; ;main.c: 207:         LATDbits.LATD2 = 0;
-[e = . . _LATDbits 0 2 -> -> 0 `i `uc ]
-"208
-[; ;main.c: 208:         LATDbits.LATD3 = alarma ? 1 : 0;
-[e = . . _LATDbits 0 3 -> ? != -> _alarma `i -> 0 `i : -> 1 `i -> 0 `i `uc ]
-"211
-[; ;main.c: 211:         if (alarma) {
-[e $ ! != -> _alarma `i -> 0 `i 435  ]
-{
-"212
-[; ;main.c: 212:             ciclo_buzzer++;
-[e ++ _ciclo_buzzer -> -> 1 `i `uc ]
-"213
-[; ;main.c: 213:             if (ciclo_buzzer >= 7) {
-[e $ ! >= -> _ciclo_buzzer `i -> 7 `i 436  ]
-{
-"214
-[; ;main.c: 214:                 ciclo_buzzer = 0;
-[e = _ciclo_buzzer -> -> 0 `i `uc ]
-"215
-[; ;main.c: 215:                 buzzer_estado ^= 1;
-[e =^ _buzzer_estado -> -> 1 `i `uc ]
-"216
-[; ;main.c: 216:                 LATBbits.LATB2 = buzzer_estado;
-[e = . . _LATBbits 0 2 _buzzer_estado ]
-"217
-[; ;main.c: 217:             }
-}
-[e :U 436 ]
-"218
-[; ;main.c: 218:         } else {
-}
-[e $U 437  ]
-[e :U 435 ]
-{
-"219
-[; ;main.c: 219:             LATBbits.LATB2 = 0;
-[e = . . _LATBbits 0 2 -> -> 0 `i `uc ]
-"220
-[; ;main.c: 220:             buzzer_estado = 0;
-[e = _buzzer_estado -> -> 0 `i `uc ]
-"221
-[; ;main.c: 221:             ciclo_buzzer = 0;
-[e = _ciclo_buzzer -> -> 0 `i `uc ]
-"222
-[; ;main.c: 222:         }
-}
-[e :U 437 ]
-"225
-[; ;main.c: 225:         ciclo_oled++;
-[e ++ _ciclo_oled -> -> 1 `i `uc ]
-"226
-[; ;main.c: 226:         if (ciclo_oled >= 2) {
-[e $ ! >= -> _ciclo_oled `i -> 2 `i 438  ]
-{
-"227
-[; ;main.c: 227:             ciclo_oled = 0;
-[e = _ciclo_oled -> -> 0 `i `uc ]
-"228
-[; ;main.c: 228:             if (!activo)
-[e $ ! ! != -> _activo `i -> 0 `i 439  ]
-"229
-[; ;main.c: 229:                 OLED_Paused();
-[e ( _OLED_Paused ..  ]
-[e $U 440  ]
-"230
-[; ;main.c: 230:             else
-[e :U 439 ]
-"231
-[; ;main.c: 231:                 OLED_Vitals(temp_int, temp_dec, bpm, alarma, perfil);
-[e ( _OLED_Vitals (4 , , , , _temp_int _temp_dec _bpm _alarma _perfil ]
-[e :U 440 ]
-"232
-[; ;main.c: 232:         }
-}
-[e :U 438 ]
-"235
-[; ;main.c: 235:         ciclo_uart++;
-[e ++ _ciclo_uart -> -> 1 `i `uc ]
-"236
-[; ;main.c: 236:         if (ciclo_uart >= 15) {
-[e $ ! >= -> _ciclo_uart `i -> 15 `i 441  ]
-{
-"237
-[; ;main.c: 237:             ciclo_uart = 0;
-[e = _ciclo_uart -> -> 0 `i `uc ]
-"238
-[; ;main.c: 238:             if (activo)
-[e $ ! != -> _activo `i -> 0 `i 442  ]
-"239
-[; ;main.c: 239:                 UART_SendVitals(temp_int, temp_dec, bpm, perfil, alarma);
-[e ( _UART_SendVitals (4 , , , , _temp_int _temp_dec _bpm _perfil _alarma ]
-[e $U 443  ]
-"240
-[; ;main.c: 240:             else
-[e :U 442 ]
-"241
-[; ;main.c: 241:                 UART_WriteString("ESTADO: EN PAUSA\r\n");
-[e ( _UART_WriteString (1 :s 19C ]
-[e :U 443 ]
-"242
-[; ;main.c: 242:         }
-}
-[e :U 441 ]
-"243
-[; ;main.c: 243:     }
-}
-[e :U 416 ]
-[e $U 417  ]
-[e :U 418 ]
-"244
-[; ;main.c: 244: }
-[e :UE 403 ]
-}
-[a 11C 78 79 32 83 69 78 83 0 ]
-[a 13C 77 65 88 32 69 82 82 0 ]
-[a 9C 82 65 87 32 69 82 82 0 ]
-[a 4C 68 83 49 56 32 69 82 82 0 ]
-[a 2C 80 69 82 70 73 76 58 32 78 79 82 77 65 76 0 ]
-[a 7C 80 79 82 32 56 53 67 0 ]
-[a 1C 80 69 82 70 73 76 58 32 68 69 80 79 82 84 73 83 84 65 0 ]
-[a 14C 69 82 82 58 32 77 65 88 51 48 49 48 50 32 110 111 32 101 110 99 111 110 116 114 97 100 111 13 10 0 ]
-[a 5C 69 82 82 58 32 68 83 49 56 66 50 48 32 110 111 32 101 110 99 111 110 116 114 97 100 111 13 10 0 ]
-[a 10C 69 82 82 58 32 82 65 87 13 10 0 ]
-[a 12C 69 82 82 58 32 83 73 78 32 83 69 78 83 79 82 13 10 0 ]
-[a 17C 80 69 82 70 73 76 58 32 78 79 82 77 65 76 13 10 0 ]
-[a 15C 77 65 88 51 48 49 48 50 32 79 75 13 10 0 ]
-[a 6C 68 83 49 56 66 50 48 32 79 75 13 10 0 ]
-[a 8C 69 82 82 58 32 80 79 82 32 56 53 67 13 10 0 ]
-[a 18C 80 69 82 70 73 76 58 32 68 69 80 79 82 84 73 83 84 65 13 10 0 ]
-[a 19C 69 83 84 65 68 79 58 32 69 78 32 80 65 85 83 65 13 10 0 ]
-[a 16C 61 61 61 32 83 73 83 84 69 77 65 32 76 73 83 84 79 32 61 61 61 13 10 0 ]
-[a 3C 61 61 61 32 67 65 82 68 73 79 46 88 32 73 78 73 67 73 65 78 68 79 32 61 61 61 13 10 0 ]
+[a 4C 78 79 82 0 ]
+[a 5C 68 69 80 0 ]
+[a 1C 84 58 0 ]
+[a 3C 32 80 58 0 ]
+[a 6C 32 65 76 58 0 ]
+[a 2C 32 66 58 0 ]
+[a 7C 13 10 0 ]

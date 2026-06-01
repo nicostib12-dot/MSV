@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "uart.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 295 "<built-in>" 3
@@ -6,8 +6,15 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-# 10 "main.c"
+# 1 "uart.c" 2
+
+
+
+
+# 1 "./config.h" 1
+
+
+
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -5907,12 +5914,7 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 2 3
-# 11 "main.c" 2
-# 1 "./config.h" 1
-
-
-
-
+# 5 "./config.h" 2
 
 
 
@@ -5921,83 +5923,7 @@ unsigned char __t3rd16on(void);
 #pragma config LVP = OFF
 #pragma config PBADEN = OFF
 #pragma config MCLRE = ON
-# 12 "main.c" 2
-# 1 "./i2c.h" 1
-# 28 "./i2c.h"
-void I2C_Init(void);
-
-
-void I2C_Start(void);
-
-
-void I2C_Stop(void);
-# 45 "./i2c.h"
-void I2C_Write(unsigned char data);
-# 57 "./i2c.h"
-unsigned char I2C_Read(char ack);
-
-
-
-
-
-
-void I2C_RepeatedStart(void);
-# 13 "main.c" 2
-# 1 "./oled.h" 1
-# 23 "./oled.h"
-void OLED_Init(void);
-
-
-void OLED_Command(unsigned char cmd);
-void OLED_Data(unsigned char data);
-
-
-void OLED_Clear(void);
-void OLED_ClearLine(unsigned char linea);
-void OLED_SetCursor(unsigned char col, unsigned char page);
-
-
-void OLED_WriteChar(char c);
-void OLED_WriteString(char *str);
-
-
-void OLED_Splash(void);
-void OLED_Vitals(unsigned char temp_int, unsigned char temp_dec,
-                 unsigned char bpm, unsigned char alarma,
-                 unsigned char perfil);
-void OLED_Paused(void);
-void OLED_Error(char *msg);
-# 14 "main.c" 2
-# 1 "./ds18b20.h" 1
-# 10 "./ds18b20.h"
-unsigned char DS18B20_Reset(void);
-void DS18B20_WriteByte(unsigned char byte);
-unsigned char DS18B20_ReadByte(void);
-unsigned char DS18B20_StartConversion(void);
-void DS18B20_WaitConversion(void);
-float DS18B20_ReadTemp(void);
-# 15 "main.c" 2
-# 1 "./max30102.h" 1
-# 25 "./max30102.h"
-unsigned char MAX30102_ReadRegister(unsigned char reg, unsigned char *data);
-unsigned char MAX30102_WriteRegister(unsigned char reg, unsigned char data);
-unsigned char MAX30102_Check(void);
-unsigned char MAX30102_Init(void);
-unsigned char MAX30102_SamplesAvailable(void);
-unsigned char MAX30102_ReadSample(unsigned long *red, unsigned long *ir);
-# 16 "main.c" 2
-# 1 "./card.h" 1
-
-
-
-
-
-extern long CAR_ultimo_delta;
-
-unsigned char CAR_HayDedo(unsigned long ir);
-unsigned char CAR_ProcesarMuestra(unsigned long red, unsigned long ir);
-unsigned char CAR_GetBPM(void);
-# 17 "main.c" 2
+# 6 "uart.c" 2
 # 1 "./uart.h" 1
 # 20 "./uart.h"
 void UART_Init(void);
@@ -6010,212 +5936,95 @@ void UART_WriteString(const char *str);
 void UART_SendVitals(unsigned char temp_int, unsigned char temp_dec,
                      unsigned char bpm, unsigned char perfil,
                      unsigned char alarma);
-# 18 "main.c" 2
-# 38 "main.c"
-static void setup(void) {
-    OSCCON = 0x72;
-    while (!OSCCONbits.IOFS);
-    _delay((unsigned long)((100)*(8000000/4000.0)));
+# 7 "uart.c" 2
 
-    TRISD = 0x40;
-    LATD = 0x00;
 
-    TRISB = 0xF8;
-    LATB = 0x00;
+void UART_Init(void) {
 
 
 
-    INTCON2bits.RBPU = 0;
-    CMCON = 0x07;
-    ADCON1 = 0x0F;
+    TRISCbits.TRISC6 = 1;
+    TRISCbits.TRISC7 = 1;
+
+
+
+
+    SPBRG = 51;
+    SPBRGH = 0;
+
+
+    TXSTAbits.TXEN = 1;
+    TXSTAbits.SYNC = 0;
+    TXSTAbits.BRGH = 1;
+
+
+    RCSTAbits.SPEN = 1;
+    RCSTAbits.CREN = 1;
+
+
+    (void)RCREG;
 }
 
-static void blink_amarillo(unsigned char n) {
-    unsigned char k;
-    for (k = 0; k < n; k++) {
-        LATDbits.LATD2 = 1; _delay((unsigned long)((200)*(8000000/4000.0)));
-        LATDbits.LATD2 = 0; _delay((unsigned long)((200)*(8000000/4000.0)));
+
+void UART_WriteChar(unsigned char c) {
+    while (!TXSTAbits.TRMT);
+    TXREG = c;
+}
+
+
+void UART_WriteString(const char *str) {
+    while (*str) {
+        UART_WriteChar((unsigned char)*str);
+        str++;
     }
 }
 
-static void mostrar_perfil(unsigned char deportista) {
-    OLED_Clear();
-    OLED_SetCursor(10, 2);
-    if (deportista)
-        OLED_WriteString("PERFIL: DEPORTISTA");
+
+
+static void send_uint(unsigned int n) {
+    char buf[4];
+    unsigned char i = 0, j = 0;
+    char tmp[4];
+
+    if (n == 0) { UART_WriteChar('0'); return; }
+
+    while (n > 0) {
+        tmp[i++] = '0' + (n % 10);
+        n /= 10;
+    }
+
+    while (i > 0) buf[j++] = tmp[--i];
+    buf[j] = '\0';
+
+    j = 0;
+    while (buf[j]) UART_WriteChar((unsigned char)buf[j++]);
+}
+
+
+void UART_SendVitals(unsigned char temp_int, unsigned char temp_dec,
+                     unsigned char bpm, unsigned char perfil,
+                     unsigned char alarma) {
+
+
+    UART_WriteString("T:");
+    send_uint(temp_int);
+    UART_WriteChar('.');
+    send_uint(temp_dec);
+
+    UART_WriteString(" B:");
+
+    if (bpm < 100) UART_WriteChar('0');
+    if (bpm < 10) UART_WriteChar('0');
+    send_uint(bpm);
+
+    UART_WriteString(" P:");
+    if (perfil == 0)
+        UART_WriteString("NOR");
     else
-        OLED_WriteString("PERFIL: NORMAL");
-    _delay((unsigned long)((1000)*(8000000/4000.0)));
-    OLED_Clear();
-}
+        UART_WriteString("DEP");
 
+    UART_WriteString(" AL:");
+    UART_WriteChar(alarma ? '1' : '0');
 
-void main(void) {
-    unsigned long red, ir;
-    unsigned char bpm = 0;
-    unsigned char hay_dedo = 0;
-    unsigned char hay_temp = 0;
-    unsigned char activo = 0;
-    unsigned char alarma = 0;
-    unsigned char i;
-
-    unsigned char ciclo_oled = 0;
-    unsigned char ciclo_temp = 0;
-    unsigned char ciclo_buzzer = 0;
-    unsigned char ciclo_uart = 0;
-    unsigned char buzzer_estado = 0;
-
-    unsigned char perfil = 0;
-    unsigned char btn_ant = 1;
-
-    float temp_f = 0.0f;
-    unsigned char temp_int = 0;
-    unsigned char temp_dec = 0;
-    unsigned char temp_valida = 0;
-
-    setup();
-    I2C_Init();
-    UART_Init();
-    OLED_Init();
-
-    UART_WriteString("=== CARDIO.X INICIANDO ===\r\n");
-
-    blink_amarillo(3);
-    OLED_Splash();
-    _delay((unsigned long)((2000)*(8000000/4000.0)));
-
-
-    LATDbits.LATD2 = 1;
-    if (!DS18B20_Reset()) {
-        OLED_Error("DS18 ERR");
-        UART_WriteString("ERR: DS18B20 no encontrado\r\n");
-        _delay((unsigned long)((2000)*(8000000/4000.0)));
-    } else {
-        DS18B20_StartConversion();
-        DS18B20_WaitConversion();
-        temp_f = DS18B20_ReadTemp();
-
-        if (temp_f > -55.0f && temp_f < 125.0f) {
-            temp_valida = 1;
-            temp_int = (unsigned char)temp_f;
-            temp_dec = (unsigned char)((temp_f - (float)temp_int) * 10.0f);
-            hay_temp = (temp_f >= 30.0f) ? 1 : 0;
-            UART_WriteString("DS18B20 OK\r\n");
-        } else {
-            if (temp_f == -997.0f) { OLED_Error("POR 85C"); UART_WriteString("ERR: POR 85C\r\n"); }
-            else if (temp_f == -998.0f) { OLED_Error("RAW ERR"); UART_WriteString("ERR: RAW\r\n"); }
-            else { OLED_Error("NO SENS"); UART_WriteString("ERR: SIN SENSOR\r\n"); }
-            _delay((unsigned long)((2000)*(8000000/4000.0)));
-        }
-        DS18B20_StartConversion();
-    }
-    LATDbits.LATD2 = 0;
-
-
-    if (!MAX30102_Init()) {
-        OLED_Error("MAX ERR");
-        UART_WriteString("ERR: MAX30102 no encontrado\r\n");
-        while (1);
-    }
-    UART_WriteString("MAX30102 OK\r\n");
-    UART_WriteString("=== SISTEMA LISTO ===\r\n");
-
-    LATDbits.LATD0 = 1;
-    OLED_Clear();
-
-
-    while (1) {
-
-
-        {
-            unsigned char btn_ahora = PORTBbits.RB3;
-            if (btn_ant == 1 && btn_ahora == 0) {
-                perfil ^= 1;
-                mostrar_perfil(perfil);
-
-                if (perfil == 0)
-                    UART_WriteString("PERFIL: NORMAL\r\n");
-                else
-                    UART_WriteString("PERFIL: DEPORTISTA\r\n");
-            }
-            btn_ant = btn_ahora;
-        }
-
-
-        for (i = 0; i < 20; i++) {
-            if (MAX30102_ReadSample(&red, &ir)) {
-                bpm = CAR_ProcesarMuestra(red, ir);
-                hay_dedo = CAR_HayDedo(ir);
-            }
-            _delay((unsigned long)((15)*(8000000/4000.0)));
-        }
-
-
-        ciclo_temp++;
-        if (ciclo_temp >= 25) {
-            ciclo_temp = 0;
-            temp_f = DS18B20_ReadTemp();
-            if (temp_f > -55.0f && temp_f < 125.0f) {
-                temp_valida = 1;
-                temp_int = (unsigned char)temp_f;
-                temp_dec = (unsigned char)((temp_f - (float)temp_int) * 10.0f);
-                hay_temp = (temp_f >= 30.0f) ? 1 : 0;
-            }
-            DS18B20_StartConversion();
-        }
-
-        activo = (hay_dedo || hay_temp) ? 1 : 0;
-
-
-        alarma = 0;
-        if (activo && bpm > 0) {
-            if (perfil == 0) {
-                if (bpm < 50 || bpm > 120) alarma = 1;
-                if (temp_valida && temp_f > 38.5f) alarma = 1;
-            } else {
-                if (bpm < 40 || bpm > 180) alarma = 1;
-                if (temp_valida && temp_f > 39.0f) alarma = 1;
-            }
-        }
-
-
-        LATDbits.LATD0 = 1;
-        LATDbits.LATD1 = activo ? 1 : 0;
-        LATDbits.LATD2 = 0;
-        LATDbits.LATD3 = alarma ? 1 : 0;
-
-
-        if (alarma) {
-            ciclo_buzzer++;
-            if (ciclo_buzzer >= 7) {
-                ciclo_buzzer = 0;
-                buzzer_estado ^= 1;
-                LATBbits.LATB2 = buzzer_estado;
-            }
-        } else {
-            LATBbits.LATB2 = 0;
-            buzzer_estado = 0;
-            ciclo_buzzer = 0;
-        }
-
-
-        ciclo_oled++;
-        if (ciclo_oled >= 2) {
-            ciclo_oled = 0;
-            if (!activo)
-                OLED_Paused();
-            else
-                OLED_Vitals(temp_int, temp_dec, bpm, alarma, perfil);
-        }
-
-
-        ciclo_uart++;
-        if (ciclo_uart >= 15) {
-            ciclo_uart = 0;
-            if (activo)
-                UART_SendVitals(temp_int, temp_dec, bpm, perfil, alarma);
-            else
-                UART_WriteString("ESTADO: EN PAUSA\r\n");
-        }
-    }
+    UART_WriteString("\r\n");
 }
