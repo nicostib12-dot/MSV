@@ -1,0 +1,26 @@
+var max30102_8h =
+[
+    [ "MAX30102_ADDR_READ", "max30102_8h.html#a67638cdfb95c527525753f972b96609f", null ],
+    [ "MAX30102_ADDR_WRITE", "max30102_8h.html#a95d50f11da3d109d5197a23e3bd59a8a", null ],
+    [ "MAX30102_FIFO_CONFIG", "max30102_8h.html#aa39e8210b943ab8682e8fc758364d071", null ],
+    [ "MAX30102_FIFO_DATA", "max30102_8h.html#a725539b4ac1444b6c8e75554820b1fc0", null ],
+    [ "MAX30102_FIFO_RD_PTR", "max30102_8h.html#acdd17466cfe6cd6a44ef84e1d0cbee4a", null ],
+    [ "MAX30102_FIFO_WR_PTR", "max30102_8h.html#af1be29198aa85e1337082b4bda017c9d", null ],
+    [ "MAX30102_INT_ENABLE_1", "max30102_8h.html#a7b2bb2816aeabecf17dc0b88a596ea7c", null ],
+    [ "MAX30102_INT_ENABLE_2", "max30102_8h.html#a40a530ca6ced36d4f1d572938103a618", null ],
+    [ "MAX30102_INT_STATUS_1", "max30102_8h.html#ab173dd95ce220beb77fa95931c2e1440", null ],
+    [ "MAX30102_INT_STATUS_2", "max30102_8h.html#a5934136367ffd66bd1bcf19d5dc1337b", null ],
+    [ "MAX30102_LED1_PA", "max30102_8h.html#aafe598ed43678ea9df9b168d35700cdc", null ],
+    [ "MAX30102_LED2_PA", "max30102_8h.html#ae2fb5b78340c32a7855e818c6065b867", null ],
+    [ "MAX30102_MODE_CONFIG", "max30102_8h.html#a426885d757310437e2807e61fda83238", null ],
+    [ "MAX30102_OVF_COUNTER", "max30102_8h.html#a62436cd0f49e7a393ce50be8d346b7b3", null ],
+    [ "MAX30102_PART_ID", "max30102_8h.html#ab7c1a40b59dcf1922d68d86d3b658b95", null ],
+    [ "MAX30102_REV_ID", "max30102_8h.html#a2655012bef2c5a43e47d09144b52b5bd", null ],
+    [ "MAX30102_SPO2_CONFIG", "max30102_8h.html#adf18f48156aa714aa944bffb8dbc77af", null ],
+    [ "MAX30102_Check", "max30102_8h.html#aa04cd45f96ff12a9e46ef96be2355c36", null ],
+    [ "MAX30102_Init", "max30102_8h.html#a3db8d8a02be1279aedbd49d0c72a7eaf", null ],
+    [ "MAX30102_ReadRegister", "max30102_8h.html#abc5c082e11a87f4877859076a592b5f5", null ],
+    [ "MAX30102_ReadSample", "max30102_8h.html#a46b4c4487b5179e791687eec647a97ce", null ],
+    [ "MAX30102_SamplesAvailable", "max30102_8h.html#afbb97c343c58397b0642e995eb6a7833", null ],
+    [ "MAX30102_WriteRegister", "max30102_8h.html#aa2f5ba5e9ec4987d3be3616403b7a685", null ]
+];

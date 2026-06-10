@@ -1,0 +1,15 @@
+var searchData=
+[
+  ['oled_5fclear_0',['OLED_Clear',['../oled_8c.html#a6960de38d41ba87c52e40f8bd4b094d3',1,'OLED_Clear(void):&#160;oled.c'],['../oled_8h.html#a6960de38d41ba87c52e40f8bd4b094d3',1,'OLED_Clear(void):&#160;oled.c']]],
+  ['oled_5fclearline_1',['OLED_ClearLine',['../oled_8c.html#afeb38a5327d872c6cfc4ea633debea15',1,'OLED_ClearLine(unsigned char linea):&#160;oled.c'],['../oled_8h.html#afeb38a5327d872c6cfc4ea633debea15',1,'OLED_ClearLine(unsigned char linea):&#160;oled.c']]],
+  ['oled_5fcommand_2',['OLED_Command',['../oled_8c.html#a5ee798d5874943b11735410201150b86',1,'OLED_Command(unsigned char cmd):&#160;oled.c'],['../oled_8h.html#a5ee798d5874943b11735410201150b86',1,'OLED_Command(unsigned char cmd):&#160;oled.c']]],
+  ['oled_5fdata_3',['OLED_Data',['../oled_8c.html#a7272fc2f7f11af951d4cb487732cc531',1,'OLED_Data(unsigned char data):&#160;oled.c'],['../oled_8h.html#a7272fc2f7f11af951d4cb487732cc531',1,'OLED_Data(unsigned char data):&#160;oled.c']]],
+  ['oled_5ferror_4',['OLED_Error',['../oled_8c.html#aba09ba51ad3aa517403f7015fe6f8857',1,'OLED_Error(char *msg):&#160;oled.c'],['../oled_8h.html#aba09ba51ad3aa517403f7015fe6f8857',1,'OLED_Error(char *msg):&#160;oled.c']]],
+  ['oled_5finit_5',['OLED_Init',['../oled_8c.html#a7372e46460a371e4d94a0ee7f5f1a1fd',1,'OLED_Init(void):&#160;oled.c'],['../oled_8h.html#a7372e46460a371e4d94a0ee7f5f1a1fd',1,'OLED_Init(void):&#160;oled.c']]],
+  ['oled_5fpaused_6',['OLED_Paused',['../oled_8c.html#a5cd2c8cf3215b7753640a727e7fbce23',1,'OLED_Paused(void):&#160;oled.c'],['../oled_8h.html#a5cd2c8cf3215b7753640a727e7fbce23',1,'OLED_Paused(void):&#160;oled.c']]],
+  ['oled_5fsetcursor_7',['OLED_SetCursor',['../oled_8c.html#a276161aa41e4af13197f0b6b9bc9973b',1,'OLED_SetCursor(unsigned char col, unsigned char page):&#160;oled.c'],['../oled_8h.html#a276161aa41e4af13197f0b6b9bc9973b',1,'OLED_SetCursor(unsigned char col, unsigned char page):&#160;oled.c']]],
+  ['oled_5fsplash_8',['OLED_Splash',['../oled_8c.html#a990c8e926f7f720538903755178ae72e',1,'OLED_Splash(void):&#160;oled.c'],['../oled_8h.html#a990c8e926f7f720538903755178ae72e',1,'OLED_Splash(void):&#160;oled.c']]],
+  ['oled_5fvitals_9',['OLED_Vitals',['../oled_8c.html#a549b0157aff506d27e2f5df5e6916245',1,'OLED_Vitals(unsigned char temp_int, unsigned char temp_dec, unsigned char bpm, unsigned char alarma, unsigned char perfil):&#160;oled.c'],['../oled_8h.html#a549b0157aff506d27e2f5df5e6916245',1,'OLED_Vitals(unsigned char temp_int, unsigned char temp_dec, unsigned char bpm, unsigned char alarma, unsigned char perfil):&#160;oled.c']]],
+  ['oled_5fwritechar_10',['OLED_WriteChar',['../oled_8c.html#a6dd3376555dd16106519c875b7794073',1,'OLED_WriteChar(char c):&#160;oled.c'],['../oled_8h.html#a6dd3376555dd16106519c875b7794073',1,'OLED_WriteChar(char c):&#160;oled.c']]],
+  ['oled_5fwritestring_11',['OLED_WriteString',['../oled_8c.html#a84467994305cc92929c121371bcb80c8',1,'OLED_WriteString(char *str):&#160;oled.c'],['../oled_8h.html#a84467994305cc92929c121371bcb80c8',1,'OLED_WriteString(char *str):&#160;oled.c']]]
+];

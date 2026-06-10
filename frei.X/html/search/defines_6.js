@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['max30102_5faddr_5fread_0',['MAX30102_ADDR_READ',['../max30102_8h.html#a67638cdfb95c527525753f972b96609f',1,'max30102.h']]],
+  ['max30102_5faddr_5fwrite_1',['MAX30102_ADDR_WRITE',['../max30102_8h.html#a95d50f11da3d109d5197a23e3bd59a8a',1,'max30102.h']]],
+  ['max30102_5ffifo_5fconfig_2',['MAX30102_FIFO_CONFIG',['../max30102_8h.html#aa39e8210b943ab8682e8fc758364d071',1,'max30102.h']]],
+  ['max30102_5ffifo_5fdata_3',['MAX30102_FIFO_DATA',['../max30102_8h.html#a725539b4ac1444b6c8e75554820b1fc0',1,'max30102.h']]],
+  ['max30102_5ffifo_5frd_5fptr_4',['MAX30102_FIFO_RD_PTR',['../max30102_8h.html#acdd17466cfe6cd6a44ef84e1d0cbee4a',1,'max30102.h']]],
+  ['max30102_5ffifo_5fwr_5fptr_5',['MAX30102_FIFO_WR_PTR',['../max30102_8h.html#af1be29198aa85e1337082b4bda017c9d',1,'max30102.h']]],
+  ['max30102_5fint_5fenable_5f1_6',['MAX30102_INT_ENABLE_1',['../max30102_8h.html#a7b2bb2816aeabecf17dc0b88a596ea7c',1,'max30102.h']]],
+  ['max30102_5fint_5fenable_5f2_7',['MAX30102_INT_ENABLE_2',['../max30102_8h.html#a40a530ca6ced36d4f1d572938103a618',1,'max30102.h']]],
+  ['max30102_5fint_5fstatus_5f1_8',['MAX30102_INT_STATUS_1',['../max30102_8h.html#ab173dd95ce220beb77fa95931c2e1440',1,'max30102.h']]],
+  ['max30102_5fint_5fstatus_5f2_9',['MAX30102_INT_STATUS_2',['../max30102_8h.html#a5934136367ffd66bd1bcf19d5dc1337b',1,'max30102.h']]],
+  ['max30102_5fled1_5fpa_10',['MAX30102_LED1_PA',['../max30102_8h.html#aafe598ed43678ea9df9b168d35700cdc',1,'max30102.h']]],
+  ['max30102_5fled2_5fpa_11',['MAX30102_LED2_PA',['../max30102_8h.html#ae2fb5b78340c32a7855e818c6065b867',1,'max30102.h']]],
+  ['max30102_5fmode_5fconfig_12',['MAX30102_MODE_CONFIG',['../max30102_8h.html#a426885d757310437e2807e61fda83238',1,'max30102.h']]],
+  ['max30102_5fovf_5fcounter_13',['MAX30102_OVF_COUNTER',['../max30102_8h.html#a62436cd0f49e7a393ce50be8d346b7b3',1,'max30102.h']]],
+  ['max30102_5fpart_5fid_14',['MAX30102_PART_ID',['../max30102_8h.html#ab7c1a40b59dcf1922d68d86d3b658b95',1,'max30102.h']]],
+  ['max30102_5frev_5fid_15',['MAX30102_REV_ID',['../max30102_8h.html#a2655012bef2c5a43e47d09144b52b5bd',1,'max30102.h']]],
+  ['max30102_5fspo2_5fconfig_16',['MAX30102_SPO2_CONFIG',['../max30102_8h.html#adf18f48156aa714aa944bffb8dbc77af',1,'max30102.h']]]
+];
